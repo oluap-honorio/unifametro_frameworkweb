@@ -1,4 +1,4 @@
-|  [Home](README.md)  |  [Instalar o Python](doc/python.md)
+|  [Home](/README.md)  |  [Instalar o Python](/doc/python.md)
 
 *  Nesta página está descrito os passos para instalar do Python no Windows
 

@@ -1,4 +1,4 @@
-|  [Home](README.md)  |  [Atividade 1](doc/atv1.md)
+|  [Home](/README.md)  |  [Atividade 1](/doc/atv1.md)
 
 *  Nesta página está descrito os passos para configurar o ambiente Django.
 

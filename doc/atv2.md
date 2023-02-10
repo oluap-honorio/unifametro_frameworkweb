@@ -1,4 +1,4 @@
-|  [Home](README.md)  |  [Atividade 2](doc/atv2.md)
+|  [Home](/README.md)  |  [Atividade 2](/doc/atv2.md)
 
 *  Nesta página está descrito os passos para criar projeto Django
 

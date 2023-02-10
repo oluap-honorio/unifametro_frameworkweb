@@ -10,17 +10,17 @@
 *  [Instalar o Python](doc/python.md)
 
 ## Atividades
-*  [Atividade 1](atv1.md)
-*  [Atividade 2](atv2.md)
-*  [Atividade 3](atv3.md)
-*  [Atividade 4](README.md)
-*  [Atividade 5](README.md)
-*  [Atividade 6](README.md)
+*  [Atividade 1](doc/atv1.md)
+*  [Atividade 2](doc/atv2.md)
+*  [Atividade 3](doc/atv3.md)
+*  [Atividade 4](README.md#atividades)
+*  [Atividade 5](README.md#atividades)
+*  [Atividade 6](README.md#atividades)
 
 ## Questionários
-*  [1º dia](README.md)
-*  [2º dia](README.md)
+*  [1º dia](README.md#questionários)
+*  [2º dia](README.md#questionários)
 
 ## Slides
-*  [1º dia](README.md)
-*  [2º dia](README.md)
+*  [1º dia](README.md#slides)
+*  [2º dia](README.md#slides)
