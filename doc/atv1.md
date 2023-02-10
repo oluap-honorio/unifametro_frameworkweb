@@ -13,7 +13,7 @@ cmd
 2. Clonar esse repositorio
 ```
 $ git clone https://github.com/oluap-honorio/unifametro_frameworkweb.git
-$ dir unifametro_frameworkweb
+$ cd unifametro_frameworkweb
 ```
 3. Gerar uma Branch com o seu nome.
 ```
