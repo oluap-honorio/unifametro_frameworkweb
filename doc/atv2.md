@@ -15,3 +15,12 @@
 ```
 (env)$ python manage.py runserver
 ```
+5. Efetuar commit 
+```
+(env)$ git add .
+(env)$ git commit -m "Finalizando Atividade 2"
+```
+6. Realizar push de Branch com o SEU NOME
+```
+(env)$ git push origin HEAD:**<NOME_SOBRENOME>**
+```
