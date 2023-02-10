@@ -5,7 +5,7 @@
 ### Iniciando projeto Django.
 1. Criando projeto Django
 ```
-(env)$ env\Scripts\django-admin.exe startproject localiza .
+(env)$ env\Scripts\django-admin.exe startproject agrovinos .
 ```
 2. Construindo a base de dados
 ```
@@ -14,4 +14,13 @@
 4. Start o servidor HTTP
 ```
 (env)$ python manage.py runserver
+```
+5. Efetuar commit 
+```
+(env)$ git add .
+(env)$ git commit -m "Finalizando Atividade 2"
+```
+6. Realizar push de Branch com o SEU NOME
+```
+(env)$ git push origin HEAD:**<NOME_SOBRENOME>**
 ```

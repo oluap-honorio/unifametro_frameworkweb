@@ -13,7 +13,7 @@ cmd
 2. Clonar esse repositorio
 ```
 $ git clone https://github.com/oluap-honorio/unifametro_frameworkweb.git
-$ dir unifametro_frameworkweb
+$ cd unifametro_frameworkweb
 ```
 3. Gerar uma Branch com o seu nome.
 ```
@@ -28,7 +28,7 @@ $ python -m venv env
 ```
 2. Ativar o Ambiente virtual:
 ```
-$ . env\Scripts\activate
+$ env\Scripts\activate
 ```
 3. Efetuar instalação do Django
 ```
@@ -48,7 +48,7 @@ Ctrl + z
 ```
 6. Efetuar commit da lista de requerimentos
 ```
-(env)$ git add .
+(env)$ git add requirements.txt
 (env)$ git commit -m "Finalizando Atividade 1"
 ```
 7. Realizar push de Branch com o SEU NOME
