@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ovino.apps.OvinoConfig',
+    'sekizai',
+    'widget_tweaks',
+
 ]
 
 MIDDLEWARE = [
@@ -50,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'agrovinos.urls'
+
+
 
 TEMPLATES = [
     {
