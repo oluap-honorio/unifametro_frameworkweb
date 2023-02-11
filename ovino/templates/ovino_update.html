@@ -1,0 +1,114 @@
+{% load sekizai_tags %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atualizar ovino</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+			<!-- Security token -->
+			{% csrf_token %}
+			<div >
+				<div >
+					<div>
+						<i ></i>Ovino </div>
+					<div >
+						<div >
+							<a href="{% url 'ovino:index' %}" >
+								 Cancelar
+							</a>
+						</div>
+						<button  type="submit">Salvar</button>
+					</div>
+				</div>
+				<div >
+					{% if form.errors %}
+					<div >
+						{{ form.errors }}
+					</div>
+					{% endif %}
+					<div>
+						<div >
+							<div >
+								<div >
+									<div >
+										<label >Identificação:</label>
+										<div >
+											{% render_field form.identificador %}
+											{% if form.identificador.errors %}
+												<div>
+													{{ form.identificador.errors }}
+												</div>
+											{% endif %}
+										</div>
+									</div>
+                  <div >
+										<label >Peso:</label>
+										<div >
+											{% render_field form.peso %}
+											{% if form.peso.errors %}
+												<div>
+													{{ form.peso.errors }}
+												</div>
+											{% endif %}
+										</div>
+									</div>
+                  <div >
+										<label >Nascimento:</label>
+										<div >
+											{% render_field form.nascimento %}
+											{% if form.nascimento.errors %}
+												<div>
+													{{ form.nascimento.errors }}
+												</div>
+											{% endif %}
+										</div>
+									</div>
+                  <div >
+										<label >Raça:</label>
+										<div >
+											{% render_field form.raca %}
+											{% if form.raca.errors %}
+												<div>
+													{{ form.raca.errors }}
+												</div>
+											{% endif %}
+										</div>
+									</div>
+                  <div >
+										<label >Cor:</label>
+										<div >
+											{% render_field form.cor %}
+											{% if form.cor.errors %}
+												<div>
+													{{ form.cor.errors }}
+												</div>
+											{% endif %}
+										</div>
+									</div>
+                  <div >
+										<label >Gênero:</label>
+										<div >
+											{% render_field form.genero %}
+											{% if form.genero.errors %}
+												<div>
+													{{ form.genero.errors }}
+												</div>
+											{% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+  </body>
+  
+  <footer>
+    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
+  </footer>
+</html>
