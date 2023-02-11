@@ -22,5 +22,5 @@
 *  [2º dia](README.md#questionários)
 
 ## Slides
-*  [1º dia](README.md#slides)
+*  [1º dia](doc/media/PrimeiroDia.pdf)
 *  [2º dia](README.md#slides)
