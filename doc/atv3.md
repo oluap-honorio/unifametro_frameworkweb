@@ -1,6 +1,7 @@
 |  [Home](/README.md)  |  [Atividade 3](/doc/atv3.md)
 
 *  Nesta página está descrito os passos para fazer um CRUD dos carneiros
+*  Instalar [VS code](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive)
 
 ### Construir uma aplicação CRUD com Django
 1. Pegar uma entidade independente do estudo de caso
@@ -34,7 +35,7 @@ class Ovino(models.Model):
 ```
 5. Criar a migração
 ```
-(env)$  python manage.py makemigations
+(env)$  python manage.py makemigrations
 ```
 6. Aplicar a migração
 ```
