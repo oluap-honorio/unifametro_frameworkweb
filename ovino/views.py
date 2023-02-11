@@ -5,14 +5,7 @@ from .models import Ovino
 from .forms import OvinoForm
 from django.contrib.auth.decorators import login_required
 
-from django.contrib.auth.decorators import login_required
-
 @login_required
-def index(request):
-    context = {}
-    context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
-
 def index(request):
     context = {}
     context["dataset"] = Ovino.objects.all()
