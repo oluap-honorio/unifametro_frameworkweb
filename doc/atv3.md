@@ -168,7 +168,7 @@ pip freeze >> requirements.txt
 ### Restringir acesso com login
 1. Criar um usuário de acesso root
 ```
-(env)$  python manage.py creatsuperuser
+(env)$  python manage.py createsuperuser
 - Username (leave blank to use 'user'): admin
 - Email address: admin@unifametro.br
 - Password: pass.123
