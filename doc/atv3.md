@@ -34,7 +34,7 @@ class Ovino(models.Model):
 ```
 5. Criar a migração
 ```
-(env)$  python manage.py makemigations
+(env)$  python manage.py makemigrations
 ```
 6. Aplicar a migração
 ```
