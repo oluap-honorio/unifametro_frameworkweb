@@ -1,0 +1,26 @@
+{% load sekizai_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deletar ovino</title>
+  </head>
+  <body>
+    <div >
+      <h4 >Atenção!</h4>
+      <p> Você tem certeza que deseja deletar esse registro? </p>
+      <form method="POST" action="{% url 'ovino:delete' id=data.id %}">
+        {% csrf_token %}
+        <br>
+        <p>
+          <input type="submit"  value="Sim" >
+          <a  href="{% url 'ovino:index' %}"> Não </a>
+        </p>
+      </form>
+    </div>
+  </body>
+  
+  <footer>
+    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
+  </footer>
+</html>
