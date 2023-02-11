@@ -53,6 +53,11 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_REDIRECT_URL = '/ovino/'
+LOGOUT_REDIRECT_URL = '/'
+
+
+
 WSGI_APPLICATION = 'agrovinos.wsgi.application'
 
 
