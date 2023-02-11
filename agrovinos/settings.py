@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ovino.apps.OvinoConfig',
+    'sekizai',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
