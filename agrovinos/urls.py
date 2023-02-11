@@ -7,3 +7,7 @@ urlpatterns = [
     path('ovino/', include('ovino.urls')),
     path('', views.index),
 ]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]

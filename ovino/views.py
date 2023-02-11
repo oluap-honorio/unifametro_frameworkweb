@@ -5,13 +5,13 @@ from .models import Ovino
 from .forms import OvinoForm
 from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def index(request):
     context = {}
     context["dataset"] = Ovino.objects.all()
     return render(request, "ovino_index.html", context)
 
-
+@login_required
 def create(request):
     context = {}
     form = OvinoForm(request.POST or None)
@@ -21,13 +21,13 @@ def create(request):
     context['form'] = form
     return render(request, "ovino_create.html", context)
 
-
+@login_required
 def read(request, id):
     context = {}
     context["data"] = Ovino.objects.get(id=id)
     return render(request, "ovino_read.html", context)
 
-
+@login_required
 def update(request, id):
     context = {}
     obj = get_object_or_404(Ovino, id=id)
@@ -38,7 +38,7 @@ def update(request, id):
     context["form"] = form
     return render(request, "ovino_update.html", context)
 
-
+@login_required
 def delete(request, id):
     context = {}
     obj = get_object_or_404(Ovino, id=id)
