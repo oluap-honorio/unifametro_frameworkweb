@@ -17,7 +17,7 @@ $ cd unifametro_frameworkweb
 ```
 3. Gerar uma Branch com o seu nome.
 ```
-$ git checkout -b **<NOME_SOBRENOME>**
+$ git checkout -b NOME_SOBRENOME
 $ git branch
 ```
 
@@ -53,5 +53,5 @@ Ctrl + z
 ```
 7. Realizar push de Branch com o SEU NOME
 ```
-(env)$ git push origin HEAD:**<NOME_SOBRENOME>**
+(env)$ git push origin HEAD:NOME_SOBRENOME
 ```
