@@ -2,3 +2,10 @@ asgiref==3.6.0
 Django==4.1.6
 sqlparse==0.4.3
 tzdata==2022.7
+asgiref==3.6.0
+Django==4.1.6
+django-classy-tags==4.0.0
+django-sekizai==4.0.0
+django-widget-tweaks==1.4.12
+sqlparse==0.4.3
+tzdata==2022.7
