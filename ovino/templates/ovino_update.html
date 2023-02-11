@@ -1,0 +1,9 @@
+<!-- templates/ovinos/ovino_form.html -->
+
+<h1>Update Ovino</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
