@@ -1,0 +1,57 @@
+{% load sekizai_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ver ovino</title>
+  </head>
+  <body>
+    <div class=>
+      <div class=>
+          <div class=>
+              <i class=></i>Detalhar Ovino</div>
+          <div >
+              <a href="{% url 'ovino:update' id=data.id %}" >Editar </a>
+          </div>
+      </div>
+      <div >
+          <div >
+            <div > Identificador: </div>
+            <div > {{ data.identificador }} </div>
+          </div>
+          <div >
+            <div > peso: </div>
+            <div > {{ data.peso }} </div>
+          </div>
+          <div >
+            <div > nascimento: </div>
+            <div > {{ data.nascimento }} </div>
+          </div>
+          <div >
+            <div > raca: </div>
+            <div > {{ data.raca }} </div>
+          </div>
+          <div >
+            <div > cor: </div>
+            <div > {{ data.cor }} </div>
+          </div>
+          <div >
+            <div > genero: </div>
+            <div > {{ data.genero }} </div>
+          </div>
+          <div >
+              <div > Dada do cadastro: </div>
+              <div >{{ data.created_at }}</div>
+          </div>
+          <div >
+              <div > Última atualização: </div>
+              <div >{{ data.updated_at }}</div>
+          </div>
+      </div>
+  </div>
+  </body>
+  
+  <footer>
+    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
+  </footer>
+</html>
