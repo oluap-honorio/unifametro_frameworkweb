@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_!5#-h^y6*yc7y=v!$g6+#11-hv_$m6to7w06ej8aun-8572w$'
+SECRET_KEY = 'django-insecure-z$aeb2q=yae@u12xfu4z-f*f265kxo$3-h4)$bp+&px_k29)-z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ovino.apps.OvinoConfig',
+    'sekizai',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -51,10 +54,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'agrovinos.urls'
 
+import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -62,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
