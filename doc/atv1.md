@@ -10,14 +10,15 @@ Para desenvolver com o framework Django será necessário prover um ambiente vir
 ```
 cmd
 ```
-2. Clonar esse repositorio
+2. Efetuar fork do repositorio [https://github.com/oluap-honorio/unifametro_frameworkweb](https://github.com/oluap-honorio/unifametro_frameworkweb)
+2.1. Clonar esse repositorio
 ```
-$ git clone https://github.com/oluap-honorio/unifametro_frameworkweb.git
-$ dir unifametro_frameworkweb
+$ git clone https://github.com/<SEU LOGIN>/unifametro_frameworkweb.git
+$ cd unifametro_frameworkweb
 ```
 3. Gerar uma Branch com o seu nome.
 ```
-$ git checkout -b **<NOME_SOBRENOME>**
+$ git checkout -b NOME_SOBRENOME
 $ git branch
 ```
 
@@ -53,5 +54,5 @@ Ctrl + z
 ```
 7. Realizar push de Branch com o SEU NOME
 ```
-(env)$ git push origin HEAD:**<NOME_SOBRENOME>**
+(env)$ git push origin HEAD:NOME_SOBRENOME
 ```
