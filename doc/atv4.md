@@ -152,6 +152,7 @@ $ docker-compose down -v
 1. Efetuar commit 
 ```
 (env)$ git add .
+
 (env)$ git commit -m "Finalizando Atividade 4"
 ```
 2. Realizar push de Branch com o SEU NOME

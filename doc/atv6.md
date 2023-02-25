@@ -121,8 +121,8 @@ $ python manage.py loaddata data.json
         - 19000:5432
         environment:
         - POSTGRES_USER=admin
-        - POSTGRES_PASSWORD=lc3.2023
-        - POSTGRES_DB=smallDB
+        - POSTGRES_PASSWORD=pass.2023
+        - POSTGRES_DB=argovinos
         - TZ=GMT-3
         
 volumes:
@@ -171,7 +171,7 @@ $  docker-compose up -d --build
 ```
 7. Aplicar os migrations
 ```
- docker-compose exec banco psql --username=hello_django --dbname=hello_django_dev doc/atv6.md
+ docker compose exec portal python manage.py migrate --no-input
 ```
 
 
