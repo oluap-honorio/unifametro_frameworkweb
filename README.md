@@ -13,8 +13,8 @@
 *  [Atividade 1](doc/atv1.md)
 *  [Atividade 2](doc/atv2.md)
 *  [Atividade 3](doc/atv3.md)
-*  [Atividade 4](README.md#atividades)
-*  [Atividade 5](README.md#atividades)
+*  [Atividade 4](doc/atv4.md)
+*  [Atividade 5](doc/atv5.md)
 *  [Atividade 6](README.md#atividades)
 
 ## Questionários
