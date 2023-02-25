@@ -11,7 +11,7 @@ Para desenvolver com o framework Django será necessário prover um ambiente vir
 cmd
 ```
 2. Efetuar fork do repositorio [https://github.com/oluap-honorio/unifametro_frameworkweb](https://github.com/oluap-honorio/unifametro_frameworkweb)
-2.1. Clonar esse repositorio
+- Clonar o repositorio apos o fork
 ```
 $ git clone https://github.com/<SEU LOGIN>/unifametro_frameworkweb.git
 $ cd unifametro_frameworkweb
