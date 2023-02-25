@@ -1,4 +1,4 @@
-|  [Home](/README.md)  |  [Atividade 6](/doc/atv6.md)
+|  [Home](/README.md)  |  [Atividade 7](/doc/atv7.md)
 
 *  Nesta página está descrito os passos para aplicar SGBD para PostgreSQL e prover restrição de acesso aos métodos
 
