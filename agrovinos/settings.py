@@ -8,6 +8,7 @@ SECRET_KEY = 'django-insecure-=sq3vhx&_wes)b(#n-$)ys)y9-h6)zti+mo^e3pbcce+t=4%m$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
@@ -38,7 +39,25 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'agrovinos.urls'
 
+# Aviable: os.path.join(BASE_DIR, ...)
 import os
+
+...
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-1pm*crjz8*(dzocwtdd+e76ushzy(uku2pm12x#+&m*%^)d6ar'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+### Docker Config
+DEBUG = int(os.environ.get("DEBUG", default=DEBUG))
+SECRET_KEY = os.environ.get("SECRET_KEY", default=SECRET_KEY)
+if os.environ.get("DJANGO_ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -55,6 +74,11 @@ TEMPLATES = [
         },
     },
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'agrovinos/static'),
+)
 
 LOGIN_REDIRECT_URL = '/ovino/'
 LOGOUT_REDIRECT_URL = '/'

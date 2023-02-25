@@ -1,0 +1,56 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Template Page Title</title>
+        <meta name="description" content="Template Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <!-- here -->
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+            @@include('common/titlebar.html')
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- for elements using the full available width of the wrapper -->
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- for elements using the standard Proton two-column layout -->
+                <!-- 8 + 4 layout for LG screen size -->
+                <!-- 6 + 6 layout for MD screen size -->
+                <div class="col-md-6 col-lg-8">
+                    <!-- left column -->
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <!-- right column -->
+                </div>
+            </div>
+        </section>
+
+        <!-- include any modal dialog componenets here -->
+        
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+
+    </body>
+</html>

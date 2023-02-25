@@ -1,0 +1,40 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Changelog</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+            <div class="row">
+                <div style="max-width:1000px;" class="col-lg-12">
+                    @@include('common/titlebar.html')
+                       
+                    @@include('components/changelog.html')
+                </div>
+            </div>
+        </section>
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+      </body>
+</html>

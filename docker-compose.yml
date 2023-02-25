@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    portal:
+        container_name: portal
+        hostname: portal
+        build:
+            context: ../unifametro_frameworkweb
+            dockerfile: Dockerfile
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/usr/src/unifametro_frameworkweb
+        ports:
+            - 8000:8000
+        env_file:
+            - ./.env.dev
