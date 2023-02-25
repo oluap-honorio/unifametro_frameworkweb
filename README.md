@@ -15,7 +15,8 @@
 *  [Atividade 3](doc/atv3.md)
 *  [Atividade 4](doc/atv4.md)
 *  [Atividade 5](doc/atv5.md)
-*  [Atividade 6](README.md#atividades)
+*  [Atividade 6](doc/atv6.md)
+*  [Atividade 7](doc/atv7.md)
 
 ## Questionários
 *  [1º dia](https://forms.office.com/r/gccCMec3Fx)

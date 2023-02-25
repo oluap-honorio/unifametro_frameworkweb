@@ -2,7 +2,7 @@
 
 *  Nesta página está descrito os passos para aplicar SGBD para PostgreSQL e prover restrição de acesso aos métodos
 
-### Gear um acesso sem privilégios de administrador:
+### Gerar um acesso sem privilégios de administrador:
 1. Ativar novamente o Ambiente Virtual e cadastrar usuário admin:
 ```
 $ env\Scripts\activate
@@ -78,7 +78,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ``` 
 
-### Mapear uma aplciação no Django Administrator
+### Mapear uma aplicação no Django Administrator
 1. Registrar a aplicação tag no Django Admin, no tag/admins.py
 ```
 from django.contrib import admin
