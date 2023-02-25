@@ -1,5 +1,6 @@
 from django.db import models
 from tag.models import Tag
+
 # Create your models here.
 class Ovino(models.Model):
     
