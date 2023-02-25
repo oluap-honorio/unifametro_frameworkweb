@@ -24,4 +24,4 @@
 
 ## Slides
 *  [1º dia](doc/media/PrimeiroDia.pdf)
-*  [2º dia](README.md#slides)
+*  [2º dia](doc/media/SegundoDia.pdf)
