@@ -94,7 +94,7 @@ admin.site.register(Tag)
 1. Vamos cadastrar algumas tags e ovinos
 2. Gerar um seed
 ```
-$ python manage.py dumpdata > data.json
+$ python manage.py dumpdata tag ovino auth > data.json
 ```
 3. Carregar um seed
 ```
