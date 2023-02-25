@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load sekizai_tags %}
+{% load widget_tweaks %}
+
+{% block "title" %}Cadastrar Ovino{% endblock %}
+{% block "conteudo" %}
+<div >
+  <h4 >Atenção!</h4>
+  <p> Você tem certeza que deseja deletar esse registro? </p>
+  <form method="POST" action="{% url 'ovino:delete' id=data.id %}">
+    {% csrf_token %}
+    <br>
+    <p>
+      <input type="submit"  value="Sim" >
+      <a  href="{% url 'ovino:index' %}"> Não </a>
+    </p>
+  </form>
+</div>
+{% endblock %}
