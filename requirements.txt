@@ -5,3 +5,4 @@ django-classy-tags==4.0.0
 django-sekizai==4.0.0
 django-widget-tweaks==1.4.12
 psycopg2-binary==2.9.5
+djangorestframework==3.14.0
