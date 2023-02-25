@@ -1,0 +1,142 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Graphs and Statistics</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+            @@include('common/titlebar.html')
+                      
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    @@include('components/preface.html')
+                    @@include('components/graph-bar.html')
+                    @@include('components/graph-area.html')
+                    <section class="panel stat stat-danger stat-color">
+                        <div class="panel-heading">
+                            <div>
+                                <i class="icon-coffee"></i>
+                                <h2>
+                                    COFFEE CONSUMED<br/>
+                                    DURING DEVELOPMENT
+                                </h2>
+                                <div class="counter counter-small">114 cups</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <section class="panel stat stat-success">
+                        <div class="panel-heading">
+                            <div>
+                                <i class="icon-thumbs-up"></i>
+                                <h2>
+                                    PROTON UI<br/>
+                                    LIKES
+                                </h2>
+                                <div id="like-count" class="counter">3421</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="panel stat stat-danger">
+                        <div class="panel-heading">
+                            <div>
+                                <i class="icon-thumbs-down"></i>
+                                <h2>
+                                    PROTON UI<br/>
+                                    DISLIKES
+                                </h2>
+                                <div class="counter">6</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="panel stat stat-success">
+                        <div class="panel-heading">
+                            <div>
+                                <i class="icon-shopping-cart"></i>
+                                <h2>
+                                    TIMES<br/>
+                                    BOUGHT
+                                </h2>
+                                <div id="buy-count" class="counter">1326</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    @@include('components/graph-basic.html')
+                    @@include('components/graph-donut.html')
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item button-demo">
+                                <h4 class="section-title">Statistics Boxes</h4>
+                                <p>
+                                    Responsive statistics boxes. Font icons can be in default color, or matching the right border color. Smaller font class can be used to fit larger counters data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('components/stats.html')
+                </div>
+
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item button-demo">
+                                <h4 class="section-title">Sparkline Boxes</h4>
+                                <p>
+                                    Responsive sparkline (small inline charts) boxes can be generated using data supplied either inline in the HTML, or via javascript.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('components/sparklines.html')
+                </div>
+            </div>
+        </section>
+
+
+        
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/graphsStats.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Raphael, used for graphs -->
+        <!-- http://raphaeljs.com/ -->
+            <script src="scripts/vendor/raphael-min.js"></script>
+        
+        <!-- Morris graphs -->
+        <!-- https://github.com/oesmith/morris.js -->
+            <script src="scripts/vendor/morris.min.js"></script>
+        <!-- jQuery Sparklines 2.1.2 -->
+        <!-- http://omnipotent.net/jquery.sparkline/#s-about -->
+            <script src="scripts/vendor/jquery.sparkline.min.js"></script>
+      </body>
+</html>

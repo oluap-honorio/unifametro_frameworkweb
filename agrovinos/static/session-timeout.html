@@ -1,0 +1,57 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Session Timeout</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+            <div class="row">
+                <div style="max-width:1000px;" class="col-lg-12">
+                    @@include('common/titlebar.html')
+                       
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">How it works</h4>
+                                <p>
+                                    After a set amount time (set to 3 seconds for this demo), a dialog is shown to the user with the option to either log out now, or stay connected. If log out now is selected, the page is redirected to a logout URL. If stay connected is selected, a keep-alive URL is requested through AJAX. If no options is selected after another set amount of time, the page is automatically redirected to a timeout URL.
+                                </p>
+                                <p>
+                                    You can start the timeout timer on your own event (you could for example check for a period of mouse inactivity, or lack of keyboard input).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/timeout.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+
+        <!-- bootstrap-session-timeout -->
+        <!-- https://github.com/orangehill/bootstrap-session-timeout -->
+        <script src="scripts/vendor/bootstrap-session-timeout.min.js"></script>
+
+      </body>
+</html>
