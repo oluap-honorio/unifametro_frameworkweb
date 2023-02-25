@@ -1,6 +1,7 @@
 |  [Home](/README.md)  |  [Atividade 3](/doc/atv3.md)
 
 *  Nesta página está descrito os passos para fazer um CRUD dos carneiros
+*  Instalar [VS code](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive)
 
 ### Construir uma aplicação CRUD com Django
 1. Pegar uma entidade independente do estudo de caso
@@ -34,7 +35,7 @@ class Ovino(models.Model):
 ```
 5. Criar a migração
 ```
-(env)$  python manage.py makemigations
+(env)$  python manage.py makemigrations
 ```
 6. Aplicar a migração
 ```
@@ -67,13 +68,66 @@ class OvinoForm(forms.ModelForm):
 ```
 9. Construir as páginas de CRUD
 - criar a pasta de templates na aplicação **ovino/templates**
-> onivo_create.html
-> onivo_delete.html
-> onivo_index.html
-> onivo_read.html
-> onivo_update.html
+> ovino_index.html
+>
+> ovino_delete.html
+>
+> ovino_index.html
+>
+> ovino_read.html
+>
+> ovino_update.html
 10.  Elaborar os métodos de CRUD no aquivo **ovino/view.py**
 ```
+from django.shortcuts import (get_object_or_404,
+                              render,
+                              HttpResponseRedirect)
+from .models import Ovino
+from .forms import OvinoForm
+from django.contrib.auth.decorators import login_required
+
+
+def index(request):
+    context = {}
+    context["dataset"] = Ovino.objects.all()
+    return render(request, "ovino_index.html", context)
+
+
+def create(request):
+    context = {}
+    form = OvinoForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect("/")
+    context['form'] = form
+    return render(request, "ovino_create.html", context)
+
+
+def read(request, id):
+    context = {}
+    context["data"] = Ovino.objects.get(id=id)
+    return render(request, "ovino_read.html", context)
+
+
+def update(request, id):
+    context = {}
+    obj = get_object_or_404(Ovino, id=id)
+    form = OvinoForm(request.POST or None, instance=obj)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect("/ovino/" + id + "/read")
+    context["form"] = form
+    return render(request, "ovino_update.html", context)
+
+
+def delete(request, id):
+    context = {}
+    obj = get_object_or_404(Ovino, id=id)
+    if request.method == "POST" and obj:
+        obj.delete()
+        return HttpResponseRedirect("/")
+    context["data"] = obj
+    return render(request, "ovino_delete.html", context)
 
 ```
 11. Inserir as rotas dos métodos na aplicação pelo arquivo **ovino/urls.py**
@@ -85,7 +139,7 @@ app_name = "ovino"
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('create', views.create, name='creat'),
+    path('create', views.create, name='create'),
     path('<id>/read', views.read, name='read'),
     path('<id>/update', views.update, name='update'),
     path('<id>/delete', views.delete, name='delete'),
@@ -114,7 +168,7 @@ pip freeze >> requirements.txt
 ### Restringir acesso com login
 1. Criar um usuário de acesso root
 ```
-(env)$  python manage.py creatsuperuser
+(env)$  python manage.py createsuperuser
 - Username (leave blank to use 'user'): admin
 - Email address: admin@unifametro.br
 - Password: pass.123
