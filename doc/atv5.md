@@ -88,6 +88,7 @@ $ python manage.py runserver
 1. Efetuar commit 
 ```
 (env)$ git add .
+
 (env)$ git commit -m "Finalizando Atividade 5"
 ```
 2. Realizar push de Branch com o SEU NOME
