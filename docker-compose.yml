@@ -14,3 +14,23 @@ services:
             - 8000:8000
         env_file:
             - ./.env.dev
+        depends_on:
+            - banco
+
+    banco:
+        container_name: banco
+        hostname: banco
+        image: postgres:14.6-alpine
+        restart: unless-stopped
+        volumes:
+            - postgres_data:/var/lib/postgresql/data/
+        ports:
+            - 19000:5432
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=pass.2023
+            - POSTGRES_DB=argovinos
+            - TZ=GMT-3
+
+volumes:
+    postgres_data:
