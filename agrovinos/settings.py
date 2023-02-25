@@ -37,16 +37,17 @@ if os.environ.get("DJANGO_ALLOWED_HOSTS"):
 # Application definition
 
 INSTALLED_APPS = [
+    'ovino.apps.OvinoConfig',
+    'tag.apps.TagConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ovino.apps.OvinoConfig',
     'sekizai',
     'widget_tweaks',
-    'tag.apps.TagConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
