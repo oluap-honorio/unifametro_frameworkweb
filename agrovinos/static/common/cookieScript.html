@@ -1,0 +1,11 @@
+
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
