@@ -1,108 +1,133 @@
 {% extends "base.html" %}
-
 {% load sekizai_tags %}
 {% load widget_tweaks %}
-
 {% block "title" %}Cadastrar Ovino{% endblock %}
 {% block "conteudo" %}
-    <form method="POST" enctype="multipart/form-data">
-			<!-- Security token -->
-			{% csrf_token %}
-			<div >
-				<div >
-					<div>
-						<i ></i>Ovino </div>
-					<div >
-						<div >
-							<a href="{% url 'ovino:index' %}" >
-								 Cancelar
-							</a>
-						</div>
-						<button  type="submit">Salvar</button>
-					</div>
-				</div>
-				<div >
-					{% if form.errors %}
-					<div >
-						{{ form.errors }}
-					</div>
-					{% endif %}
-					<div>
-						<div >
-							<div >
-								<div >
-									<div >
-										<label >Identificação:</label>
-										<div >
-											{% render_field form.identificador %}
-											{% if form.identificador.errors %}
-												<div>
-													{{ form.identificador.errors }}
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                  <div >
-										<label >Peso:</label>
-										<div >
-											{% render_field form.peso %}
-											{% if form.peso.errors %}
-												<div>
-													{{ form.peso.errors }}
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                  <div >
-										<label >Nascimento:</label>
-										<div >
-											{% render_field form.nascimento %}
-											{% if form.nascimento.errors %}
-												<div>
-													{{ form.nascimento.errors }}
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                  <div >
-										<label >Raça:</label>
-										<div >
-											{% render_field form.raca %}
-											{% if form.raca.errors %}
-												<div>
-													{{ form.raca.errors }}
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                  <div >
-										<label >Cor:</label>
-										<div >
-											{% render_field form.cor %}
-											{% if form.cor.errors %}
-												<div>
-													{{ form.cor.errors }}
-												</div>
-											{% endif %}
-										</div>
-									</div>
-                  <div >
-										<label >Gênero:</label>
-										<div >
-											{% render_field form.genero %}
-											{% if form.genero.errors %}
-												<div>
-													{{ form.genero.errors }}
-												</div>
-											{% endif %}
-										</div>
-									</div>
+<div class="panel panel-default panel-block">
+		<div class="list-group">
+			<div class="list-group-item" id="twelve-grid-system">
+				<h4 class="section-title">Cadastrar Ovino</h4>
+				<form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+				<!-- Security token -->
+				{% csrf_token %}
+					
+					<div class="form-group">
+						<label for="input-grid-2-10" class="col-lg-2 control-label">
+							Identificação:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.identificador|attr:"id:input-grid-2-10"|attr:"class:form-control" %}
+							{% if form.identificador.errors %}
+								<div>
+									{{ form.identificador.errors }}
 								</div>
-							</div>
+							{% endif %}
 						</div>
 					</div>
-				</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-210" class="col-lg-2 control-label">
+							Tag:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.tag|attr:"id:input-grid-2-210"|attr:"class:form-control" %}
+							{% if form.tag.errors %}
+								<div>
+									{{ form.tag.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-10" class="col-lg-2 control-label">
+							Identificação:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.identificador|attr:"id:input-grid-2-10"|attr:"class:form-control" %}
+							{% if form.identificador.errors %}
+								<div>
+									{{ form.identificador.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-11" class="col-lg-2 control-label">
+							Peso:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.peso|attr:"id:input-grid-2-11"|attr:"class:form-control" %}
+							{% if form.peso.errors %}
+								<div>
+									{{ form.peso.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-12" class="col-lg-2 control-label">
+							Nascimento:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.nascimento|attr:"id:input-grid-2-12"|attr:"class:form-control" %}
+							{% if form.nascimento.errors %}
+								<div>
+									{{ form.nascimento.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-13" class="col-lg-2 control-label">
+							Raça:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.raca|attr:"id:input-grid-2-13"|attr:"class:form-control" %}
+							{% if form.raca.errors %}
+								<div>
+									{{ form.raca.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-14" class="col-lg-2 control-label">
+							Cor:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.cor|attr:"id:input-grid-2-14"|attr:"class:form-control" %}
+							{% if form.cor.errors %}
+								<div>
+									{{ form.cor.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="input-grid-2-15" class="col-lg-2 control-label">
+							Gênero:
+						</label>
+						<div class="col-lg-10">
+							{% render_field form.genero|attr:"id:input-grid-2-15"|attr:"class:form-control" %}
+							{% if form.genero.errors %}
+								<div>
+									{{ form.genero.errors }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Salvar</button>
+					<a href="{% url 'ovino:index' %}" class="btn btn-default" >
+						Cancelar
+				</a>
+				</form>
 			</div>
-	</form>
-  {% endblock %}  
-  
+		</div>
+	</div>
+{% endblock %}
