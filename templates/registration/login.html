@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" />
     <title>Login</title>
   </head>
   <body class="h-full">
@@ -38,9 +39,9 @@
         {% csrf_token %}
 
         <div>
-          <label for="id_username" class="block text-sm font-medium text-gray-700">E-mail</label>
+          <label for="id_username" class="block text-sm font-medium text-gray-700">Usuário</label>
           <div class="mt-1">
-            <input id="id_username" name="username" type="email" autocomplete="email" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+            <input id="id_username" name="username" type="text" autocomplete="username" required class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
           </div>
         </div>
 
