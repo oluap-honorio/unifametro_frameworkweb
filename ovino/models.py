@@ -1,8 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
 class Ovino(models.Model):
-    
+
     identificador = models.CharField(max_length=16, unique=True)
     peso = models.FloatField()
     nascimento = models.DateTimeField()

@@ -1,0 +1,409 @@
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Getting Started</h4>
+								<p>
+									Proton is a <span class="text-bold">fully responsive mobile first Admin Template</span> based on Bootstrap 3. It features a <span class="text-bold">highly flexible multi-column content structure</span> built using the best Html5 and CSS3 have to offer, while also staying <span class="text-bold">compatible down to Internet Explorer 8.</span>
+								</p>
+								<p>
+									Proton has a few easy ways to get started, each one appealing to a different skill level and use case. The fastest way is to use the the <span class="text-bold">precompiled and minified version</span> of our CSS, JavaScript, fonts and icons. From there, you can use the compiled html template to get started on building you own custom Admin panel.
+								</p>
+								<p>
+									If you ever need to modify any of the components, you can use the <span class="text-bold">non-minified version</span>. You only need to find and copy the component's selector and styles from our original CSS file, and paste them in your custom stylesheet. <br>
+								</p>
+								<p>
+									For instance, to customize the main nav background, just copy the <span class="text-success text-bold">nav.main-menu</span> style specification. <br>
+									No need for prepending additional classes, or appending !important here. Keep it simple.
+								</p>
+								<p>
+									Rinse and repeat until you're happy with your customizations.
+								</p>
+								<p>
+									Proton if fully based on Bootstrap 3 and if you're not already familiar with Bootstrap, you can find all the necessary documentation here:<br> <a href="http://getbootstrap.com/getting-started/">http://getbootstrap.com/getting-started/</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Using LESS To Customize</h4>
+								<p>
+									While this is not something we would recommend to folks new to Bootstrap and LESS, you can also use the <span class="text-bold">development version</span> of Proton, giving you access to all the tools to perform even the most complex customizations with ease.
+								</p>
+								<p>
+									All the original LESS files used for development are included for you to modify.
+								</p>
+								<p>
+									Also available along with the predefined themes you can see in the demo is the <span class="text-success text-bold">theme-creator.less</span> file. It contains a set of mixins to allow you to create your own custom color theme in just a minutes.
+									To see how easy it is, you can simply open one of the theme files already in use. For example, the <span class="text-success text-bold">theme-pastel-marine.less</span> file.
+								</p>
+								<p>
+									If you're new to LESS and want to give it a try, you can find all the information you need here: <br>
+									<a href="http://lesscss.org/">http://lesscss.org/</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Built With Grunt</h4>
+								<p>
+									If you are working on a large project, requiring frequent changes to Html, JS and LESS files, Proton also comes packed with a set of Grunt development tools to make your life easier.
+								</p>
+								<p>
+									If you are not familiar with Grunt you will still be able to make all the customizations you may need using the non-minified version, or the development version of Proton. The <span class="text-bold">Grunt version</span> simply gives more advanced developers a chance to greatly reduce their development time by utilizing simple <span class="text-bold">automatic LESS compiler</span> triggered on any change to the LESS files. And of course the live reload which gives you the benefit of not having to reload the browser(s) every time you make a change. This is especially useful when developing responsive website because it saves a lot of time otherwise spent on reloading manually in every browser and across all devices used for testing.
+								</p>
+								<p>
+									Proton was developed using <span class="text-bold">Yeoman generator-webapp 0.4.2</span> which comes with <span class="text-bold">Grunt 0.4.1</span>. In addition to a wide range of tools that come out of the box with with generator-webapp, Proton also has the <span class="text-bold">compile LESS files to CSS</span> and <span class="text-bold">include files and replace variables</span> Grunt tasks in it's Gruntfile.js configuration file.
+								</p>
+								<p>
+									To use them, you'll only need to install these two additional packages using npm, easy: <br>
+									<span class="text-success text-bold">npm install grunt-contrib-less --save-dev</span> <br>
+									<span class="text-success text-bold">npm install grunt-include-replace --save-dev</span> <br>
+								</p>
+								<p>
+									So your dependency list is basically this: <br>
+									<span class="text-success text-bold">
+										├── grunt@0.4.1 (comes with generator-webapp 0.4.2) <br>
+										├── grunt-contrib-less@0.7.0 <br>
+										└── grunt-include-replace@1.1.1 <br>
+									</span>
+								</p>
+								<p>
+									If you want to know more about Yeoman and Grunt, we recommend these two links: <br>
+									<a href="http://yeoman.io/">http://yeoman.io/</a> <br>
+									<a href="http://gruntjs.com/">http://gruntjs.com/</a> <br>
+								</p>
+								<p>
+									More information on the grunt-contrib-less and grunt-include-replace tasks are available on GitHub: <br>
+									<a href="https://github.com/gruntjs/grunt-contrib-less">https://github.com/gruntjs/grunt-contrib-less</a> <br>
+									<a href="https://github.com/alanshaw/grunt-include-replace">https://github.com/alanshaw/grunt-include-replace</a>
+								</p>
+								<p>
+									Please note that there are two template Grunt config files: <span class="text-success text-bold">Gruntfile-min.js</span> and <span class="text-success text-bold">Gruntfile-dev.js</span>. The first one is used to generate a minimized version of Proton, and the second (also used as the default Grunt config file) generates a dev version of Proton and can be used to start a Grunt dev server.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Layout</h4>
+								<p>
+									Proton is a mobile first Admin Theme, and as such the base layout is aimed at providing a <span class="text-bold">native app experience</span>. The <span class="text-success text-bold">body</span> element is fixed, non-scrollable. Only the elements with <span class="text-success text-bold">.scrollable</span> class are scrollable, with no use of JavaScript scrolling plug-ins. This provides a <span class="text-bold">app-like native elastic scrolling</span> with best results on iOS and Android devices.
+								</p>
+								<p>
+									Every inner page has a title bar with JavaScript generated title. This is of course fully customizable. JavaScript function responsible for this is the same one used to generate the tree menu and the breadcrumbs menu. More info on this is available later in the document.
+								</p>
+								<p>
+									The scrollable <span class="text-success text-bold">.wrapper</span> section houses the main page content and is used on all pages. All inner pages feature a <span class="text-bold">Main Navigation Menu, User Navigation Menu, Sidebar Menu and Breadcrumb Strip.</span>
+								</p>
+								<p>
+									<span class="text-bold">Login page</span> obviously only displays the login form, while the <span class="text-bold">Dashboard page</span> doesn't need the Sidebar Menu and thus has more space available for the main content.
+								</p>
+								<p>
+									Less layout file is: <span class="text-success text-bold">/app/less/components/layout.less</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Main Navigation Menu</h4>
+								<p>
+									Main Navigation Menu is a two level menu that slides in and out on mouseover, or on touch if viewed on touch devices. It is fully responsive and transforms to mobile version for XS screen sizes (by default this is defined at 480px).
+								</p>
+								<p>
+									Html component file for the Main Navigation Menu is: <span class="text-success text-bold">/app/common/main-nav.html</span>
+								</p>
+								<p>
+									Less file for the Main Navigation Menu is: <span class="text-success text-bold">/app/less/components/main-nav.less</span>
+								</p>
+								<p>
+									JavaScript file for the Main Navigation Menu is: <span class="text-success text-bold">/app/scripts/proton/main-nav.js</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">User Navigation Menu</h4>
+								<p>
+									User Navigation Menu is a custimizable menu positioned at the upper right part of the screen. It is fully responsive and transforms to mobile version for XS screen sizes (by default this is defined at 480px).
+								</p>
+								<p>
+									By default, Proton User Navigation Menu comes with three menu items: <span class="text-bold">Color Scheme Switcher, Messages and Notifications</span>. Messages and Notifications can also have an <span class="text-bold">animated counter</span> alterting the user on the number of unread items.
+								</p>
+								<p>
+									Html component file for the User Navigation Menu is: <span class="text-success text-bold">/app/common/user-nav.html</span>
+								</p>
+								<p>
+									Less file for the User Navigation Menu is: <span class="text-success text-bold">/app/less/components/user-nav.less</span>
+								</p>
+								<p>
+									JavaScript file for the User Navigation Menu is: <span class="text-success text-bold">/app/scripts/proton/user-nav.js</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Sidebar Menu</h4>
+								<p>
+									Sidebar Menu is a custimizable menu positioned right next to the Main Navigation Menu. It is fully responsive and transforms to mobile version for XS screen sizes (by default this is defined at 480px).
+								</p>
+								<p>
+									Sidebar Menu displays a <span class="text-bold">logo</span>, <span class="text-bold">module name</span> (with the <span class="text-bold">optional "Add New" button</span> to the right) and an universal <span class="text-bold">search field</span>. There is also a <span class="text-bold">jsTree tree menu</span> below the search field. 
+									Tree serves as an <span class="text-bold">infinite-level menu</span> that can be used to link deep inside the module structure. Tree menu is skinned to render in a touch-friendly size for tablet and mobile devices.
+								</p>
+								<p>
+									Entire tree scrolls independently and as such, it is not limited by the vertical size of the Sidebar Menu. By default, the contents of the tree is <span class="text-bold">generated dynamically using JavaScript</span> by searching for on-page h4 title elements with class <span class="text-success text-bold">.section-title</span>
+								</p>
+								<p>
+									Main menu can be retracted and the <span class="text-bold">jQuery Cookie plugin</span> is used to remember it's state.
+								</p>
+								<p>
+									Html component file for the Sidebar Menu is: <span class="text-success text-bold">app/common/sidebar.html</span>
+								</p>
+								<p>
+									Less file for the Sidebar Menu is: <span class="text-success text-bold">/app/less/components/sidebar.less</span>
+								</p>
+								<p>
+									JavaScript file for the Sidebar Menu is: <span class="text-success text-bold">/app/scripts/proton/sidebar.js</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Breadcrumb Strip</h4>
+								<p>
+									Breadcrumb Strip uses xbreadcrumbs jQuery Plugin. Breadcrumbs are styled differently for desktop and mobile screen sizes.
+								</p>
+								<p>
+									Breadcrumb Strip uses <span class="text-bold">xbreadcrumbs jQuery Plugin</span>. It is positioned right next to the Sidebar Menu and is fully responsive. It transforms to mobile version for XS screen sizes (by default this is defined at 480px).
+								</p>
+								<p>
+									Desktop sized Breadcrumb Strip also features drop-down menus allowing you to navigate within the current page or to another page.
+								</p>
+								<p>
+									The same function that generates the sidebar tree (located in the <span class="text-success text-bold">/app/scripts/proton/sidebar.js</span> file), also generates the drop-down for on-page navigation by searching for h4 title elements with class <span class="text-success text-bold">.section-title</span>.
+								</p>
+								<p>
+									Html component file for the Sidebar Menu is: <span class="text-success text-bold">/app/common/breadcrumbs.html</span>
+								</p>
+								<p>
+									Less file for jthe Sidebar Menu is: <span class="text-success text-bold">/app/less/proton/breadcrumbs.less</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Dashboard Page</h4>
+								<p>
+									Dashboard Page features a <span class="text-bold">Dashboard Menu, Sortable Quicklaunch Bar and Sortable Widget Area.</span> All of which are customizable and responsive.
+								</p>
+								<p>
+									<span class="text-bold">Quicklaunch items</span> can be reordered via jQuery UI sortable plug-in. Modal dialog to add new items can be launched by clicking the plus icon or using the Dashboard Menu (cog icon).
+								</p>
+								<p>
+									Widget Area can house as many widgets as you might need. The widgets are 300px &times; 250px two-sided boxes. <span class="text-bold">Widgets can be flipped</span> to the other (set up) side by hovering the widget and clicking the cog icon appearing in the right upper corner. In addition to being fully responsive, the Widget Area is also sortable. <span class="text-bold">Widgets can be reordered</span> via jQuery UI sortable plug-in.
+								</p>
+								<p>
+									Html file for the Dashboard Page is: <span class="text-success text-bold">app/index.html</span>
+								</p>
+								<p>
+									Less file for the Dashboard Page is: <span class="text-success text-bold">/app/less/components/dashboard.less</span>
+								</p>
+								<p>
+									JavaScript file for the Dashboard Page is: <span class="text-success text-bold">/app/scripts/proton/dashboard.js</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Fonts and Icons</h4>
+								<p>
+									Proton uses a custom webfont <span class="text-bold">Titillium Web</span>, declared in <span class="text-success text-bold">/app/styles/font-titillium.css</span>
+								</p>
+								<p>
+									Proton uses <span class="text-bold">Font Awesome 3.2.1</span> ( <a href="http://fontawesome.io/">http://fontawesome.io/</a> ) to power all on-site icons. These are declared in <span class="text-success text-bold">/app/styles/font-awesome.css</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Modular JavaScript</h4>
+								<p>
+									Proton features a highly modular JavaScript system. Every page only uses the JavaScript it needs and nothing more. The two common JavaScript files are: <br>
+									<span class="text-success text-bold">/app/scripts/main.js</span> <br>
+									<span class="text-success text-bold">/app/scripts/proton/common.js</span>
+								</p>
+								<p>
+									<span class="text-success text-bold">/app/scripts/main.js</span> creates a <span class="text-success text-bold">proton</span> root object used to house all other objects used by individual proton pages.
+								</p>
+								<p>
+									By default the <span class="text-success text-bold">verboseBuild</span> variable in <span class="text-success text-bold">/app/scripts/main.js</span> is set to true. This lets you monitor the building of all Proton scripts through the browser JavaScript console. You can try monitoring it's output out on any of the inner pages or the Dashboard.
+								</p>
+								<p>
+									<span class="text-success text-bold">/app/scripts/main.js</span> also contains detection scripts for IE and iOS detection needed to iron out some device / browser specific CSS differences.
+								</p>
+								<p>
+									<span class="text-success text-bold">/app/proton/common.js</span> controls some basic aspects of Proton appearance such as animated page rendering for browsers supporting this feature, scroll corrections for iOS devices and window resize detection along with everything that needs to happen after resize is detected. It also enables Bootstrap 3 tooltips which are disabled by default.
+								</p>
+								<p>
+									Proton is fully compatible with all Bootstrap 3.1.0 JavaScript functions and <span class="text-success text-bold">bootstrap.min.js</span> is included on all pages.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">External JavaScript</h4>
+								<p>
+									Proton uses <span class="text-bold">jQuery 2.0.3</span> ( <a href="http://jquery.com/">http://jquery.com/</a> ) hosted by Google CDN to ensure a stable, reliable and high-speed application. Older browsers like IE 8 fall back to jQuery 1.10.2
+								</p>
+								<p>
+									Proton is fully compatible with all <span class="text-bold">Bootstrap 3.1.0 JavaScript</span> functions ( <a href="http://getbootstrap.com/javascript/">http://getbootstrap.com/javascript/</a> ) and <span class="text-success text-bold">bootstrap.min.js</span> is included on all pages.
+								</p>
+								<p>
+									Proton uses <span class="text-bold">Modernizr</span> ( <a href="http://modernizr.com/">http://modernizr.com/</a> ) to detect supported browser features and <span class="text-success text-bold">modernizr.js</span> is included on all pages.
+								</p>
+								<p>
+									Proton uses cookies to remember application state, for purposes of displaying on-page help alerts, remembering selected color schemes and the state of the Sidebar menu. For this, <span class="text-success text-bold">jquery.cookie.js</span> ( <a href="https://github.com/carhartl/jquery-cookie">https://github.com/carhartl/jquery-cookie</a> ) is included on all pages.
+								</p>
+								<p>
+									Below is the full list of Javascript plugins used to power Proton inner pages. Individual plugins are located at the bottom of the page using the plugin (along with the comment containing plugin name and website). Any plugin css is included either in page head or as a separate less file.
+								</p>
+
+								<ul class="font-icons-list">
+								    <li>
+								    	<span class="text-bold">bootstrap-datetimepicker.js</span> - <a href="http://www.malot.fr/bootstrap-datetimepicker">http://www.malot.fr/bootstrap-datetimepicker</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">bootstrap-slider.js v2.0.0</span> - <a href="http://www.eyecon.ro/bootstrap-slider">http://www.eyecon.ro/bootstrap-slider</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">bootstrapSwitch v1.8</span> - <a href="http://www.larentis.eu/switch">http://www.larentis.eu/switch</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">bootstrap-tagsinput v0.3.6</span> - <a href="https://github.com/TimSchlechter/bootstrap-tagsinput">https://github.com/TimSchlechter/bootstrap-tagsinput</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Character Count jQuery Plugin</span> - <a href="http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas">http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">DataTables</span> - <a href="http://datatables.net">http://datatables.net</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">DataTables mods for Bootstrap 3</span> - <a href="https://github.com/Jowin/Datatables-Bootstrap3">https://github.com/Jowin/Datatables-Bootstrap3</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Farbtastic Color Picker 1.2</span> - <a href="http://acko.net/blog/farbtastic-jquery-color-picker-plug-in">http://acko.net/blog/farbtastic-jquery-color-picker-plug-in</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Javascript Code Prettifier</span> - <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html">http://google-code-prettify.googlecode.com/svn/trunk/README.html</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">jsTree 1.0-rc3</span> - <a href="http://jstree.com">http://jstree.com</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Masked Input plugin</span> - <a href="http://digitalbush.com/projects/masked-input-plugin">http://digitalbush.com/projects/masked-input-plugin</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">jQuery Pines Notify (pnotify) Plugin 1.2.0</span> - <a href="http://pinesframework.org/pnotify">http://pinesframework.org/pnotify</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">jQuery Raty - A Star Rating Plugin</span> - <a href="http://wbotelhos.com/raty">http://wbotelhos.com/raty</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">jQuery.textareaCounter</span> - <a href="http://bavotasan.com">http://bavotasan.com</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Uniform</span> - <a href="http://uniformjs.com">http://uniformjs.com</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Raphael</span> - <a href="http://raphaeljs.com">http://raphaeljs.com</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Morris</span> - <a href="https://github.com/oesmith/morris.js">https://github.com/oesmith/morris.js</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Numeral</span> - <a href="http://adamwdraper.github.com/Numeral-js">http://adamwdraper.github.com/Numeral-js</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Respond v1.3.0</span> - <a href="https://github.com/scottjehl/Respond">https://github.com/scottjehl/Respond</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Select2</span> - <a href="http://ivaynberg.github.io/select2">http://ivaynberg.github.io/select2</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Summernote.js v0.4.2</span> - <a href="http://hackerwins.github.io/summernote">http://hackerwins.github.io/summernote</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Autotab - jQuery plugin 1.5b</span> - <a href="https://github.com/Mathachew/jquery-autotab">https://github.com/Mathachew/jquery-autotab</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Parsley.js 1.2.2</span> - <a href="http://parsleyjs.org">http://parsleyjs.org</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Dropzone v3.7.3</span> - <a href="http://www.dropzonejs.com">http://www.dropzonejs.com</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Fullcalendar v1.6.4</span> - <a href="http://arshaw.com/fullcalendar">http://arshaw.com/fullcalendar</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Fileinput.js v3.0.0-p7</span> - <a href="http://jasny.github.com/bootstrap/javascript.html#fileinput">http://jasny.github.com/bootstrap/javascript.html#fileinput</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Intro.js v0.6.0</span> - <a href="https://github.com/usablica/intro.js">https://github.com/usablica/intro.js</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Bootstrap-session-timeout v1.0.3</span> - <a href="https://github.com/orangehill/bootstrap-session-timeout">https://github.com/orangehill/bootstrap-session-timeout</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">Tinymce 4.0.12</span> - <a href="http://www.tinymce.com">http://www.tinymce.com</a>
+								    </li>
+								    <li>
+								    	<span class="text-bold">jQuery Sparklines 2.1.2</span> - <a href="http://omnipotent.net/jquery.sparkline/#s-about">http://omnipotent.net/jquery.sparkline/#s-about</a>
+								    </li>
+
+								    
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default panel-block">
+						<div class="list-group">
+							<div class="list-group-item">
+								<h4 class="section-title">Proton UI Changelog</h4>
+								<p>
+									You can find the Proton UI Changelog <a href="changelog.html">here</a>.
+								</p>
+							</div>
+						</div>
+					</div>
