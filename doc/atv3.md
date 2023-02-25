@@ -68,11 +68,15 @@ class OvinoForm(forms.ModelForm):
 ```
 9. Construir as páginas de CRUD
 - criar a pasta de templates na aplicação **ovino/templates**
-> onivo_create.html
-> onivo_delete.html
-> onivo_index.html
-> onivo_read.html
-> onivo_update.html
+> ovino_index.html
+>
+> ovino_delete.html
+>
+> ovino_index.html
+>
+> ovino_read.html
+>
+> ovino_update.html
 10.  Elaborar os métodos de CRUD no aquivo **ovino/view.py**
 ```
 from django.shortcuts import (get_object_or_404,
@@ -135,7 +139,7 @@ app_name = "ovino"
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('create', views.create, name='creat'),
+    path('create', views.create, name='create'),
     path('<id>/read', views.read, name='read'),
     path('<id>/update', views.update, name='update'),
     path('<id>/delete', views.delete, name='delete'),
@@ -164,7 +168,7 @@ pip freeze >> requirements.txt
 ### Restringir acesso com login
 1. Criar um usuário de acesso root
 ```
-(env)$  python manage.py creatsuperuser
+(env)$  python manage.py createsuperuser
 - Username (leave blank to use 'user'): admin
 - Email address: admin@unifametro.br
 - Password: pass.123
