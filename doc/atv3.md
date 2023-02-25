@@ -84,11 +84,15 @@ class OvinoForm(forms.ModelForm):
 9. Construir as páginas de CRUD
 
 - criar a pasta de templates na aplicação **ovino/templates**
-  > onivo_create.html
-  > onivo_delete.html
-  > onivo_index.html
-  > onivo_read.html
-  > onivo_update.html
+  > ovino_index.html
+  >
+  > ovino_delete.html
+  >
+  > ovino_index.html
+  >
+  > ovino_read.html
+  >
+  > ovino_update.html
 
 10. Elaborar os métodos de CRUD no aquivo **ovino/view.py**
 
@@ -191,7 +195,7 @@ pip freeze >> requirements.txt
 1. Criar um usuário de acesso root
 
 ```
-(env)$  python manage.py creatsuperuser
+(env)$  python manage.py createsuperuser
 - Username (leave blank to use 'user'): admin
 - Email address: admin@unifametro.br
 - Password: pass.123
