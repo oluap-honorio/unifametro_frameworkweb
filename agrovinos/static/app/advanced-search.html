@@ -1,0 +1,65 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Advanced Search</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar-advanced.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+            <div class="row">
+                <div style="max-width:1000px;" class="col-lg-12">
+                    @@include('common/titlebar.html')
+                    
+                    <form action="#">
+                        <div class="panel panel-default panel-block">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <h4 class="section-title">Sidebar Advanced Search Feature</h4>
+                                    <p>
+                                        Toggle the Advanced Search by clicking on the vertical ellipsis icon next to the search glass in the Sidebar search input field.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Select2 For Bootstrap3 -->
+        <!-- https://github.com/fk/select2-bootstrap-css -->
+            <script src="scripts/vendor/select2.min.js"></script>
+
+        <!-- uniformJs -->
+            <script src="scripts/vendor/jquery.uniform.min.js"></script>
+
+        <!-- Date Time Picker -->
+        <!-- https://github.com/smalot/bootstrap-datetimepicker -->
+        <!-- NOTE: Original JS file is modified: Proton is forcing bootstrap 2 plugin mode in order to support font icons -->
+            <script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+      </body>
+</html>

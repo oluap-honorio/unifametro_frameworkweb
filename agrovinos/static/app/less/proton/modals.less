@@ -1,0 +1,49 @@
+@modal-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05);
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Actual modal
+.modal-content {
+  border-radius: 0;
+  .box-shadow(@modal-shadow);
+}
+
+// Modal background
+.modal-backdrop {
+  &.in { .opacity(.3); }
+}
+
+.modal-body {
+  background-color: @panel-bg;
+}
+
+.modal-title{
+  i{
+    position: relative;
+    top: -1px;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 0;
+    margin-right: 10px;
+    font-size: 24px;
+  }
+}
+
+// Footer (for actions)
+.modal-footer {
+  margin-top: 0;
+}
+
+// Scale up the modal
+@media screen and (min-width: @screen-tablet) {
+  .modal-content {
+    .box-shadow(@modal-shadow);
+  }
+}
