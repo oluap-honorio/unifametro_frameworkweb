@@ -41,34 +41,71 @@ INSTALLED_APPS = [
 ```
 id = models.UUIDField(    primary_key=True,default=uuid.uuid4,null=False,blank=True)
 ```
-1. Atualizar migrations
-2. Aplicar migrate
-3. Configurar o serializer no arquivo tag/serializers.py
-4. Configurar ViewSets no tag/views.py
-5. Prover rotas no tag/urls.py
-6. Publicar as URLS no agrovinos/urls.py
 
-### ToDo
-1. todo
+2. Atualizar migrations
+```
+$ python manage.py makemigrations
+```
+3. Aplicar migrate
+```
+$ python manage.py migrate
+```
+4. Configurar o serializer no arquivo tag/serializers.py
+```
+from rest_framework import serializers
+from .models import Tag
 
-### ToDo
-1. todo
 
-### ToDo
-1. todo
+class TagSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Tag
+    fields = [
+      'id',
+      'created_at',
+      'updated_at',
+      'serial'
+    ]
+```
+5. Configurar ViewSets no tag/views.py
+```
+from .serializers import TagSerializer
+from rest_framework import viewsets, permissions
+from .models import Tag
 
-### ToDo
-1. todo
 
-### ToDo
-1. todo
+class TagViewSet(viewsets.ModelViewSet):
+  queryset = Tag.objects.all()
+  serializer_class = TagSerializer
+  permission_classes = [permissions.IsAuthenticated]
+``` 
+7. Prover rotas no tag/urls.py
+```
+from rest_framework.routers import DefaultRouter
+from .views import TagViewSet
+
+
+app_name = 'tag'
+
+router = DefaultRouter(trailing_slash=False)
+router.register(r'tag', TagViewSet)
+
+urlpatterns = router.urls
+```
+7. Publicar as URLS no final de agrovinos/urls.py
+```
+urlpatterns += [
+  path('tag/v1/', include('tag.urls', namespace='tag')),
+  path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+]
+```
+1. Acessao documentação na [api REST](http://127.0.0.1:8000/tag/v1/) 
 
 ### Publicar atividade
 1. Efetuar commit 
 ```
 (env)$ git add .
 
-(env)$ git commit -m "Finalizando Atividade 5"
+(env)$ git commit -m "Finalizando Atividade 7"
 ```
 2. Realizar push de Branch com o SEU NOME
 ```

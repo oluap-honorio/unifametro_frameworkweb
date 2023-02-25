@@ -180,7 +180,7 @@ $  docker-compose up -d --build
 ```
 $ git add .
 
-$ git commit -m "Finalizando Atividade 5"
+$ git commit -m "Finalizando Atividade 6"
 ```
 2. Realizar push de Branch com o SEU NOME
 ```
