@@ -103,7 +103,7 @@ $ python manage.py migrate
 $ python manage.py loaddata data.json
 ```
 ### Aplicar SGBD PostgreSQL
-1. Adicionar dependencias do postgres no docker-compose.yml
+1. Adicionar dependencias do postgres no **docker-compose.yml**
 ```
         env_file:
             - ./.env.dev
@@ -131,9 +131,9 @@ volumes:
 2. Adicionar configurrações od banco no arquivo .env.dev
 ```
 SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=smallDB
+SQL_DATABASE=argovinos
 SQL_USER=admin
-SQL_PASSWORD=lc3.2023
+SQL_PASSWORD=pass.2023
 SQL_HOST=banco
 SQL_PORT=5432
 ```
@@ -161,9 +161,9 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update \
  && apk add postgresql-dev gcc python3-dev musl-dev
 ```
-5. Instalar requirements.txt
+5. Aplicar o driver no final do requirements.txt
 ```
-psycopg2-binary==2.9.1
+psycopg2-binary==2.9.5
 ```
 6. Recompilar e erguer o container
 ```
@@ -171,15 +171,16 @@ $  docker-compose up -d --build
 ```
 7. Aplicar os migrations
 ```
- docker-compose exec banco psql --username=hello_django --dbname=hello_django_dev
+ docker-compose exec banco psql --username=hello_django --dbname=hello_django_dev doc/atv6.md
 ```
 
 
 ### Publicar atividade
 1. Efetuar commit 
 ```
-(env)$ git add .
-(env)$ git commit -m "Finalizando Atividade 5"
+$ git add .
+
+$ git commit -m "Finalizando Atividade 5"
 ```
 2. Realizar push de Branch com o SEU NOME
 ```

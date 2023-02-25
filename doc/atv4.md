@@ -35,7 +35,7 @@ $ env\Scripts\activate
 ```
 3. Efetuar instalação das dependências Python
 ```
-(env)$ >pip install -r requirements.txt
+(env)$ pip install -r requirements.txt
 ```
 4. Validar instalação
 ```
