@@ -33,7 +33,7 @@ $ python manage.py createsuperuser --email admin@unifametro.br --username admin
     </body>
 </html>
 ```
-3. Alterar um dos tamplates da aplicação ovino, para herdar o base.html. Ex.: ./onivo/templates/ovini_create.html
+3. Alterar um dos tamplates da aplicação ovino, para herdar o base.html. Ex.: ./onivo/templates/ovino_create.html
 ```
 {% extends "base.html" %}
 

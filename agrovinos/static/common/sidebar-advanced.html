@@ -1,0 +1,118 @@
+
+        <section class="sidebar extended">
+            <script>
+            if ($.cookie('protonSidebar') == 'retracted') {
+                $('.sidebar').removeClass('extended').addClass('retracted');
+                $('.wrapper').removeClass('retracted').addClass('extended');
+            }
+            if ($.cookie('protonSidebar') == 'extended') {
+                $('.wrapper').removeClass('extended').addClass('retracted');
+                $('.sidebar').removeClass('retracted').addClass('extended');
+            }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <img src="images/proton-logo.png" alt="proton-logo">
+                        <h5>
+                            <span class="title">
+                                Proton
+                            </span>
+                            <span class="subtitle">
+                                CMS ADMIN PANEL
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="title">
+                        <i class="icon-shopping-cart"></i>
+                        <span>
+                            CATEGORIES
+                        </span>
+                        <a href="javascript:;" class="add">
+                            <i class="icon-plus-sign"></i>
+                            <span>
+                                ADD NEW
+                            </span>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="button"><i class="icon-search"></i></button>
+                            <button class="btn btn-default btn-advanced-search" type="button"><i class="icon-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body tree-body">
+                    <div class="scrollable clearfix">
+                        <div class="advanced-search">
+                            <div class="panel panel-default">
+                                <div class="arrow adv-search-arrow"></div>
+                                <div class="panel-heading">
+                                    <i class="icon-search"></i>
+                                    <span>Advanced Search</span>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="list-group">
+                                        <div class="list-group-item">
+                                            <div class="form-group">
+                                                <label>Search By</label>
+                                                <div>
+                                                    <select class="select2">
+                                                        <option selected="" value="price">Unit Price</option>
+                                                        <option value="spread">Supplier</option>
+                                                        <option value="buyer">Buyer</option>
+                                                        <option value="status">Status</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label><i class="icon-exchange"></i> Compare to Date</label>
+                                                <div>
+                                                    <input type="text" value="2012-05-15 21:05" class="datetimepicker-search form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>VAT</label>
+                                                <div>
+                                                    <select class="select2">
+                                                        <option selected="" value="Inclusive">Inclusive</option>
+                                                        <option value="Exclusive">Exclusive</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" value="">
+                                                        Adjust Prices According to Quantity
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" checked="checked">
+                                                        Show Hidden Products
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item text-right">
+                                            <button type="button" class="btn btn-sm btn-success close-advanced-search">APPLY</button>
+                                            <button type="button" class="btn btn-sm btn-default">RESET</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="proton-tree"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
