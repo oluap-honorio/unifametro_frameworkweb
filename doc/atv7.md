@@ -1,78 +1,52 @@
 |  [Home](/README.md)  |  [Atividade 7](/doc/atv7.md)
 
-*  Nesta página está descrito os passos para aplicar SGBD para PostgreSQL e prover restrição de acesso aos métodos
+*  Nesta página está descrito os passos para gerar aplicação REST
 
-### Gear um acesso sem privilégios de administrador:
-1. Ativar novamente o Ambiente Virtual e cadastrar usuário admin:
-```
-$ env\Scripts\activate
-$ python manage.py createsuperuser --email admin@unifametro.br --username admin
-```
-2. Acessa o [admin](http://127.0.0.1:8000/admin/) no navegador
-3. Cadastrar um usuário sem privilégios de administração
-- Nome: *user*
-- Senha: *pass.123*
-4. Atribuir para ele a permissão **ovino | ovino | Can add ovino**
-5. Ajusta o idioma do projeto Django, atualizando a variável LANGUAGE_CODE no agrovinos/settings.py 
-```
-LANGUAGE_CODE = 'pt-br'
-``` 
+### Instalando o Django Rest Framework
 
-### Criando uma nova aplicação
-1. Adicione a aplicação **tag** ao projeto agrovinos
-``` 
-$ python manage.py startapp tag
-``` 
-2. Casdatre ela na variável INSTALLED_APPS no agrovinos/settings.py
-``` 
-# Application definition
-
+1. Derrubar container Docker
+```
+docker-compose down -v
+```
+2. Ativar ambientevirtual
+```
+env\Scripts\activate
+```
+3. Instalar o pacote rest_framework com pip
+```
+pip install djangorestframework
+```
+4. Atualizar o requirement.txt
+```
+djangorestframework==3.14.0
+```
+5. Atualizar a variável INSTALLED_APPS no agrovinos/settings.py 
+```
 INSTALLED_APPS = [
     'ovino.apps.OvinoConfig',
     'tag.apps.TagConfig',
-``` 
-3. Criar o modelo Tag na nova aplicação, no tag/models.py
-``` 
-from django.db import models
-import uuid
-
-
-class Tag(models.Model):
-    
-    serial = models.CharField(max_length=16, unique=True)
-    id = models.UUIDField(    primary_key=True,default=uuid.uuid4,null=False,blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.serial
-``` 
-4. Atualizar os migrations
-``` 
-$ python manage.py makemigrations
-``` 
-5. Atializa a base de dados
-``` 
-$ python manage.py migrate
-``` 
-
-### Mapear uma aplciação no Django Administrator
-1. Registrar a aplicação tag no Django Admin, no tag/admins.py
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'sekizai',
+    'widget_tweaks',
+    'rest_framework',
+]
 ```
-from django.contrib import admin
-from .models import *
-
-# Register your models here.
-
-admin.site.register(Tag)
+### Configurando o Django Rest Framework
+1. No modelo vamos utilizar a a classe **Tag** na aplicação tag/models.py Garantir que a PK do modelo seja o padrão uuid
 ```
-2. Acesse novamente o [admin](http://127.0.0.1:8000/admin/) para ver o CRUD da aplciação Tag.    
-
-### ToDo
-1. todo
-
-### ToDo
-1. todo
+id = models.UUIDField(    primary_key=True,default=uuid.uuid4,null=False,blank=True)
+```
+1. Atualizar migrations
+2. Aplicar migrate
+3. Configurar o serializer no arquivo tag/serializers.py
+4. Configurar ViewSets no tag/views.py
+5. Prover rotas no tag/urls.py
+6. Publicar as URLS no agrovinos/urls.py
 
 ### ToDo
 1. todo
@@ -93,6 +67,7 @@ admin.site.register(Tag)
 1. Efetuar commit 
 ```
 (env)$ git add .
+
 (env)$ git commit -m "Finalizando Atividade 5"
 ```
 2. Realizar push de Branch com o SEU NOME
