@@ -1,0 +1,127 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Dashboard</title>
+        <meta name="description" content="">
+@@include('common/head-part-2.html')
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/jquery.pnotify.default.css">
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+
+@@include('common/head-part-3.html')
+
+    <body class="dashboard-page">
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        @@include('common/main-nav.html')
+        
+        <section class="wrapper scrollable">
+        @@include('common/user-nav.html')
+            <section class="title-bar">
+                <div>
+                    <span>DASHBOARD</span>
+                    <nav class="dashboard-menu">
+                        <a href="javascript:;">
+                            <i class="icon-cog toggle-widget-setup"></i>
+                            <i class="menu-state-icon icon-sort-up"></i>
+                            <i class="menu-state-icon icon-caret-down active"></i>
+                        </a>
+                        <ul>
+                            
+                            <li><a data-toggle="modal" href="#quickLaunchModal">Add Quick Launch Icon</a></li>
+                            <li><a data-toggle="modal" href="#quickLaunchModal">Remove Quick Launch Icon</a></li>
+                            <li><a href="javascript:;">Third Menu Item</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <nav class="quick-launch-bar">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-bar-chart"></i>
+                            <span>Graphs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-calendar-empty"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-map-marker"></i>
+                            <span>Maps</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-cloud"></i>
+                            <span>Cloud</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-microphone"></i>
+                            <span>Conference</span>
+                        </a>
+                    </li>
+                </ul>
+                <a data-toggle="modal" href="#quickLaunchModal" class="add-quick-launch"><i class="icon-plus"></i></a>
+            </nav>
+        @@include('components/example-widgets-larger.html')
+        </section>
+
+        <div id="quickLaunchModal" tabindex="-1" role="dialog" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><i class="icon-plus"></i><span>EDIT QUICK LAUNCH ITEMS</span></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Edit quick launch items below:</p>
+                        <input type="text" placeholder="Placeholder Text" value="Graphs,Calendar,Maps,Cloud,Conference" data-role="tagsinput" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-lg btn-default" data-dismiss="modal">CANCEL</button>
+                        <button type="button" class="btn btn-lg btn-success" data-dismiss="modal">SAVE SELECTION</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="scripts/proton/dashboard.js"></script>
+        <script src="scripts/proton/dashdemo.js"></script>
+
+        <!-- Bootstrap Tags Input -->
+        <!-- http://timschlechter.github.io/bootstrap-tagsinput/examples/ -->
+            <script src="scripts/vendor/bootstrap-tagsinput.min.js"></script>
+
+        <!-- Raphael, used for graphs -->
+        <!-- http://raphaeljs.com/ -->
+            <script src="scripts/vendor/raphael-min.js"></script>
+        
+        <!-- Morris graphs -->
+        <!-- https://github.com/oesmith/morris.js -->
+            <script src="scripts/vendor/morris.min.js"></script>
+
+        <!-- Select2 For Bootstrap3 -->
+        <!-- https://github.com/fk/select2-bootstrap-css -->
+            <script src="scripts/vendor/select2.min.js"></script>
+            
+        <!-- Number formating for dashboard demo -->
+            <script src="scripts/vendor/numeral.min.js"></script>
+
+        <!-- Notifications -->
+        <!-- http://pinesframework.org/pnotify/ -->
+            <script src="scripts/vendor/jquery.pnotify.min.js"></script>
+    </body>
+</html>
