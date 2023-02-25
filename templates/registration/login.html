@@ -1,9 +1,6 @@
-<!doctype html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head></head>
-
-{% block content %}
+{% block "conteudo" %}
 
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
@@ -42,4 +39,3 @@
     {% endblock %}
     
     
-    </html>
