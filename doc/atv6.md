@@ -2,7 +2,7 @@
 
 *  Nesta página está descrito os passos para aplicar SGBD para PostgreSQL e prover restrição de acesso aos métodos
 
-### Gerar um acesso sem privilégios de administrador:
+### Gear um acesso sem privilégios de administrador:
 1. Ativar novamente o Ambiente Virtual e cadastrar usuário admin:
 ```
 $ env\Scripts\activate
@@ -78,7 +78,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ``` 
 
-### Mapear uma aplicação no Django Administrator
+### Mapear uma aplciação no Django Administrator
 1. Registrar a aplicação tag no Django Admin, no tag/admins.py
 ```
 from django.contrib import admin
@@ -103,7 +103,7 @@ $ python manage.py migrate
 $ python manage.py loaddata data.json
 ```
 ### Aplicar SGBD PostgreSQL
-1. Adicionar dependencias do postgres no **docker-compose.yml**
+1. Adicionar dependencias do postgres no docker-compose.yml
 ```
         env_file:
             - ./.env.dev
@@ -121,8 +121,8 @@ $ python manage.py loaddata data.json
         - 19000:5432
         environment:
         - POSTGRES_USER=admin
-        - POSTGRES_PASSWORD=pass.2023
-        - POSTGRES_DB=argovinos
+        - POSTGRES_PASSWORD=lc3.2023
+        - POSTGRES_DB=smallDB
         - TZ=GMT-3
         
 volumes:
@@ -131,9 +131,9 @@ volumes:
 2. Adicionar configurrações od banco no arquivo .env.dev
 ```
 SQL_ENGINE=django.db.backends.postgresql
-SQL_DATABASE=argovinos
+SQL_DATABASE=smallDB
 SQL_USER=admin
-SQL_PASSWORD=pass.2023
+SQL_PASSWORD=lc3.2023
 SQL_HOST=banco
 SQL_PORT=5432
 ```
@@ -161,9 +161,9 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update \
  && apk add postgresql-dev gcc python3-dev musl-dev
 ```
-5. Aplicar o driver no final do requirements.txt
+5. Instalar requirements.txt
 ```
-psycopg2-binary==2.9.5
+psycopg2-binary==2.9.1
 ```
 6. Recompilar e erguer o container
 ```
@@ -171,16 +171,15 @@ $  docker-compose up -d --build
 ```
 7. Aplicar os migrations
 ```
- docker compose exec portal python manage.py migrate --no-input
+ docker-compose exec banco psql --username=hello_django --dbname=hello_django_dev
 ```
 
 
 ### Publicar atividade
 1. Efetuar commit 
 ```
-$ git add .
-
-$ git commit -m "Finalizando Atividade 6"
+(env)$ git add .
+(env)$ git commit -m "Finalizando Atividade 5"
 ```
 2. Realizar push de Branch com o SEU NOME
 ```

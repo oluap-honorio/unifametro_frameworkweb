@@ -35,7 +35,7 @@ $ env\Scripts\activate
 ```
 3. Efetuar instalação das dependências Python
 ```
-(env)$ pip install -r requirements.txt
+(env)$ >pip install -r requirements.txt
 ```
 4. Validar instalação
 ```
@@ -152,7 +152,6 @@ $ docker-compose down -v
 1. Efetuar commit 
 ```
 (env)$ git add .
-
 (env)$ git commit -m "Finalizando Atividade 4"
 ```
 2. Realizar push de Branch com o SEU NOME
