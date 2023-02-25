@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Ovino(models.Model):
     
     identificador = models.CharField(max_length=16, unique=True)
