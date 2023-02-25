@@ -1,9 +1,11 @@
 from django.db import models
+from tag.models import Tag
 
 # Create your models here.
 
 class Ovino(models.Model):
     identificador = models.CharField(max_length=16, unique=True)
+    tag = models.OneToOneField(Tag, on_delete=models.SET_NULL, null=True)
     peso = models.FloatField()
     nascimento = models.DateField()
     raca = models.CharField(max_length=20, null=True)

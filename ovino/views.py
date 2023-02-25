@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def index(request):
     context = {}
-    context["ovinos"] = Ovino.objects.all()
+    context["dataset"] = Ovino.objects.all()
     return render(request, "ovino_index.html", context)
 
 
