@@ -24,6 +24,11 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-        path('admin/', admin.site.urls),
-        path('accounts/', include('django.contrib.auth.urls')),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+]
+
+urlpatterns += [
+    path('tag/v1/', include('tag.urls', namespace='tag')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
