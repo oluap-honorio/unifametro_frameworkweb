@@ -24,11 +24,13 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
-      - 19000:5432
+      - 5433:5432
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=pass.2023
-      - POSTGRES_DB=argovinos
+      - POSTGRES_DB=agrovinos
       - TZ=GMT-3
 volumes:
   postgres_data:
+
+
