@@ -1,0 +1,59 @@
+
+        <section class="sidebar extended">
+            <script>
+            $(document).ready(function() {
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            });
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <img src="images/proton-logo.png" alt="proton-logo">
+                        <h5>
+                            <span class="title">
+                                Proton
+                            </span>
+                            <span class="subtitle">
+                                CMS ADMIN PANEL
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="title">
+                        <i class="icon-shopping-cart"></i>
+                        <span>
+                            CATEGORIES
+                        </span>
+                        <a href="javascript:;" class="add">
+                            <i class="icon-plus-sign"></i>
+                            <span>
+                                ADD NEW
+                            </span>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body tree-body">
+                    <div class="scrollable">
+                        <div id="proton-tree"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
