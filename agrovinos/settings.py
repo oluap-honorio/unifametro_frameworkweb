@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sekizai',
     'widget_tweaks',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,6 @@ LOGIN_REDIRECT_URL = '/ovino/'
 LOGOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'agrovinos.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -119,6 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
+# LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
