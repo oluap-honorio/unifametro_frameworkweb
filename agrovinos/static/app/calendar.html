@@ -1,0 +1,65 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Calendar</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/fullcalendar.css" media="screen" />
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+            @@include('common/titlebar.html')          
+            
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-default panel-block calendar" id="calendar">
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Add Events</h4>
+                                <div class="form-group custom-events">
+                                    <input type="text" placeholder="Placeholder Text" value="Code,Design,Meeting,Conference,Launch" data-role="tagsinput" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('common/base-scripts.html')
+
+    <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        
+        <!-- fullcalendar-1.6.4 -->
+        <!-- http://arshaw.com/fullcalendar/ -->
+        <script src="scripts/vendor/fullcalendar.min.js"></script>
+        <script src="scripts/vendor/jquery-ui.custom.min.js"></script>
+        
+        <!-- Bootstrap Tags Input -->
+        <!-- http://timschlechter.github.io/bootstrap-tagsinput/examples/ -->
+            <script src="scripts/vendor/bootstrap-tagsinput.min.js"></script>
+
+        <script src="scripts/proton/calendar.js"></script>
+      </body>
+</html>

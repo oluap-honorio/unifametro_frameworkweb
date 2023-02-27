@@ -6,18 +6,12 @@ from .forms import OvinoForm
 from django.contrib.auth.decorators import login_required
 
 
-def index(request):
-    context = {}
-    context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
-
-from django.contrib.auth.decorators import login_required
-
 @login_required
 def index(request):
     context = {}
     context["dataset"] = Ovino.objects.all()
     return render(request, "ovino_index.html", context)
+
 
 def create(request):
     context = {}
@@ -28,26 +22,12 @@ def create(request):
     context['form'] = form
     return render(request, "ovino_create.html", context)
 
-from django.contrib.auth.decorators import login_required
-
-@login_required
-def index(request):
-    context = {}
-    context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
 
 def read(request, id):
     context = {}
     context["data"] = Ovino.objects.get(id=id)
     return render(request, "ovino_read.html", context)
 
-from django.contrib.auth.decorators import login_required
-
-@login_required
-def index(request):
-    context = {}
-    context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
 
 def update(request, id):
     context = {}
@@ -59,13 +39,6 @@ def update(request, id):
     context["form"] = form
     return render(request, "ovino_update.html", context)
 
-    from django.contrib.auth.decorators import login_required
-
-@login_required
-def index(request):
-    context = {}
-    context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
 
 def delete(request, id):
     context = {}
@@ -75,10 +48,3 @@ def delete(request, id):
         return HttpResponseRedirect("/")
     context["data"] = obj
     return render(request, "ovino_delete.html", context)
-    from django.contrib.auth.decorators import login_required
-
-@login_required
-def index(request):
-    context = {}
-    context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
