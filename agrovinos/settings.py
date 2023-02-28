@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'ovino.apps.OvinoConfig',
     'sekizai',
     'widget_tweaks',
-    'tag.apps.TagConfig', 
+    'tag.apps.TagConfig',
+    'rest_framework', 
 ]
 
 MIDDLEWARE = [
