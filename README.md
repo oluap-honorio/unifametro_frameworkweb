@@ -26,5 +26,5 @@
 *  [1º dia](doc/media/PrimeiroDia.pdf)
 *  [2º dia](doc/media/SegundoDia.pdf)
 
-## Tumas ninitras
+## Tumas ministradas
 * 2023.1
