@@ -25,3 +25,6 @@
 ## Slides
 *  [1º dia](doc/media/PrimeiroDia.pdf)
 *  [2º dia](doc/media/SegundoDia.pdf)
+
+## Tumas ninitras
+* 2023.1
