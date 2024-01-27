@@ -20,11 +20,11 @@
 
 ## Questionários
 *  [1º dia](https://forms.office.com/r/gccCMec3Fx)
-*  [2º dia](https://forms.office.com/r/r3uYd7hnUy)
+*  [2º dia](README.md)
 
 ## Slides
 *  [1º dia](doc/media/PrimeiroDia.pdf)
-*  [2º dia](doc/media/SegundoDia.pdf)
+*  [2º dia](README.md)
 
 ## Tumas ministradas
 * 2023.1
