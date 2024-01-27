@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jwygss^i6fi&g*b3j4z%xzqw^(u=+%8t3()xzszk^+57@fcc2j'
+SECRET_KEY = 'django-insecure-1pm*crjz8*(dzocwtdd+e76ushzy(uku2pm12x#+&m*%^)d6ar'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+### Docker Config
+DEBUG = int(os.environ.get("DEBUG", default=DEBUG))
+SECRET_KEY = os.environ.get("SECRET_KEY", default=SECRET_KEY)
+if os.environ.get("DJANGO_ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # Application definition
 
@@ -55,7 +61,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'agrovinos.urls'
 
-import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
