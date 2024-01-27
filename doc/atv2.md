@@ -6,6 +6,8 @@
 1. Criando projeto Django
 ```
 (env)$ env\Scripts\django-admin.exe startproject agrovinos .
+django-admin startproject agrovinos .
+
 ```
 2. Construindo a base de dados
 ```
