@@ -5,7 +5,7 @@
 ### Iniciando projeto Django.
 1. Criando projeto Django
 ```
-(env)$ env\Scripts\django-admin.exe startproject agrovinos .
+(env)$ env/Scripts/django-admin.exe startproject agrovinos .
 ```
 2. Construindo a base de dados
 ```

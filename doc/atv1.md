@@ -29,7 +29,7 @@ $ python -m venv env
 ```
 2. Ativar o Ambiente virtual:
 ```
-$ env\Scripts\activate
+$ env/Scripts/activate
 ```
 3. Efetuar instalação do Django
 ```
