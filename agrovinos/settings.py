@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ovino',
+    'sekizai',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +69,17 @@ TEMPLATES = [
         },
     },
 ]
+
+#########################################
+import os
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/ovino/'
+LOGOUT_REDIRECT_URL = '/',
+#########################################
 
 WSGI_APPLICATION = 'agrovinos.wsgi.application'
 
