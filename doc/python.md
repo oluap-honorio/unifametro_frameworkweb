@@ -11,6 +11,7 @@
 ```
 cmd
 $ python --version
+
 ```
 2. Execute o instalador baixado.
 3. Certifique nas opções de instalação se o Pip está incluso e se a variável PATH será atualizada.
