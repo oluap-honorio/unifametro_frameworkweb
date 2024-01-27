@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ovino.apps.OvinoConfig'
+    'ovino.apps.OvinoConfig',
+    'sekizai',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -52,10 +54,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'agrovinos.urls'
 
+import os
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +71,9 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_REDIRECT_URL = '/ovino/'
+LOGOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'agrovinos.wsgi.application'
 
