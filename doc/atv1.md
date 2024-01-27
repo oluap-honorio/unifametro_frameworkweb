@@ -26,10 +26,12 @@ $ git branch
 1. Gere o ambiente inicial:
 ```
 $ python -m venv env
+$ python3 -m venv env
 ```
 2. Ativar o Ambiente virtual:
 ```
 $ env\Scripts\activate
+$ source env/bin/activate
 ```
 3. Efetuar instalação do Django
 ```
