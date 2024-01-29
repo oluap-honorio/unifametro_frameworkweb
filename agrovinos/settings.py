@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for agrovinos project.
 
@@ -28,8 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ALLOWED_HOSTS = []
 
 ### Docker Config
-DEBUG = int(os.environ.get("DEBUG", default=DEBUG))
-SECRET_KEY = os.environ.get("SECRET_KEY", default=SECRET_KEY)
+DEBUG = int(os.environ.get("DEBUG", default=1))
+SECRET_KEY = os.environ.get("SECRET_KEY", default="django-insecure-3_z)j50m(gk5#0!t&x(7!ug!3to^tkxp+co3d#imw6t4b-an_e")
 if os.environ.get("DJANGO_ALLOWED_HOSTS"):
     ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
     
@@ -60,7 +62,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "agrovinos.urls"
 
-import os
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
