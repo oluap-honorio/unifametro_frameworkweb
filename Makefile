@@ -13,7 +13,7 @@ dba:
 dip:
 		docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' uniframe-db
 dms:
-		
+		docker-compose exec portal python manage.py makemigrations
 dmm:
 		docker-compose exec portal python manage.py migrate --noinput
 gmg:
