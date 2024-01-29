@@ -6,12 +6,12 @@ ddo:
 		docker-compose down
 dps:
 		docker-compose ps -a
-dlo: #make arg=uniframe-app dlo
+dlo: #make arg=portal dlo
 		docker-compose logs $(arg) -f
 dba:
-		docker exec -it uniframe-app /bin/bash
+		docker exec -it portal-app /bin/bash
 dip:
-		docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' uniframe-db
+		docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' portal-db
 dms:
 		docker-compose exec portal python manage.py makemigrations
 dmm:
@@ -21,11 +21,12 @@ gmg:
 dru:
 		docker run
 drb:
-		docker run -it --rm uniframe:1.0 bash
+		docker run -it --rm portal:1.0 bash
 dtg:
-		docker image tag  uniframe:1.0 uniframe:1.0
+		docker image tag  portal:1.0 portal:1.0
 dbu:
-		docker build -t uniframe:1.0  .
-
+		docker build -t portal:1.0  .
+dcr:
+		docker-compose exec portal python manage.py createsuperuser --username='admin' --email=''
 
 
