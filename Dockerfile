@@ -7,7 +7,9 @@ ENV WORKDIR /usr/src/unifametro_frameworkweb
 
 # set environment variables 
 ENV PYTHONDONTWRITEBYTECODE 1 
+#PYTHONDONTWRITEBYTECODE: Evita que o Python grave arquivos pyc no disco (equivalente a python -B option)
 ENV PYTHONUNBUFFERED 1 
+#PYTHONUNBUFFERED: Evita que o Python armazene em buffer stdout e stderr (equivalente a python -u option)
 
 # install dependencies 
 RUN pip install --upgrade pip 
