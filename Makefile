@@ -28,5 +28,5 @@ dbu:
 		docker build -t portal:1.0  .
 dcr:
 		docker-compose exec portal python manage.py createsuperuser --username='admin' --email=''
-
-
+dcs:
+		docker-compose exec portal python manage.py collectstatic

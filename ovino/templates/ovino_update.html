@@ -1,12 +1,10 @@
+{% extends "base.html" %}
+
 {% load sekizai_tags %}
 {% load widget_tweaks %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Atualizar ovino</title>
-  </head>
-  <body>
+
+{% block "title" %}Atualizar Ovino{% endblock %}
+{% block "conteudo" %}
     <form method="POST" enctype="multipart/form-data">
 			<!-- Security token -->
 			{% csrf_token %}
@@ -106,9 +104,4 @@
 				</div>
 			</div>
 		</form>
-  </body>
-  
-  <footer>
-    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
-  </footer>
-</html>
+{% endblock %}

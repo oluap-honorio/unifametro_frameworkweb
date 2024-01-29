@@ -1,11 +1,10 @@
+{% extends "base.html" %}
+
 {% load sekizai_tags %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ver ovino</title>
-  </head>
-  <body>
+{% load widget_tweaks %}
+
+{% block "title" %}Listar Ovino{% endblock %}
+{% block "conteudo" %}
     <div class=>
       <div class=>
           <div class=>
@@ -49,9 +48,4 @@
           </div>
       </div>
   </div>
-  </body>
-  
-  <footer>
-    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
-  </footer>
-</html>
+{% endblock %}
