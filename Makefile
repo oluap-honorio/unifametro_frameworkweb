@@ -30,3 +30,7 @@ dcr:
 		docker-compose exec portal python manage.py createsuperuser --username='admin' --email=''
 dcs:
 		docker-compose exec portal python manage.py collectstatic
+dgs:
+		docker-compose exec portal python manage.py dumpdata auth tag ovino > data.json
+dld:
+		docker-compose exec portal python manage.py loadata data.json

@@ -96,6 +96,17 @@
 												</div>
 											{% endif %}
 										</div>
+
+										<label >Tag:</label>
+										<div >
+											{% render_field form.tag %}
+											{% if form.tag.errors %}
+												<div>
+													{{ form.tag.errors }}
+												</div>
+											{% endif %}
+										</div>
+
 									</div>
 								</div>
 							</div>
