@@ -7,7 +7,8 @@ services:
         build:
             context: ../unifametro_frameworkweb
             dockerfile: Dockerfile
-        command: python manage.py runserver 0.0.0.0:8000
+        #command: pip install --root-user-action=ignore psycopg2-binary && python manage.py runserver 0.0.0.0:8000
+        command: ["sh", "-c", "pip install --root-user-action=ignore psycopg2-binary && python manage.py runserver 0.0.0.0:8000"]
         volumes:
             - .:/usr/src/unifametro_frameworkweb
         ports:
@@ -22,13 +23,27 @@ services:
         image: postgres:14.6-alpine
         restart: unless-stopped
         volumes:
-        - postgres_data:/var/lib/postgresql/data/
+            - postgres_data:/var/lib/postgresql/data/
         ports:
-        - 19000:5432
+            - 19000:5432
         environment:
-        - POSTGRES_USER=admin
-        - POSTGRES_PASSWORD=pass.2023
-        - POSTGRES_DB=agrovinos
-        - TZ=GMT-3
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=pass.2023
+            - POSTGRES_DB=agrovinos
+            - TZ=GMT-3
+    pgadmin:
+        container_name: pgadmin4
+        image: dpage/pgadmin4:5.1
+        user: root
+        volumes:
+            - pgadmin_data:/var/lib/pgadmin
+        restart: always
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+            - PGADMIN_DEFAULT_PASSWORD=root
+        ports:
+            - "5050:80"
+
 volumes:
     postgres_data:
+    pgadmin_data:

@@ -10,6 +10,8 @@ dlo: #make arg=portal dlo
 		docker-compose logs $(arg) -f
 dba:
 		docker exec -it portal /bin/bash
+dba2:
+		docker exec -it portal /bin/sh
 dip:
 		docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' banco
 dms:
