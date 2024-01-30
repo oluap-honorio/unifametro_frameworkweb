@@ -9,9 +9,9 @@ dps:
 dlo: #make arg=portal dlo
 		docker-compose logs $(arg) -f
 dba:
-		docker exec -it portal-app /bin/bash
+		docker exec -it portal /bin/bash
 dip:
-		docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' portal-db
+		docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' banco
 dms:
 		docker-compose exec portal python manage.py makemigrations
 dmm:
