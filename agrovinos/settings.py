@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'ovino',
     'tag',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
