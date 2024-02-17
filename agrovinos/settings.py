@@ -33,12 +33,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ovino.apps.OvinoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sekizai',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -53,10 +56,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'agrovinos.urls'
 
+import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +72,9 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_REDIRECT_URL = '/ovino/'
+LOGOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'agrovinos.wsgi.application'
 
