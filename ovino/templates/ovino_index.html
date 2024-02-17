@@ -11,6 +11,7 @@
       <thead>
         <tr>
           <th> identificador #</th>
+          <th> tag </th>
           <th> peso </th>
           <th> nascimento </th>
           <th> raca </th>
@@ -27,6 +28,7 @@
           <td>
             <a href="{% url 'ovino:read' id=data.id %}">{{ data.identificador }}</a>
           </td>
+          <td>{{ data.tag }}</td>
           <td>{{ data.peso }}</td>
           <td>{{ data.nascimento }}</td>
           <td>{{ data.raca }}</td>
