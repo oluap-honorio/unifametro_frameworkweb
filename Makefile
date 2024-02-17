@@ -35,4 +35,4 @@ dcs:
 dgs:
 		docker-compose exec portal python manage.py dumpdata auth tag ovino > data.json
 dld:
-		docker-compose exec portal python manage.py loadata data.json
+		docker-compose exec portal python manage.py loaddata data.json
