@@ -44,11 +44,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'ovino',
     'sekizai',
     'widget_tweaks',
     'ovino.apps.OvinoConfig',
     'tag.apps.TagConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
