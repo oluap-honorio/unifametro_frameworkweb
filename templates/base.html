@@ -7,14 +7,14 @@
     <meta charset="utf-8" />
     <title>{% block "title" %} AGROVINOS {% endblock %}</title>
     <link rel="shortcut icon" href="{% static '/favicon.ico' %}" />
-	<link rel="stylesheet" href="../agrovinos/static/styles/bootstrap.css">
-	<!-- Proton CSS: -->
-	<link rel="stylesheet" href="../agrovinos/static/styles/proton.css">
-	<link rel="stylesheet" href="../agrovinos/static/styles/vendor/animate.css">
-	<!-- adds CSS media query support to IE8   -->
-	<!-- Fonts CSS: -->
-	<link rel="stylesheet" href="../agrovinos/static/styles/font-awesome.css" type="text/css" />
-	<link rel="stylesheet" href="../agrovinos/static/styles/font-titillium.css" type="text/css" />
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+    <!-- Proton CSS: -->
+    <link rel="stylesheet" href="{% static 'styles/proton.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/vendor/animate.css' %}">
+    <!-- adds CSS media query support to IE8   -->
+    <!-- Fonts CSS: -->
+    <link rel="stylesheet" href="{% static 'styles/font-awesome.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'styles/font-titillium.css' %}" type="text/css" />
     {% block styles %}{% endblock %}
 </head>
 <!-- END HEAD -->
