@@ -16,3 +16,7 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
+
+# install psycopg2 dependencies
+RUN apk update \
+ && apk add postgresql-dev gcc python3-dev musl-dev
