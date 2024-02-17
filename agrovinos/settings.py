@@ -16,6 +16,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+LANGUAGE_CODE = 'pt-br'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -45,6 +47,7 @@ if os.environ.get("DJANGO_ALLOWED_HOSTS"):
 
 INSTALLED_APPS = [
     'ovino.apps.OvinoConfig',
+    'tag.apps.TagConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -97,6 +100,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        "USER": os.environ.get("SQL_USER", "admin"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", "1234"),
+        "HOST": os.environ.get("SQL_HOST", "localhost"),
+        "PORT": os.environ.get("SQL_PORT", "5432"),
     }
 }
 
