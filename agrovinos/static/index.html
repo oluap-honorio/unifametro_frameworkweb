@@ -36,15 +36,7 @@
 
         <!-- Common Scripts: -->
         <script>
-        (function () {
-          var js;
-          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-            js = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';
-          } else {
-            js = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
-          }
-          document.write('<script src="' + js + '"><\/script>');
-        }());
+
         </script>
         <script src="scripts/vendor/modernizr.js"></script>
         <script src="scripts/vendor/jquery.cookie.js"></script>
@@ -1185,8 +1177,9 @@
 		
 
 
-        <!-- Page-specific scripts: -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <!-- Page-specific scripts: -->        
+        <script src="scripts/vendor/jquery-ui.custom.min.js"></script>
+
         <script src="scripts/proton/dashboard.js"></script>
         <script src="scripts/proton/dashdemo.js"></script>
 

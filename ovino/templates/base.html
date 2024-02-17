@@ -37,18 +37,7 @@
         <link rel="stylesheet" href="{% static 'styles/font-awesome.css' %}" type="text/css" />
         <link rel="stylesheet" href="{% static 'styles/font-titillium.css' %}" type="text/css" />
 
-        <!-- Common Scripts: -->
-        <script>
-        (function () {
-          var js;
-          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-            js = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';
-          } else {
-            js = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
-          }
-          document.write('<script src="' + js + '"><\/script>');
-        }());
-        </script>
+        <script src="{% static 'scripts/vendor/jquery.min.js' %}"></script>
         <script src="{% static 'scripts/vendor/modernizr.js' %}"></script>
         <script src="{% static 'scripts/vendor/jquery.cookie.js' %}"></script>
         {% block styles %}{% endblock %}
