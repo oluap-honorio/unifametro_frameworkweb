@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sekizai',
     'widget_tweaks',
+    'ovino.apps.OvinoConfig',
+    'tag.apps.TagConfig',
 ]
 
 MIDDLEWARE = [
