@@ -1,6 +1,6 @@
 # pull official base image
 FROM python:3.10.6-alpine
-
+USER root
 # set work directory
 WORKDIR /usr/src/unifametro_frameworkweb
 ENV WORKDIR /usr/src/unifametro_frameworkweb
