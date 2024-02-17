@@ -1,0 +1,384 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Intro</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+
+@@include('common/head-part-3.html')
+
+        <body>
+            
+            <script>
+                var theme = $.cookie('protonTheme') || 'default';
+                $('body').removeClass (function (index, css) {
+                    return (css.match (/\btheme-\S+/g) || []).join(' ');
+                });
+                if (theme !== 'default') $('body').addClass(theme);
+            </script>
+            <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            
+            @@include('common/main-nav.html')
+            
+            
+            <section class="sidebar extended">
+                <script>
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.sidebar').removeClass('extended').addClass('retracted');
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                        $('.sidebar').removeClass('retracted').addClass('extended');
+                    }
+                </script>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="clearfix" data-intro='Welcome to Proton CMS Admin Panel!' data-position='right'>
+                            <img src="images/proton-logo.png" alt="proton-logo">
+                            <h5>
+                                <span class="title">
+                                    Proton
+                                </span>
+                                <span class="subtitle">
+                                    CMS ADMIN PANEL
+                                </span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="panel-body" data-step='3' data-intro='You can add new categories or search for a specific category here.' data-position='right'>
+                        <div class="title">
+                            <i class="icon-shopping-cart"></i>
+                            <span>
+                                CATEGORIES
+                            </span>
+                            <a href="javascript:;" class="add">
+                                <i class="icon-plus-sign"></i>
+                                <span>
+                                    ADD NEW
+                                </span>
+                            </a>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default btn-search" type="button"><i class="icon-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body tree-body" data-step='4' data-intro='The multi-level scrollable tree allows you to quickly reach a specific section.' data-position='right'>
+                        <div class="scrollable">
+                            <div id="proton-tree"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-handle">
+                    <i class="icon-ellipsis-horizontal"></i>
+                    <i class="icon-ellipsis-vertical"></i>
+                </div>
+            </section>
+
+            <section class="wrapper retracted scrollable">
+                
+                <script>
+                    if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                        if ($.cookie('protonSidebar') == 'retracted') {
+                            $('.wrapper').removeClass('retracted').addClass('extended');
+                        }
+                        if ($.cookie('protonSidebar') == 'extended') {
+                            $('.wrapper').removeClass('extended').addClass('retracted');
+                        }
+                    }
+                </script>
+                
+                <nav class="user-menu">
+                    <a href="javascript:;" class="main-menu-access">
+                        <i class="icon-proton-logo"></i>
+                        <i class="icon-reorder"></i>
+                    </a>
+                    <section class="user-menu-wrapper" data-step='6' data-intro='The user menu allows you to read your messages, notification or to change the Proton color theme.' data-position='left'>
+                        <a href="javascript:;" data-expand=".theme-view" class="view-menu-access">
+                            <i class="icon-eye-open"></i>
+                        </a>
+                        <a href="javascript:;" data-expand=".messages-view" class="messages-access">
+                            <i class="icon-envelope-alt"></i>
+                        </a>
+                        <a href="javascript:;" data-expand=".notifications-view" class="notifications-access unread">
+                            <i class="icon-comment-alt"></i>
+                            <div class="menu-counter">6</div>
+                        </a>
+                    </section>
+
+                    <div class="panel panel-default nav-view theme-view">
+                        <div class="arrow user-menu-arrow"></div>
+                        <div class="panel-heading">
+                            <i class="icon-eye-open"></i>
+                            <span>Color Scheme</span>
+                            <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" data-theme="default">
+                                <a href="javascript:;">
+                                    <i><b class="dark"></b></i>
+                                    <div class="text-holder">
+                                        <span class="title-text">
+                                            Dark
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" data-theme="theme-light">
+                                <a href="javascript:;">
+                                    <i><b></b></i>
+                                    <div class="text-holder">
+                                        <span class="title-text">
+                                            Light
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" data-theme="theme-pastel">
+                                <a href="javascript:;">
+                                    <i><b class="pastel"></b></i>
+                                    <div class="text-holder">
+                                        <span class="title-text">
+                                            Pastel Green
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" data-theme="theme-pastel-marine">
+                                <a href="javascript:;">
+                                    <i><b class="pastel-marine"></b></i>
+                                    <div class="text-holder">
+                                        <span class="title-text">
+                                            Pastel Marine
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" data-theme="theme-terminal">
+                                <a href="javascript:;">
+                                    <i><b class="terminal"></b></i>
+                                    <div class="text-holder">
+                                        <span class="title-text">
+                                            Terminal
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" data-theme="theme-rio">
+                                <a href="javascript:;">
+                                    <i><b class="rio"></b></i>
+                                    <div class="text-holder">
+                                        <span class="title-text">
+                                            Rio
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel panel-default nav-view messages-view">
+                        <div class="arrow user-menu-arrow"></div>
+                        <div class="panel-heading">
+                            <i class="icon-envelope-alt"></i>
+                            <span>Messages</span>
+                            <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Nunc Cenenatis:
+                                    </span>
+                                    <span class="description-text">
+                                        Hi, can you meet me at the office tomorrow morning?
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    3 mins ago
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Prasent Neque:
+                                    </span>
+                                    <span class="description-text">
+                                        Just a quick question: do you know the balance on the adsense account?
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    17 mins ago
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Flor Demoa:
+                                    </span>
+                                    <span class="description-text">
+                                        Hey, we're going surfing tomorrow. Feel free to join in.
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    3 hrs ago
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel panel-default nav-view notifications-view">
+                        <div class="arrow user-menu-arrow"></div>
+                        <div class="panel-heading">
+                            <i class="icon-comment-alt"></i>
+                            <span>Notifications</span>
+                            <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Nunc Cenenatis
+                                    </span>
+                                    <span class="description-text">
+                                        likes your website.
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    32 mins ago
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Flor Demoa
+                                    </span>
+                                    <span class="description-text">
+                                        wrote a new post.
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    3 hrs ago
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Nunc Neque
+                                    </span>
+                                    <span class="description-text">
+                                        wrote a new post.
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    57 mins ago
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Flor Demoa
+                                    </span>
+                                    <span class="description-text">
+                                        submitted a new ticket.
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    1.5 hrs ago
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Nunc Cenenatis
+                                    </span>
+                                    <span class="description-text">
+                                        wrote a new post.
+                                    </span>
+                                </div>
+                                <span class="time-ago">
+                                    3 hrs ago
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <ol class="breadcrumb breadcrumb-nav" data-step='5' data-intro='The breadcrumbs provide another easy way to navigate.' data-position='bottom'>
+                    <li><a href="."><i class="icon-home"></i></a></li>
+                    <li class="active">
+                        <a class="bread-page-title" data-toggle="dropdown" href="#"></a>
+                        <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                        </ul>
+                    </li>
+                </ol>
+                <div class="row">
+                    <div style="max-width:1000px;" class="col-lg-12">
+                    <div id="top" class="panel panel-default panel-block panel-title-block" data-step='7' data-intro="The title bar shows you the page you're currently on as well as additional page description." data-position='bottom'>
+                        <div class="panel-heading">
+                            <div>
+                                <i class="icon-edit"></i>
+                                <h1>
+                                    <span class="page-title"></span>
+                                    <small>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                                    </small>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                           
+                    <div class="panel panel-default panel-block" data-step='8' data-intro="We hope you enjoy using Proton. Thank you for checking it out!" data-position='left'>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Getting Started</h4>
+                                <p>
+                                    Proton is a <span class="text-bold">fully responsive mobile first Admin Template</span> based on Bootstrap 3. It features a <span class="text-bold">highly flexible multi-column content structure</span> built using the best Html5 and CSS3 have to offer, while also staying <span class="text-bold">compatible down to Internet Explorer 8.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+            
+
+            
+            <script src="scripts/bootstrap.min.js"></script>
+
+            <!-- Proton base scripts: -->
+            
+            <script src="scripts/main.js"></script>
+            <script src="scripts/proton/common.js"></script>
+            <script src="scripts/proton/main-nav.js"></script>
+            <script src="scripts/proton/user-nav.js"></script>
+            
+
+
+            <!-- Page-specific scripts: -->
+            <script src="scripts/proton/sidebar.js"></script>
+            <script src="scripts/proton/intro.js"></script>
+            <!-- jsTree -->
+            <script src="scripts/vendor/jquery.jstree.js"></script>
+            
+            <!-- Intro JS -->
+            <!-- https://github.com/usablica/intro.js -->
+            <script src="scripts/vendor/intro.min.js"></script>
+        </body>
+</html>

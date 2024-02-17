@@ -1,0 +1,55 @@
+{% load sekizai_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Listar ovino</title>
+  </head>
+  <body>
+    <a href="{% url 'ovino:create' %}" > Adicionar</a>
+    <table border="1px" >
+      <thead>
+        <tr>
+          <th> identificador #</th>
+          <th> tag </th>
+          <th> peso </th>
+          <th> nascimento </th>
+          <th> raca </th>
+          <th> cor </th>
+          <th> genero </th>
+          <th> cadastrado </th>
+          <th> atualizado </th>
+          <th> ação </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for data in dataset %}
+        <tr>
+          <td>
+            <a href="{% url 'ovino:read' id=data.id %}">{{ data.identificador }}</a>
+          </td>
+          <td>{{ data.tag }}</td>
+          <td>{{ data.peso }}</td>
+          <td>{{ data.nascimento }}</td>
+          <td>{{ data.raca }}</td>
+          <td>{{ data.cor }}</td>
+          <td>{{ data.genero }}</td>
+          <td>{{ data.created_at }}</td>
+          <td>{{ data.updated_at }}</td>
+          <td>
+            <a href="{% url 'ovino:update' id=data.id %}">
+              editar
+            </a><br>
+            <a href="{% url 'ovino:delete' id=data.id %}">
+              deletar
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </body>
+  <footer>
+    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
+  </footer>
+</html>

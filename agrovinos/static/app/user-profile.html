@@ -1,0 +1,115 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - User Profile</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+
+        <section class="wrapper user-profile extended scrollable">
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs.html')
+
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    <div class="panel panel-default panel-block panel-title-block">
+                        <div class="panel-heading clearfix">
+                            <div class="avatar">
+                                <img src="images/user-icons/user4.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="controls clearfix">
+                                        <a href="javascript:;"><i class="icon-search"></i></a>
+                                        <a href="javascript:;"><i class="icon-undo"></i></a>
+                                        <a class="edit-item" href="javascript:;"><i class="icon-pencil"></i></a>
+                                        <a class="trash-item" href="javascript:;"><i class="icon-trash"></i></a>
+                                    </div>
+                                    <div class="controls confirm-removal clearfix">
+                                        <a class="remove-item" href="javascript:;">YES</a>
+                                        <a class="remove-cancel" href="javascript:;">NO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">John Doe</span>
+                            <small>
+                                <b class="text-bold">Location:</b> 2nd Avenue, New York, USA
+                            </small>
+                            <small>
+                                <b class="text-bold">Occupation:</b> Web Developer
+                            </small>
+                        </div>
+                    </div>
+
+                    @@include('components/profile-tabs.html')
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="panel panel-default panel-block">
+                        <div class="panel-heading clearfix">
+                            <span class="title">Contact</span>
+                            <small>
+                                <b class="text-bold">Email:</b> <a href="mailto:john.doe@orangehilldev.com">john.doe@orangehilldev.com</a>
+                            </small>
+                            <small>
+                                <b class="text-bold">Facebook:</b> <a href="https://www.facebook.com/orangehilldev">orangehilldev</a>
+                            </small>
+                            <small>
+                                <b class="text-bold">Twitter:</b> <a href="https://twitter.com/orangehilldev">orangehilldev</a>
+                            </small>
+                            <small>
+                                <b class="text-bold">Website:</b> <a href="http://www.orangehilldev.com">www.orangehilldev.com</a>
+                            </small>
+                            <div class="map" id="hybridMap" style="height:250px; width:100%"></div>
+                        </div>
+                    </div>
+                    @@include('components/profile-chart.html')
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Word Counter -->
+        <!-- http://bavotasan.com/2011/simple-textarea-word-counter-jquery-plugin/ -->
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+            </div>
+        </section>
+
+
+
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/userProfile.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Raphael, used for graphs -->
+        <!-- http://raphaeljs.com/ -->
+            <script src="scripts/vendor/raphael-min.js"></script>
+
+        <!-- Morris graphs -->
+        <!-- https://github.com/oesmith/morris.js -->
+            <script src="scripts/vendor/morris.min.js"></script>
+
+        <!-- Google Maps -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+        <!-- Word Counter -->
+        <!-- http://bavotasan.com/2011/simple-textarea-word-counter-jquery-plugin/ -->
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+
+        <!-- File Input -->
+        <!-- http://jasny.github.io/bootstrap/javascript/#fileinput -->
+            <script src="scripts/vendor/fileinput.js"></script>
+
+      </body>
+</html>

@@ -1,0 +1,71 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - General</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/farbtastic/farbtastic.css" media="screen">
+        <link rel="stylesheet" href="styles/vendor/jquery.pnotify.default.css" media="screen">
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs-ui-components.html')
+            @@include('common/titlebar.html')
+
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    @@include('components/preface.html')
+                    @@include('components/notification-starter.html')
+                    @@include('components/alerts.html')
+                    @@include('components/code-prettifier.html')
+                    @@include('components/tooltips.html')
+                    @@include('components/pagination.html')
+                    @@include('components/spinners.html')
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    @@include('components/tags-n-stars.html')
+                    @@include('components/modal-dialog-starter.html')
+                    @@include('components/progress-bars.html')
+                    @@include('components/color-picker.html')
+                </div>
+            </div>
+        </section>
+
+        @@include('components/modal-dialogs.html')
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/ui-components-general.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Javascript code prettifier -->
+        <!-- http://google-code-prettify.googlecode.com/svn/trunk/README.html -->
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <!-- Notifications -->
+        <!-- http://pinesframework.org/pnotify/ -->
+            <script src="scripts/vendor/jquery.pnotify.min.js"></script>
+        <!-- Bootstrap Tags Input -->
+        <!-- http://timschlechter.github.io/bootstrap-tagsinput/examples/ -->
+            <script src="scripts/vendor/bootstrap-tagsinput.min.js"></script>
+        <!-- Star Rating -->
+        <!-- https://github.com/astronouth7303/raty -->
+            <script src="scripts/vendor/jquery.raty.js"></script>
+        <!-- Farbtastic Color Picker -->
+        <!-- http://acko.net/blog/farbtastic-jquery-color-picker-plug-in -->
+            <script src="scripts/vendor/farbtastic.js"></script>
+    </body>
+</html>
