@@ -1,5 +1,6 @@
-from django.db import models
-
+from tag.models import models
+from tag.models import Tag
+    
 
 class Ovino(models.Model):
     
@@ -11,6 +12,7 @@ class Ovino(models.Model):
     genero = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    tag = models.OneToOneField(Tag, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.deveui
