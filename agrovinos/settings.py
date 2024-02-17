@@ -1,3 +1,22 @@
+# Aviable: os.path.join(BASE_DIR, ...)
+import os
+
+...
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-1pm*crjz8*(dzocwtdd+e76ushzy(uku2pm12x#+&m*%^)d6ar'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+### Docker Config
+DEBUG = int(os.environ.get("DEBUG", default=DEBUG))
+SECRET_KEY = os.environ.get("SECRET_KEY", default=SECRET_KEY)
+if os.environ.get("DJANGO_ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+
 """
 Django settings for agrovinos project.
 
