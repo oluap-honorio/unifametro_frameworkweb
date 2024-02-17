@@ -11,3 +11,5 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.serial
+
+        id = models.UUIDField(    primary_key=True,default=uuid.uuid4,null=False,blank=True)
