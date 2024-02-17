@@ -1,0 +1,283 @@
+<!doctype html>
+{% load sekizai_tags %}
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>{% block "title" %} AGROVINOS {% endblock %}</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="{% static 'favicon_io/favicon.ico' %}" />
+        <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+        
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="{% static 'styles/vendor/select2/select2.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/vendor/uniformjs/css/uniform.default.css' %}">
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="{% static 'styles/proton.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/vendor/animate.css' %}">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="{% static 'styles/font-awesome.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'styles/font-titillium.css' %}" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script>
+        (function () {
+          var js;
+          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';
+          } else {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+          }
+          document.write('<script src="' + js + '"><\/script>');
+        }());
+        </script>ß
+        <script src="{% static 'scripts/vendor/modernizr.js' %}"></script>
+        <script src="{% static 'scripts/vendor/jquery.cookie.js' %}"></script>
+        {% block styles %}{% endblock %}
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <nav class="main-menu" data-step='2' data-intro='This is the extendable Main Navigation Menu.' data-position='right'>
+            <ul>
+                <li>
+                    <a href=".">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="{% url 'login' %}">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+            $(document).ready(function() {
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            });
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <img src="{% static 'images/proton-logo.png' %}" alt="proton-logo">
+                        <h5>
+                            <span class="title">
+                                Proton
+                            </span>
+                            <span class="subtitle">
+                                CMS ADMIN PANEL
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="title">
+                        <i class="icon-shopping-cart"></i>
+                        <span>
+                            CATEGORIES
+                        </span>
+                        <a href="javascript:;" class="add">
+                            <i class="icon-plus-sign"></i>
+                            <span>
+                                ADD NEW
+                            </span>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body tree-body">
+                    <div class="scrollable">
+                        <div id="proton-tree"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <!-- BEGIN CONTAINER -->
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+            <nav class="user-menu">
+                <a href="javascript:;" class="main-menu-access">
+                    <i class="icon-proton-logo"></i>
+                    <i class="icon-reorder"></i>
+                </a>
+                <section class="user-menu-wrapper">
+                    <a href="javascript:;" data-expand=".theme-view" class="view-menu-access">
+                        <i class="icon-eye-open"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".messages-view" class="messages-access">
+                        <i class="icon-envelope-alt"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".notifications-view" class="notifications-access unread">
+                        <i class="icon-comment-alt"></i>
+                        <div class="menu-counter">6</div>
+                    </a>
+                </section>
+
+                
+
+              
+
+            </nav>
+            
+            <ol class="breadcrumb breadcrumb-nav">
+                <li><a href="."><i class="icon-home"></i></a></li>
+                <li class="group">
+                    <a data-toggle="dropdown" href="#">FORMS</a>
+                    <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="">ToDo</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="active">
+                    <a class="bread-page-title" data-toggle="dropdown" href="#"></a>
+                    <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                    </ul>
+                </li>
+            </ol>
+                            <div id="top" class="panel panel-default panel-block panel-title-block">
+                    <div class="panel-heading">
+                        <div>
+                            <i class="icon-edit"></i>
+                            <h1>
+                                <span class="page-title"></span>
+                                <small>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                                </small>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row">
+            <!-- BEGIN PAGE BASE CONTENT -->
+            {% block "conteudo" %} {% endblock %}
+            <!-- END PAGE BASE CONTENT -->
+            </div>
+
+        </section>
+        <!-- END CONTAINER -->
+
+        
+        <script src="{% static 'scripts/bootstrap.min.js' %}"></script>
+
+		<!-- Proton base scripts: -->
+        
+        <script src="{% static 'scripts/main.js' %}"></script>
+		<script src="{% static 'scripts/proton/common.js' %}"></script>
+		<script src="{% static 'scripts/proton/main-nav.js' %}"></script>
+		<script src="{% static 'scripts/proton/user-nav.js' %}"></script>
+		
+
+
+        <!-- Page-specific scripts: -->
+        <script src="{% static 'scripts/proton/sidebar.js' %}"></script>
+        <script src="{% static 'scripts/proton/forms.js' %}"></script>
+        <!-- jsTree -->
+        <script src="{% static 'scripts/vendor/jquery.jstree.js' %}"></script>
+        <!-- Select2 For Bootstrap3 -->
+        <!-- https://github.com/fk/select2-bootstrap-css -->
+            <script src="{% static 'scripts/vendor/select2.min.js' %}"></script>
+
+        <!-- uniformJs -->
+            <script src="{% static 'scripts/vendor/jquery.uniform.min.js' %}"></script>
+
+        <!-- Date Time Picker -->
+        <!-- https://github.com/smalot/bootstrap-datetimepicker -->
+        <!-- NOTE: Original JS file is modified: Proton is forcing bootstrap 2 plugin mode in order to support font icons -->
+            <script src="{% static 'scripts/vendor/bootstrap-datetimepicker.js' %}"></script>
+
+        <!-- Character Counter -->
+        <!-- http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas -->
+            <script src="{% static 'scripts/vendor/charCount.js' %}"></script>
+
+        <!-- Word Counter -->
+        <!-- http://bavotasan.com/2011/simple-textarea-word-counter-jquery-plugin/ -->
+            <script src="{% static 'scripts/vendor/jquery.textareaCounter.js' %}"></script>
+
+        <!-- WYSIWYG Editor -->
+        <!-- http://hackerwins.github.io/summernote/ -->
+            <script src="{% static 'scripts/vendor/summernote.js' %}"></script>
+
+        <!-- File Input -->
+        <!-- http://jasny.github.io/bootstrap/javascript/#fileinput -->
+            <script src="{% static 'scripts/vendor/fileinput.js' %}"></script>
+
+        <!-- tinymce -->
+        <!-- http://www.tinymce.com/ -->
+        <script src="{% static 'scripts/vendor/tinymce/tinymce.min.js' %}"></script>
+
+
+    </body>
+</html>
+base.html
+Exibindo base.html…

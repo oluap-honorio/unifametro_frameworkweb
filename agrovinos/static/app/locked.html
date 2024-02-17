@@ -1,0 +1,56 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Login</title>
+        <meta name="description" content="">
+@@include('common/head-part-2.html')
+@@include('common/head-part-3.html')
+
+    <body class="login-page">
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <form role="form">
+            <section class="wrapper scrollable animated fadeInDown">
+                <section class="panel panel-default">
+                    <div class="panel-heading">
+                        <div>
+                            <img src="images/proton-logo.png" alt="proton-logo">
+                            <h1>
+                                <span class="title">
+                                    Proton
+                                </span>
+                                <span class="subtitle">
+                                    CMS ADMIN PANEL
+                                </span>
+                            </h1>
+                        </div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="welcome-text">
+                                Your session has been locked.
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="login-text">
+                                Login with your Proton account
+                            </span>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control input-lg" id="email" value="john.doe@orangehilldev.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control input-lg" id="password" placeholder="Password">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-success" href="session-timeout.html">LOG BACK IN</a>
+                    </div>
+                </section>
+            </section>
+        </form>
+    </body>
+</html>
