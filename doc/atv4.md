@@ -20,7 +20,7 @@ $ cd unifametro_frameworkweb
 ```
 4. Gerar uma Branch com o seu nome.
 ```
-$ git checkout -b NOME_SOBRENOME v1.1
+$ git checkout -b NOME_SOBRENOME
 $ git branch
 ```
 
