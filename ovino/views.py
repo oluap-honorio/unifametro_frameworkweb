@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     context = {}
     context["dataset"] = Ovino.objects.all()
-    return render(request, "ovino_index.html", context)
+    return render(request, "onivo_index.html", context)
 
 
 def create(request):
