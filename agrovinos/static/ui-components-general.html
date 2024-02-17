@@ -1,0 +1,1161 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Proton UI - General</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/farbtastic/farbtastic.css" media="screen">
+        <link rel="stylesheet" href="styles/vendor/jquery.pnotify.default.css" media="screen">
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script>
+        (function () {
+          var js;
+          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';
+          } else {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+          }
+          document.write('<script src="' + js + '"><\/script>');
+        }());
+        </script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <nav class="main-menu" data-step='2' data-intro='This is the extendable Main Navigation Menu.' data-position='right'>
+            <ul>
+                <li>
+                    <a href=".">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-laptop nav-icon"></i>
+                        <span class="nav-text">
+                            UI Components
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="ui-components-general.html">
+                                General
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-buttons.html">
+                                Buttons
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-tabs-accordions.html">
+                                Tabs &amp; Accordions
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-sliders.html">
+                                Sliders
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-grid.html">
+                                Grid
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-list nav-icon"></i>
+                        <span class="nav-text">
+                            Forms
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="forms-form-components.html">
+                                Form Componenets<span class="label label-warning label-new">Update</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-masked-input-fields.html">
+                                Masked Input Fields
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-autotab-input-fields.html">
+                                Autotab Input Fields
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-validation.html">
+                                Form Validation
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-folder-open nav-icon"></i>
+                        <span class="nav-text">
+                            Pages
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="intro.html">
+                                Intro Page<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="image-gallery-uploader.html">
+                                Image Gallery Uploader
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="calendar.html">
+                                Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="user-profile.html">
+                                User Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="advanced-search.html">
+                                Advanced Search<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="session-timeout.html">
+                                Session Timeout<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="login.html">
+                                Login Page
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="graphs-and-statistics.html">
+                        <i class="icon-bar-chart nav-icon"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics<span class="label label-warning label-new">Update</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography-and-icons.html">
+                        <i class="icon-font nav-icon"></i>
+                        <span class="nav-text">
+                            Typography and Icons
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tables.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Tables
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="maps.html">
+                        <i class="icon-map-marker nav-icon"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-warning-sign nav-icon"></i>
+                        <span class="nav-text">
+                            Error Pages
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="400-bad-request-error.html">
+                                400 Bad Request
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="401-unauthorized-error.html">
+                                401 Unauthorized
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="403-forbidden-error.html">
+                                403 Forbidden
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="404-page-not-found-error.html">
+                                404 Page Not Found
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="500-internal-server-error.html">
+                                500 Internal Server Error
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="503-service-unavailable-error.html">
+                                503 Service Unavailable
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="documentation.html">
+                        <i class="icon-info-sign nav-icon"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+            $(document).ready(function() {
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            });
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <img src="images/proton-logo.png" alt="proton-logo">
+                        <h5>
+                            <span class="title">
+                                Proton
+                            </span>
+                            <span class="subtitle">
+                                CMS ADMIN PANEL
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="title">
+                        <i class="icon-shopping-cart"></i>
+                        <span>
+                            CATEGORIES
+                        </span>
+                        <a href="javascript:;" class="add">
+                            <i class="icon-plus-sign"></i>
+                            <span>
+                                ADD NEW
+                            </span>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body tree-body">
+                    <div class="scrollable">
+                        <div id="proton-tree"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+            <nav class="user-menu">
+                <a href="javascript:;" class="main-menu-access">
+                    <i class="icon-proton-logo"></i>
+                    <i class="icon-reorder"></i>
+                </a>
+                <section class="user-menu-wrapper">
+                    <a href="javascript:;" data-expand=".theme-view" class="view-menu-access">
+                        <i class="icon-eye-open"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".messages-view" class="messages-access">
+                        <i class="icon-envelope-alt"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".notifications-view" class="notifications-access unread">
+                        <i class="icon-comment-alt"></i>
+                        <div class="menu-counter">6</div>
+                    </a>
+                </section>
+
+                <div class="panel panel-default nav-view theme-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-eye-open"></i>
+                        <span>Color Scheme</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item" data-theme="default">
+                            <a href="javascript:;">
+                                <i><b class="dark"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Dark
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-light">
+                            <a href="javascript:;">
+                                <i><b></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Light
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-pastel">
+                            <a href="javascript:;">
+                                <i><b class="pastel"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Pastel Green
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-pastel-marine">
+                            <a href="javascript:;">
+                                <i><b class="pastel-marine"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Pastel Marine
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-terminal">
+                            <a href="javascript:;">
+                                <i><b class="terminal"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Terminal
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-rio">
+                            <a href="javascript:;">
+                                <i><b class="rio"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Rio
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default nav-view messages-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-envelope-alt"></i>
+                        <span>Messages</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis:
+                                </span>
+                                <span class="description-text">
+                                    Hi, can you meet me at the office tomorrow morning?
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Prasent Neque:
+                                </span>
+                                <span class="description-text">
+                                    Just a quick question: do you know the balance on the adsense account?
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                17 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa:
+                                </span>
+                                <span class="description-text">
+                                    Hey, we're going surfing tomorrow. Feel free to join in.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default nav-view notifications-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-comment-alt"></i>
+                        <span>Notifications</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis
+                                </span>
+                                <span class="description-text">
+                                    likes your website.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                32 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Neque
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                57 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa
+                                </span>
+                                <span class="description-text">
+                                    submitted a new ticket.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                1.5 hrs ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <ol class="breadcrumb breadcrumb-nav">
+                <li><a href="."><i class="icon-home"></i></a></li>
+                <li class="group">
+                    <a data-toggle="dropdown" href="#">UI COMPONENTS</a>
+                    <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="ui-components-general.html">General</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="ui-components-buttons.html">Buttons</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="ui-components-tabs-accordions.html">Tabs &amp; Accordions</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="ui-components-sliders.html">Sliders</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="ui-components-grid.html">Grid</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a class="bread-page-title" data-toggle="dropdown" href="#"></a>
+                    <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                    </ul>
+                </li>
+            </ol>
+                            <div id="top" class="panel panel-default panel-block panel-title-block">
+                    <div class="panel-heading">
+                        <div>
+                            <i class="icon-edit"></i>
+                            <h1>
+                                <span class="page-title"></span>
+                                <small>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                                </small>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                                        <div class="panel panel-default panel-block preface">
+                        <div class="list-group">
+                            <div class="list-group-item button-demo">
+                                <h4 class="section-title preface-title">Preface</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item button-demo">
+                                <h4 class="section-title">Notifications</h4>
+                                <div class="form-group">
+                                    <label>By Type</label>
+                                    <div>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Basic Notification',
+                                        text: 'I am your basic notification.',
+                                        history: false,
+                                        }); return false;">
+                                        Basic Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Transparent Notification',
+                                        text: 'I am a transparent notification. You can hardly see me, good for less important stuff.',
+                                        history: false,
+                                        opacity: .5
+                                        }); return false;">
+                                        Transparent Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Sticky Notification',
+                                        text: 'I am a sticky notification. I won\'t go away, you\'ll have to close me yourself!',
+                                        history: false,
+                                        hide: false
+                                        }); return false;">
+                                        Sticky Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Long-Life Notification',
+                                        text: 'I am a long-life notification, I\'ll stay around longer than others.',
+                                        history: false,
+                                        delay: '10000'
+                                        }); return false;">
+                                        Long-life Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Non-blocking Notification',
+                                        text: 'I am a non-blocking notification. You can click behind me, I won\'t bother you.',
+                                        history: false,
+                                        nonblock: true,
+                                        nonblock_opacity: .2
+                                        }); return false;">
+                                        Non-blocking Notification
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>By Status</label>
+                                    <div>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                            title: 'Sticky Notice',
+                                            text: 'Check me out! I\'m a sticky notice. You\'ll have to close me yourself.',
+                                            history: false,
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Notice
+                                        </button>
+                                        <button class="btn btn-info" onclick="$.pnotify({
+                                            title: 'Sticky Info',
+                                            text: 'Sticky info, you know, like a newspaper covered in honey.',
+                                            history: false,
+                                            type: 'info',
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Info
+                                        </button>
+                                        <button class="btn btn-success" onclick="$.pnotify({
+                                            title: 'Sticky Success',
+                                            text: 'Sticky success... I\'m not even gonna make a joke.',
+                                            history: false,
+                                            type: 'success',
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Success
+                                        </button>
+                                        <button class="btn btn-danger" onclick="$.pnotify({
+                                            title: 'Uh Oh!',
+                                            text: 'Something really terrible happened. You really need to read this, so I won\'t close automatically.',
+                                            history: false,
+                                            type: 'error',
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Danger
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <!-- ALERTS/NOTIFICATIONS -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Alerts</h4>
+                                <div class="form-group">
+                                    <div class="alert alert-dismissable alert-success fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-remove"></i></button>
+                                        <span class="title"><i class="icon-check-sign"></i> SUCCESS</span>
+                                        You successfully read this important alert message.
+                                    </div>
+                                    <div class="alert alert-dismissable alert-info fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-remove"></i></button>
+                                        <span class="title"><i class="icon-info-sign"></i> INFORMATION</span>
+                                        This alert needs your attention, but it's not super important.
+                                    </div>
+                                    <div class="alert alert-dismissable alert-warning fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-remove"></i></button>
+                                        <span class="title"><i class="icon-warning-sign"></i> WARNING</span>
+                                        Best check yo self, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-dismissable alert-danger fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-remove"></i></button>
+                                        <span class="title"><i class="icon-remove-sign"></i> ERROR</span>
+                                        Change a few things up and try submitting again.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+
+                                        <!-- JAVASCRIPT CODE PRETTIFIER -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Code Prettifier</h4>
+                                <div class="form-group">
+                                    <div>
+                                        <pre class="prettyprint lang-js">
+
+    $('#half-cancel-stars-demo').raty({
+        cancel      : true,
+        cancelPlace : 'right',
+        starOff     : 'icon-star dimmed',
+        cancelOff   : 'icon-remove-sign dimmed',
+        half: true
+    });
+                                        </pre>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        <!-- TOOLTIPS -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="form-group button-demo">
+                                    <h4 class="section-title">Tooltips <i class="icon-info-sign uses-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hover To See Them"></i></h4>
+                                    <div>
+                                        <button type="button" class="btn btn-default uses-tooltip" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</button>
+                                        <button type="button" class="btn btn-default uses-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Tooltip on top</button>
+                                        <button type="button" class="btn btn-default uses-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Tooltip on bottom</button>
+                                        <button type="button" class="btn btn-default uses-tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Pagination</h4>
+                                <div class="form-group">
+                                    <label>Large</label>
+                                    <div>
+                                    	<ul class="pagination pagination-demo pagination-lg">
+                                    	  <li><a href="javascript:;">&laquo;</a></li>
+                                    	  <li><a href="javascript:;">1</a></li>
+                                    	  <li><a href="javascript:;">2</a></li>
+                                    	  <li><a href="javascript:;">3</a></li>
+                                    	  <li><a href="javascript:;">4</a></li>
+                                    	  <li><a href="javascript:;">5</a></li>
+                                    	  <li><a href="javascript:;">&raquo;</a></li>
+                                    	</ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Default</label>
+                                    <div>
+                                    	<ul class="pagination pagination-demo">
+                                    	  <li><a href="javascript:;">&laquo;</a></li>
+                                    	  <li><a href="javascript:;">1</a></li>
+                                    	  <li><a href="javascript:;">2</a></li>
+                                    	  <li><a href="javascript:;">3</a></li>
+                                    	  <li><a href="javascript:;">4</a></li>
+                                    	  <li><a href="javascript:;">5</a></li>
+                                    	  <li><a href="javascript:;">&raquo;</a></li>
+                                    	</ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Active First Page</label>
+                                    <div>
+                                    	<ul class="pagination pagination-demo">
+                                    	  <li class="disabled"><a href="javascript:;">&laquo;</a></li>
+                                    	  <li class="active"><a href="javascript:;">1 <span class="sr-only">(current)</span></a></li>
+                                    	  <li><a href="javascript:;">2</a></li>
+                                    	  <li><a href="javascript:;">3</a></li>
+                                    	  <li><a href="javascript:;">4</a></li>
+                                    	  <li><a href="javascript:;">5</a></li>
+                                    	  <li><a href="javascript:;">&raquo;</a></li>
+                                    	</ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Small</label>
+                                    <div>
+                                    	<ul class="pagination pagination-demo pagination-sm">
+                                    	  <li><a href="javascript:;">&laquo;</a></li>
+                                    	  <li><a href="javascript:;">1</a></li>
+                                    	  <li><a href="javascript:;">2</a></li>
+                                    	  <li><a href="javascript:;">3</a></li>
+                                    	  <li><a href="javascript:;">4</a></li>
+                                    	  <li><a href="javascript:;">5</a></li>
+                                    	  <li><a href="javascript:;">&raquo;</a></li>
+                                    	</ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Spinners</h4>
+                                <div class="form-group">
+                                    <div>
+                                        <ul class="spinners">
+                                            <li><img src="images/spinners/130.gif" alt="loader" /></li>
+                                            <li><img src="images/spinners/2.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/20.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/22.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/239.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/282.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/284.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/3.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/301.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/320.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/325.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/328.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/332.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/334.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/76.gif" alt="loader"/></li>
+                                            <li><img src="images/spinners/82.gif" alt="loader"/></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                                        <!-- BOOTSTRAP TAGS INPUT -->
+                    <!-- http://timschlechter.github.io/bootstrap-tagsinput/examples/ -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Tags</h4>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Placeholder Text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- STAR RATING -->
+                    <!-- https://github.com/astronouth7303/raty -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Star Rating</h4>
+                                <div class="form-group">
+                                    <div id="basic-stars-demo" class="star-rating"></div>
+                                    <div id="half-cancel-stars-demo" class="star-rating"></div>
+                                    <div id="ten-stars-stars-demo" class="star-rating"></div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <h4 class="section-title">Star Rating (read only)</h4>
+                                <div class="form-group">
+                                    <div id="readonly-stars-demo" class="star-rating"></div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item button-demo">
+                                <h4 class="section-title">Modal Dialogs</h4>
+                                <div class="form-group">
+                                    <div>
+                                        <a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
+	                                    <a data-toggle="modal" href="#myModal2" class="btn btn-success">Launch another modal</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <!-- PROGRESS BARS -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Progress Bars</h4>
+                                <div class="form-group">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <h4 class="section-title">Striped Progress Bars</h4>
+                                <div class="form-group">
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <h4 class="section-title">Animated Progress Bars</h4>
+                                <div class="form-group">
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <h4 class="section-title">Thin Progress Bars</h4>
+                                <div class="form-group">
+                                    <div class="progress progress-thin">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-thin">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-thin">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-thin">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-thin">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <h4 class="section-title">Stacked Progress Bars</h4>
+                                <div class="form-group">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" style="width: 65%">
+                                        <span class="sr-only">65% Complete (success)</span>
+                                        </div>
+                                        <div class="progress-bar progress-bar-warning" style="width: 20%">
+                                        <span class="sr-only">20% Complete (warning)</span>
+                                        </div>
+                                        <div class="progress-bar progress-bar-danger" style="width: 4%">
+                                        <span class="sr-only">4% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        <!-- COLOR PICKER -->
+                    <!-- http://timschlechter.github.io/bootstrap-tagsinput/examples/ -->
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Color Picker</h4>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" id="color" name="color" value="#428bca" />
+                                </div>
+                                <div class="colorpicker-binder text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                            <div id="myModal" tabindex="-1" role="dialog" class="modal fade">
+                    	<div class="modal-dialog">
+                    		<div class="modal-content">
+                    			<div class="modal-header">
+                    				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    				<h4 class="modal-title"><i class="icon-hdd"></i> Modal title</h4>
+                    			</div>
+                    			<div class="modal-body">
+                    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, impedit, at corporis provident consectetur dolores sequi aliquam nam cupiditate labore ab eius mollitia veritatis perspiciatis quidem vitae officiis exercitationem tenetur cum voluptatem in recusandae consequatur magnam vero expedita aspernatur nihil et velit pariatur ratione fugit voluptatibus iure nulla maxime qui.</p>
+                                    <a href="javascript:;">
+                                        Some link here.
+                                    </a>
+                    			</div>
+                    			<div class="modal-footer">
+                    				<button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Close</button>
+                    				<button type="button" class="btn btn-lg btn-primary">Save changes</button>
+                    			</div>
+                    		</div><!-- /.modal-content -->
+                    	</div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+
+                    <div id="myModal2" tabindex="-1" role="dialog" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title"><i class="icon-smile"></i> Smile</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>You just launched another modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-lg btn-success" data-dismiss="modal">Yeaaah!</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+        
+        <script src="scripts/bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        
+        <script src="scripts/main.js"></script>
+		<script src="scripts/proton/common.js"></script>
+		<script src="scripts/proton/main-nav.js"></script>
+		<script src="scripts/proton/user-nav.js"></script>
+		
+
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/ui-components-general.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Javascript code prettifier -->
+        <!-- http://google-code-prettify.googlecode.com/svn/trunk/README.html -->
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <!-- Notifications -->
+        <!-- http://pinesframework.org/pnotify/ -->
+            <script src="scripts/vendor/jquery.pnotify.min.js"></script>
+        <!-- Bootstrap Tags Input -->
+        <!-- http://timschlechter.github.io/bootstrap-tagsinput/examples/ -->
+            <script src="scripts/vendor/bootstrap-tagsinput.min.js"></script>
+        <!-- Star Rating -->
+        <!-- https://github.com/astronouth7303/raty -->
+            <script src="scripts/vendor/jquery.raty.js"></script>
+        <!-- Farbtastic Color Picker -->
+        <!-- http://acko.net/blog/farbtastic-jquery-color-picker-plug-in -->
+            <script src="scripts/vendor/farbtastic.js"></script>
+    </body>
+</html>

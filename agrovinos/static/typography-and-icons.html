@@ -1,0 +1,1345 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Proton UI - Typography and Icons</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script>
+        (function () {
+          var js;
+          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';
+          } else {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+          }
+          document.write('<script src="' + js + '"><\/script>');
+        }());
+        </script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <nav class="main-menu" data-step='2' data-intro='This is the extendable Main Navigation Menu.' data-position='right'>
+            <ul>
+                <li>
+                    <a href=".">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-laptop nav-icon"></i>
+                        <span class="nav-text">
+                            UI Components
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="ui-components-general.html">
+                                General
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-buttons.html">
+                                Buttons
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-tabs-accordions.html">
+                                Tabs &amp; Accordions
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-sliders.html">
+                                Sliders
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-grid.html">
+                                Grid
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-list nav-icon"></i>
+                        <span class="nav-text">
+                            Forms
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="forms-form-components.html">
+                                Form Componenets<span class="label label-warning label-new">Update</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-masked-input-fields.html">
+                                Masked Input Fields
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-autotab-input-fields.html">
+                                Autotab Input Fields
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-validation.html">
+                                Form Validation
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-folder-open nav-icon"></i>
+                        <span class="nav-text">
+                            Pages
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="intro.html">
+                                Intro Page<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="image-gallery-uploader.html">
+                                Image Gallery Uploader
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="calendar.html">
+                                Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="user-profile.html">
+                                User Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="advanced-search.html">
+                                Advanced Search<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="session-timeout.html">
+                                Session Timeout<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="login.html">
+                                Login Page
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="graphs-and-statistics.html">
+                        <i class="icon-bar-chart nav-icon"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics<span class="label label-warning label-new">Update</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography-and-icons.html">
+                        <i class="icon-font nav-icon"></i>
+                        <span class="nav-text">
+                            Typography and Icons
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tables.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Tables
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="maps.html">
+                        <i class="icon-map-marker nav-icon"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-warning-sign nav-icon"></i>
+                        <span class="nav-text">
+                            Error Pages
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="400-bad-request-error.html">
+                                400 Bad Request
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="401-unauthorized-error.html">
+                                401 Unauthorized
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="403-forbidden-error.html">
+                                403 Forbidden
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="404-page-not-found-error.html">
+                                404 Page Not Found
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="500-internal-server-error.html">
+                                500 Internal Server Error
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="503-service-unavailable-error.html">
+                                503 Service Unavailable
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="documentation.html">
+                        <i class="icon-info-sign nav-icon"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+            $(document).ready(function() {
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            });
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <img src="images/proton-logo.png" alt="proton-logo">
+                        <h5>
+                            <span class="title">
+                                Proton
+                            </span>
+                            <span class="subtitle">
+                                CMS ADMIN PANEL
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="title">
+                        <i class="icon-shopping-cart"></i>
+                        <span>
+                            CATEGORIES
+                        </span>
+                        <a href="javascript:;" class="add">
+                            <i class="icon-plus-sign"></i>
+                            <span>
+                                ADD NEW
+                            </span>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body tree-body">
+                    <div class="scrollable">
+                        <div id="proton-tree"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+            <nav class="user-menu">
+                <a href="javascript:;" class="main-menu-access">
+                    <i class="icon-proton-logo"></i>
+                    <i class="icon-reorder"></i>
+                </a>
+                <section class="user-menu-wrapper">
+                    <a href="javascript:;" data-expand=".theme-view" class="view-menu-access">
+                        <i class="icon-eye-open"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".messages-view" class="messages-access">
+                        <i class="icon-envelope-alt"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".notifications-view" class="notifications-access unread">
+                        <i class="icon-comment-alt"></i>
+                        <div class="menu-counter">6</div>
+                    </a>
+                </section>
+
+                <div class="panel panel-default nav-view theme-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-eye-open"></i>
+                        <span>Color Scheme</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item" data-theme="default">
+                            <a href="javascript:;">
+                                <i><b class="dark"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Dark
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-light">
+                            <a href="javascript:;">
+                                <i><b></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Light
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-pastel">
+                            <a href="javascript:;">
+                                <i><b class="pastel"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Pastel Green
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-pastel-marine">
+                            <a href="javascript:;">
+                                <i><b class="pastel-marine"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Pastel Marine
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-terminal">
+                            <a href="javascript:;">
+                                <i><b class="terminal"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Terminal
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-rio">
+                            <a href="javascript:;">
+                                <i><b class="rio"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Rio
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default nav-view messages-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-envelope-alt"></i>
+                        <span>Messages</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis:
+                                </span>
+                                <span class="description-text">
+                                    Hi, can you meet me at the office tomorrow morning?
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Prasent Neque:
+                                </span>
+                                <span class="description-text">
+                                    Just a quick question: do you know the balance on the adsense account?
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                17 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa:
+                                </span>
+                                <span class="description-text">
+                                    Hey, we're going surfing tomorrow. Feel free to join in.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default nav-view notifications-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-comment-alt"></i>
+                        <span>Notifications</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis
+                                </span>
+                                <span class="description-text">
+                                    likes your website.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                32 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Neque
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                57 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa
+                                </span>
+                                <span class="description-text">
+                                    submitted a new ticket.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                1.5 hrs ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <ol class="breadcrumb breadcrumb-nav">
+                <li><a href="."><i class="icon-home"></i></a></li>
+                <li class="active">
+                    <a class="bread-page-title" data-toggle="dropdown" href="#"></a>
+                    <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                    </ul>
+                </li>
+            </ol>
+                            <div id="top" class="panel panel-default panel-block panel-title-block">
+                    <div class="panel-heading">
+                        <div>
+                            <i class="icon-edit"></i>
+                            <h1>
+                                <span class="page-title"></span>
+                                <small>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                                </small>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                      
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                            	<div class="form-group">
+                                    <h4 class="section-title">Headings</h4>
+
+									<h1>This is Heading 1</h1>
+									<h2>This is Heading 2</h2>
+									<h3>This is Heading 3 </h3>
+									<h4>This is Heading 4</h4>
+									<h5>This is Heading 5</h5>
+									<h6>This is Heading 6</h6>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="form-group">
+                                	<h4 class="section-title">Simple Text with Links</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <a href="#">commodo elementum</a> dapibus. 
+                                        Pellentesque sed lacus dui, sit amet viverra velit. Vivamus ut nunc in ante convallis rhoncus. 
+                                        Phasellus scelerisque pretium tellus, et tincidunt tellus scelerisque at. Nam in lacus velit. 
+                                        Nam mattis convallis ligula, in ultricies nibh pretium porttitor. Nunc in ligula dolor.
+                                    </p>
+                                    <p class="lead">
+                                        Praesent id nibh sapien. Ut laoreet sem non orci consequat in scelerisque lacus fermentum. 
+                                        Etiam odio enim, consequat in adipiscing non, pulvinar eu orci. Suspendisse nec nulla pretium turpis pellentesque eleifend.
+                                    </p>
+                                    <p>
+                                        Nulla <a href="#">pellentesque</a> metus id purus tincidunt luctus id et magna. Praesent tortor lorem, lobortis nec sodales 
+                                        lacinia, interdum in leo. Sed enim quam, egestas vitae pellentesque eget, condimentum ut lectus. Aenean id orci orci, 
+                                        ut fringilla quam. Donec at suscipit nisl. Sed nibh tortor, fringilla at mattis vitae, gravida non nisi. Nunc quam urna, 
+                                        interdum a bibendum eu, <a href="#">sollicitudin sit amet massa</a>. Vivamus egestas ullamcorper quam vitae adipiscing. 
+                                        Vestibulum non ultricies elit. Aliquam pretium gravida ipsum, gravida facilisis nulla feugiat et.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					<div class="panel panel-default panel-block">
+					    <div class="list-group">
+                            <div class="list-group-item">
+                            	<div class="form-group">
+                                	<h4 class="section-title">Labels</h4>
+
+									<p>
+									    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+									    Nunc <span class="label label-primary">commodo elementum</span> dapibus.
+									    Pellentesque sed lacus dui, sit amet viverra velit. 
+									    Vivamus ut nunc in ante convallis rhoncus. 
+									    Phasellus <span class="label label-success">scelerisque</span> pretium tellus, et tincidunt tellus scelerisque at. 
+									    Nam in lacus velit. Nam mattis convallis ligula, in ultricies nibh pretium porttitor. 
+									    Nunc in ligula dolor.
+									</p>
+									<p>
+									    Praesent id nibh sapien.
+									    Ut laoreet sem non orci consequat in scelerisque lacus fermentum. 
+									    Etiam <span class="label label-info">odio</span> enim, consequat in adipiscing non, pulvinar eu orci. 
+									    Suspendisse nec nulla pretium turpis pellentesque eleifend. 
+									    <span class="label label-danger">Nulla</span> pellentesque metus id purus tincidunt luctus id et magna. 
+									    Praesent tortor lorem, lobortis nec sodales lacinia, interdum in leo. 
+									    Sed enim quam, egestas vitae pellentesque eget, condimentum ut lectus. 
+									    Aenean id orci orci, ut <span class="label label-warning">fringilla</span> quam. Donec at suscipit nisl. 
+									    Sed nibh tortor, fringilla at mattis vitae, gravida non nisi.
+									    Nunc quam urna, <span class="label label-default">interdum a bibendum</span> eu, sollicitudin sit amet massa.
+									    Vivamus egestas ullamcorper quam vitae adipiscing. Vestibulum non ultricies elit. 
+									    Aliquam pretium gravida ipsum, gravida facilisis nulla feugiat et.
+									</p>
+                            	</div>
+                            </div>
+                            <div class="list-group-item">
+                            	<div class="form-group">
+                                	<h4 class="section-title">Badges</h4>
+
+									<p>
+									    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+									    Nunc <span class="badge">commodo elementum</span> dapibus.
+									    Pellentesque sed lacus dui, sit amet viverra velit. 
+									    Vivamus ut nunc in ante convallis rhoncus. 
+									    Phasellus <span class="badge">scelerisque</span> pretium tellus, et tincidunt tellus scelerisque at. 
+									    Nam in lacus velit. Nam mattis convallis ligula, in ultricies nibh pretium porttitor. 
+									    Nunc in ligula dolor.
+									</p>
+									<p>
+									    Praesent id nibh sapien.
+									    Ut laoreet sem non orci consequat in scelerisque lacus fermentum. 
+									    Etiam <span class="badge">odio</span> enim, consequat in adipiscing non, pulvinar eu orci. 
+									    Suspendisse nec nulla pretium turpis pellentesque eleifend. 
+									    <span class="badge">Nulla</span> pellentesque metus id purus tincidunt luctus id et magna. 
+									    Praesent tortor lorem, lobortis nec sodales lacinia, interdum in leo. 
+									    Sed enim quam, egestas vitae pellentesque eget, condimentum ut lectus. 
+									    Aenean id orci orci, ut <span class="badge">fringilla</span> quam. Donec at suscipit nisl. 
+									    Sed nibh tortor, fringilla at mattis vitae, gravida non nisi.
+									    Nunc quam urna, <span class="badge">interdum a bibendum</span> eu, sollicitudin sit amet massa.
+									    Vivamus egestas ullamcorper quam vitae adipiscing. Vestibulum non ultricies elit. 
+									    Aliquam pretium gravida ipsum, gravida facilisis nulla feugiat et.
+									</p>
+                            	</div>
+                            </div>
+                            <div class="list-group-item">
+                            	<div class="form-group">
+                                	<h4 class="section-title">Emphasis</h4>
+
+									<p>
+									    <strong>Some bold text example.</strong>
+									</p>
+									<p>
+									    <em>Some italic text example.</em>
+									</p>
+									<p>
+									    <small>Some fine print text example.</small>
+									</p>
+									<p class="text-muted">
+									    Some dimmed text example.
+									</p>
+									<p class="text-info">
+									    Some informative text example.
+									</p>
+									<p class="text-success">
+									    Some success text notification example.
+									</p>
+									<p class="text-warning">
+									    Some warning text example.
+									</p>
+									<p class="text-danger">
+									    Some error text example.
+									</p>
+                            	</div>
+                            </div>
+                        </div>
+					</div>
+					<div class="panel panel-default panel-block">
+					    <div class="list-group">
+                            <div class="list-group-item">
+                            	<div class="form-group">
+                                	<h4 class="section-title">Lists</h4>
+									
+									<div class="row">
+										<div class="col-md-4">
+											<h4>Unordered List</h4>
+											<ul>
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											    <li>Vivamus ut nunc in ante</li>
+											    <li>Tellus scelerisque at</li>
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<h4>Ordered List</h4>
+											<ol>
+											    <li>Tellus scelerisque at</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											    <li>Vivamus ut nunc in ante</li>
+											</ol>
+										</div>
+										<div class="col-md-4">
+											<h4>Letter List</h4>
+											<ol class="upper-alpha">
+											    <li>Vivamus ut nunc in ante</li>
+											    <li>Tellus scelerisque at</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-4">
+											<h4>Roman List</h4>
+											<ol class="upper-roman">
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											    <li>Vivamus ut nunc in ante</li>
+											    <li>Tellus scelerisque at</li>
+											</ol>
+										</div>
+										<div class="col-md-4">
+											<h4>Ordered List w/ Leading Zero</h4>
+											<ol class="decimal-leading-zero">
+											    <li>Tellus scelerisque at</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											    <li>Vivamus ut nunc in ante</li>
+											</ol>
+										</div>
+										<div class="col-md-4">
+											<h4>Letter Lowercase List</h4>
+											<ol class="lower-alpha">
+											    <li>Vivamus ut nunc in ante</li>
+											    <li>Tellus scelerisque at</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											</ol>
+										</div>
+									</div>
+                            	</div>
+                            	<div class="form-group">
+									<div class="row">
+										<div class="col-md-4">
+											<h4>Background Image Icons List</h4>
+											<ul class="image-icons-list">
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											    <li>Vivamus ut nunc in ante</li>
+											    <li>Tellus scelerisque at</li>
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<h4>Font Icons List</h4>
+											<ul class="font-icons-list">
+											    <li>Tellus scelerisque at</li>
+											    <li>Consectetur adipiscing elit</li>
+											    <li>Lorem ipsum dolor sit amet</li>
+											    <li>Nunc commodo elementum dapibus</li>
+											    <li>Vivamus ut nunc in ante</li>
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<h4>Inline Font Icons List</h4>
+											<ul class="inline-font-icons-list">
+											    <li><i class='icon-cog'></i>Vivamus ut nunc in ante</li>
+											    <li><i class='icon-bell'></i>Tellus scelerisque at</li>
+											    <li><i class='icon-bookmark'></i>Consectetur adipiscing elit</li>
+											    <li><i class='icon-female'></i>Lorem ipsum dolor sit amet</li>
+											    <li><i class='icon-headphones'></i>Nunc commodo elementum dapibus</li>
+											</ul>
+										</div>
+									</div>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Currency Icons</h4>
+                                <div class="form-group">
+                                	<section class="icons-demo">
+                                	    <div class="the-icons row">
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-bitcoin"></i> icon-bitcoin <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-btc"></i> icon-btc</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-cny"></i> icon-cny</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-dollar"></i> icon-dollar <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-eur"></i> icon-eur</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-euro"></i> icon-euro <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-gbp"></i> icon-gbp</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-inr"></i> icon-inr</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-jpy"></i> icon-jpy</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-krw"></i> icon-krw</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-renminbi"></i> icon-renminbi <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-rupee"></i> icon-rupee <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-usd"></i> icon-usd</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-won"></i> icon-won <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-yen"></i> icon-yen <span class="muted">(alias)</span></a></div>
+                                	    </div>
+                                	</section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default panel-block">
+					    <div class="list-group">
+					        <div class="list-group-item">
+					            <h4 class="section-title">Text Editor Icons</h4>
+					            <div class="form-group">
+                                	<section class="icons-demo">
+                                	    <div class="the-icons row">
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-align-center"></i> icon-align-center</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-align-justify"></i> icon-align-justify</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-align-left"></i> icon-align-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-align-right"></i> icon-align-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-bold"></i> icon-bold</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-columns"></i> icon-columns</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-copy"></i> icon-copy</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-cut"></i> icon-cut</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-eraser"></i> icon-eraser</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-file"></i> icon-file</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-file-alt"></i> icon-file-alt</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-file-text"></i> icon-file-text</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-file-text-alt"></i> icon-file-text-alt</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-font"></i> icon-font</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-indent-left"></i> icon-indent-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-indent-right"></i> icon-indent-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-italic"></i> icon-italic</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-link"></i> icon-link</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-list"></i> icon-list</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-list-alt"></i> icon-list-alt</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-list-ol"></i> icon-list-ol</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-list-ul"></i> icon-list-ul</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-paper-clip"></i> icon-paper-clip</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-paperclip"></i> icon-paperclip <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-paste"></i> icon-paste</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-repeat"></i> icon-repeat</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-rotate-left"></i> icon-rotate-left <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-rotate-right"></i> icon-rotate-right <span class="muted">(alias)</span></a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-save"></i> icon-save</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-strikethrough"></i> icon-strikethrough</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-table"></i> icon-table</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-text-height"></i> icon-text-height</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-text-width"></i> icon-text-width</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-th"></i> icon-th</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-th-large"></i> icon-th-large</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-th-list"></i> icon-th-list</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-underline"></i> icon-underline</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-undo"></i> icon-undo</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-unlink"></i> icon-unlink</a></div>
+                                	    </div>
+                                	</section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default panel-block">
+					    <div class="list-group">
+					        <div class="list-group-item">
+					            <h4 class="section-title">Directional Icons</h4>
+					            <div class="form-group">
+                                	<section class="icons-demo">
+                                	    <div class="the-icons row">
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-angle-down"></i> icon-angle-down</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-angle-left"></i> icon-angle-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-angle-right"></i> icon-angle-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-angle-up"></i> icon-angle-up</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-caret-down"></i> icon-caret-down</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-caret-left"></i> icon-caret-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-caret-right"></i> icon-caret-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-caret-up"></i> icon-caret-up</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-down"></i> icon-chevron-down</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-left"></i> icon-chevron-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-right"></i> icon-chevron-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-sign-down"></i> icon-chevron-sign-down</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-sign-left"></i> icon-chevron-sign-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-sign-right"></i> icon-chevron-sign-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-sign-up"></i> icon-chevron-sign-up</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-chevron-up"></i> icon-chevron-up</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-double-angle-down"></i> icon-double-angle-down</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-double-angle-left"></i> icon-double-angle-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-double-angle-right"></i> icon-double-angle-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-double-angle-up"></i> icon-double-angle-up</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-hand-down"></i> icon-hand-down</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-hand-left"></i> icon-hand-left</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-hand-right"></i> icon-hand-right</a></div>
+                                	        <div class="col-md-4"><a href="javascript:;"><i class="icon-hand-up"></i> icon-hand-up</a></div>
+                                	    </div>
+                                	</section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-block">
+					    <div class="list-group">
+					        <div class="list-group-item">
+					            <h4 class="section-title">Brand Icons</h4>
+					            <div class="form-group">
+									<section class="icons-demo">
+									    <div class="alert alert-info">
+									        <ul class="margin-bottom-none">
+									            <li>All brand icons are trademarks of their respective owners.</li>
+									            <li>The use of these trademarks does not indicate endorsement of the trademark holder by the developer of Proton UI Theme, nor vice versa.</li>
+									        </ul>
+									    </div>
+
+									    <div class="the-icons row">
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-adn"></i> icon-adn</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-android"></i> icon-android</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-apple"></i> icon-apple</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bitbucket"></i> icon-bitbucket</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bitbucket-sign"></i> icon-bitbucket-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bitcoin"></i> icon-bitcoin <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-btc"></i> icon-btc</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-css3"></i> icon-css3</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-dribbble"></i> icon-dribbble</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-dropbox"></i> icon-dropbox</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-facebook"></i> icon-facebook</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-facebook-sign"></i> icon-facebook-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-flickr"></i> icon-flickr</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-foursquare"></i> icon-foursquare</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-github"></i> icon-github</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-github-alt"></i> icon-github-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-github-sign"></i> icon-github-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-gittip"></i> icon-gittip</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-google-plus"></i> icon-google-plus</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-google-plus-sign"></i> icon-google-plus-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-html5"></i> icon-html5</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-instagram"></i> icon-instagram</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-linkedin"></i> icon-linkedin</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-linkedin-sign"></i> icon-linkedin-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-linux"></i> icon-linux</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-maxcdn"></i> icon-maxcdn</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-pinterest"></i> icon-pinterest</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-pinterest-sign"></i> icon-pinterest-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-renren"></i> icon-renren</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-skype"></i> icon-skype</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-stackexchange"></i> icon-stackexchange</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-trello"></i> icon-trello</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tumblr"></i> icon-tumblr</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tumblr-sign"></i> icon-tumblr-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-twitter"></i> icon-twitter</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-twitter-sign"></i> icon-twitter-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-vk"></i> icon-vk</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-weibo"></i> icon-weibo</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-windows"></i> icon-windows</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-xing"></i> icon-xing</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-xing-sign"></i> icon-xing-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-youtube"></i> icon-youtube</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-youtube-play"></i> icon-youtube-play</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-youtube-sign"></i> icon-youtube-sign</a></div>
+									    </div>
+									</section>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default panel-block">
+					    <div class="list-group">
+					        <div class="list-group-item">
+					            <h4 class="section-title">Medical Icons</h4>
+					            <div class="form-group">
+									<section class="icons-demo">
+									    <div class="the-icons row">
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ambulance"></i> icon-ambulance</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-h-sign"></i> icon-h-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-hospital"></i> icon-hospital</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-medkit"></i> icon-medkit</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-plus-sign-alt"></i> icon-plus-sign-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-stethoscope"></i> icon-stethoscope</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-user-md"></i> icon-user-md</a></div>
+									    </div>
+									</section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Web Application Icons</h4>
+                                <div class="form-group">
+									<section class="icons-demo">
+									    <div class="the-icons row">
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-adjust"></i> icon-adjust</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-anchor"></i> icon-anchor</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-archive"></i> icon-archive</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-asterisk"></i> icon-asterisk</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ban-circle"></i> icon-ban-circle</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bar-chart"></i> icon-bar-chart</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-barcode"></i> icon-barcode</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-beaker"></i> icon-beaker</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-beer"></i> icon-beer</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bell"></i> icon-bell</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bell-alt"></i> icon-bell-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bolt"></i> icon-bolt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-book"></i> icon-book</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bookmark"></i> icon-bookmark</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bookmark-empty"></i> icon-bookmark-empty</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-briefcase"></i> icon-briefcase</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bug"></i> icon-bug</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-building"></i> icon-building</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bullhorn"></i> icon-bullhorn</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-bullseye"></i> icon-bullseye</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-calendar"></i> icon-calendar</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-calendar-empty"></i> icon-calendar-empty</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-camera"></i> icon-camera</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-camera-retro"></i> icon-camera-retro</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-certificate"></i> icon-certificate</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-check"></i> icon-check</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-check-empty"></i> icon-check-empty</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-check-minus"></i> icon-check-minus</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-check-sign"></i> icon-check-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-circle"></i> icon-circle</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-circle-blank"></i> icon-circle-blank</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-cloud"></i> icon-cloud</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-cloud-download"></i> icon-cloud-download</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-cloud-upload"></i> icon-cloud-upload</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-code"></i> icon-code</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-code-fork"></i> icon-code-fork</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-coffee"></i> icon-coffee</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-cog"></i> icon-cog</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-cogs"></i> icon-cogs</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-collapse"></i> icon-collapse</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-collapse-alt"></i> icon-collapse-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-collapse-top"></i> icon-collapse-top</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-comment"></i> icon-comment</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-comment-alt"></i> icon-comment-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-comments"></i> icon-comments</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-comments-alt"></i> icon-comments-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-compass"></i> icon-compass</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-credit-card"></i> icon-credit-card</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-crop"></i> icon-crop</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-dashboard"></i> icon-dashboard</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-desktop"></i> icon-desktop</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-download"></i> icon-download</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-download-alt"></i> icon-download-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-edit"></i> icon-edit</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-edit-sign"></i> icon-edit-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ellipsis-horizontal"></i> icon-ellipsis-horizontal</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ellipsis-vertical"></i> icon-ellipsis-vertical</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-envelope"></i> icon-envelope</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-envelope-alt"></i> icon-envelope-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-eraser"></i> icon-eraser</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-exchange"></i> icon-exchange</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-exclamation"></i> icon-exclamation</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-exclamation-sign"></i> icon-exclamation-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-expand"></i> icon-expand</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-expand-alt"></i> icon-expand-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-external-link"></i> icon-external-link</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-external-link-sign"></i> icon-external-link-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-eye-close"></i> icon-eye-close</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-eye-open"></i> icon-eye-open</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-facetime-video"></i> icon-facetime-video</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-female"></i> icon-female</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-fighter-jet"></i> icon-fighter-jet</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-film"></i> icon-film</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-filter"></i> icon-filter</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-fire"></i> icon-fire</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-fire-extinguisher"></i> icon-fire-extinguisher</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-flag"></i> icon-flag</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-flag-alt"></i> icon-flag-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-flag-checkered"></i> icon-flag-checkered</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-folder-close"></i> icon-folder-close</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-folder-close-alt"></i> icon-folder-close-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-folder-open"></i> icon-folder-open</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-folder-open-alt"></i> icon-folder-open-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-food"></i> icon-food</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-gamepad"></i> icon-gamepad</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-gear"></i> icon-gear <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-gears"></i> icon-gears <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-gift"></i> icon-gift</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-glass"></i> icon-glass</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-globe"></i> icon-globe</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-group"></i> icon-group</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-hdd"></i> icon-hdd</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-headphones"></i> icon-headphones</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-heart"></i> icon-heart</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-heart-empty"></i> icon-heart-empty</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-home"></i> icon-home</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-inbox"></i> icon-inbox</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-info"></i> icon-info</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-info-sign"></i> icon-info-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-key"></i> icon-key</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-keyboard"></i> icon-keyboard</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-laptop"></i> icon-laptop</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-leaf"></i> icon-leaf</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-legal"></i> icon-legal</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-lemon"></i> icon-lemon</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-level-down"></i> icon-level-down</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-level-up"></i> icon-level-up</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-lightbulb"></i> icon-lightbulb</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-lock"></i> icon-lock</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-magic"></i> icon-magic</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-magnet"></i> icon-magnet</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-mail-forward"></i> icon-mail-forward <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-mail-reply"></i> icon-mail-reply <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-mail-reply-all"></i> icon-mail-reply-all</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-male"></i> icon-male</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-map-marker"></i> icon-map-marker</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-meh"></i> icon-meh</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-microphone"></i> icon-microphone</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-microphone-off"></i> icon-microphone-off</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-minus"></i> icon-minus</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-minus-sign"></i> icon-minus-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-minus-sign-alt"></i> icon-minus-sign-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-mobile-phone"></i> icon-mobile-phone</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-money"></i> icon-money</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-moon"></i> icon-moon</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-move"></i> icon-move</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-music"></i> icon-music</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-off"></i> icon-off</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ok"></i> icon-ok</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ok-circle"></i> icon-ok-circle</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ok-sign"></i> icon-ok-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-pencil"></i> icon-pencil</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-phone"></i> icon-phone</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-phone-sign"></i> icon-phone-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-picture"></i> icon-picture</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-plane"></i> icon-plane</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-plus"></i> icon-plus</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-plus-sign"></i> icon-plus-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-plus-sign-alt"></i> icon-plus-sign-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-power-off"></i> icon-power-off <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-print"></i> icon-print</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-pushpin"></i> icon-pushpin</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-puzzle-piece"></i> icon-puzzle-piece</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-qrcode"></i> icon-qrcode</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-question"></i> icon-question</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-question-sign"></i> icon-question-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-quote-left"></i> icon-quote-left</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-quote-right"></i> icon-quote-right</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-random"></i> icon-random</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-refresh"></i> icon-refresh</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-remove"></i> icon-remove</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-remove-circle"></i> icon-remove-circle</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-remove-sign"></i> icon-remove-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-reorder"></i> icon-reorder</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-reply"></i> icon-reply</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-reply-all"></i> icon-reply-all</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-resize-horizontal"></i> icon-resize-horizontal</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-resize-vertical"></i> icon-resize-vertical</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-retweet"></i> icon-retweet</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-road"></i> icon-road</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-rocket"></i> icon-rocket</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-rss"></i> icon-rss</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-rss-sign"></i> icon-rss-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-screenshot"></i> icon-screenshot</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-search"></i> icon-search</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-share"></i> icon-share</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-share-alt"></i> icon-share-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-share-sign"></i> icon-share-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-shield"></i> icon-shield</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-shopping-cart"></i> icon-shopping-cart</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sign-blank"></i> icon-sign-blank</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-signal"></i> icon-signal</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-signin"></i> icon-signin</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-signout"></i> icon-signout</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sitemap"></i> icon-sitemap</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-smile"></i> icon-smile</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort"></i> icon-sort</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-by-alphabet"></i> icon-sort-by-alphabet</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-by-alphabet-alt"></i> icon-sort-by-alphabet-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-by-attributes"></i> icon-sort-by-attributes</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-by-attributes-alt"></i> icon-sort-by-attributes-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-by-order"></i> icon-sort-by-order</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-by-order-alt"></i> icon-sort-by-order-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-down"></i> icon-sort-down</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sort-up"></i> icon-sort-up</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-spinner"></i> icon-spinner</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-star"></i> icon-star</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-star-empty"></i> icon-star-empty</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-star-half"></i> icon-star-half</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-star-half-empty"></i> icon-star-half-empty</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-star-half-full"></i> icon-star-half-full <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-subscript"></i> icon-subscript</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-suitcase"></i> icon-suitcase</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-sun"></i> icon-sun</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-superscript"></i> icon-superscript</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tablet"></i> icon-tablet</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tag"></i> icon-tag</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tags"></i> icon-tags</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tasks"></i> icon-tasks</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-terminal"></i> icon-terminal</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-thumbs-down"></i> icon-thumbs-down</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-thumbs-down-alt"></i> icon-thumbs-down-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-thumbs-up"></i> icon-thumbs-up</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-thumbs-up-alt"></i> icon-thumbs-up-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-ticket"></i> icon-ticket</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-time"></i> icon-time</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-tint"></i> icon-tint</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-trash"></i> icon-trash</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-trophy"></i> icon-trophy</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-truck"></i> icon-truck</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-umbrella"></i> icon-umbrella</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-unchecked"></i> icon-unchecked <span class="muted">(alias)</span></a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-unlock"></i> icon-unlock</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-unlock-alt"></i> icon-unlock-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-upload"></i> icon-upload</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-upload-alt"></i> icon-upload-alt</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-user"></i> icon-user</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-volume-down"></i> icon-volume-down</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-volume-off"></i> icon-volume-off</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-volume-up"></i> icon-volume-up</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-warning-sign"></i> icon-warning-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-wrench"></i> icon-wrench</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-zoom-in"></i> icon-zoom-in</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-zoom-out"></i> icon-zoom-out</a></div>
+									    </div>
+									</section>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+					<div class="panel panel-default panel-block">
+					    <div class="list-group">
+					        <div class="list-group-item">
+					            <h4 class="section-title">Video Player Icons</h4>
+					            <div class="form-group">
+									<section class="icons-demo">
+									    <div class="the-icons row">
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-backward"></i> icon-backward</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-eject"></i> icon-eject</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-fast-backward"></i> icon-fast-backward</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-fast-forward"></i> icon-fast-forward</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-forward"></i> icon-forward</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-fullscreen"></i> icon-fullscreen</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-pause"></i> icon-pause</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-play"></i> icon-play</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-play-circle"></i> icon-play-circle</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-play-sign"></i> icon-play-sign</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-resize-full"></i> icon-resize-full</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-resize-small"></i> icon-resize-small</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-step-backward"></i> icon-step-backward</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-step-forward"></i> icon-step-forward</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-stop"></i> icon-stop</a></div>
+									        <div class="col-md-4"><a href="javascript:;"><i class="icon-youtube-play"></i> icon-youtube-play</a></div>
+									    </div>
+									</section>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+
+        
+        <script src="scripts/bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        
+        <script src="scripts/main.js"></script>
+		<script src="scripts/proton/common.js"></script>
+		<script src="scripts/proton/main-nav.js"></script>
+		<script src="scripts/proton/user-nav.js"></script>
+		
+
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+      </body>
+</html>

@@ -1,7 +1,7 @@
 dup:
 		docker-compose up -d --build --remove-orphans
 duu:
-		docker-compose up -d
+		docker-compose up -d 
 ddo:
 		docker-compose down
 dps:

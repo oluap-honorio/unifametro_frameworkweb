@@ -1,0 +1,1280 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Proton UI - User Profile</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        
+
+        <!-- Page-specific Plugin CSS: -->
+        <link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script>
+        (function () {
+          var js;
+          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';
+          } else {
+            js = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+          }
+          document.write('<script src="' + js + '"><\/script>');
+        }());
+        </script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <nav class="main-menu" data-step='2' data-intro='This is the extendable Main Navigation Menu.' data-position='right'>
+            <ul>
+                <li>
+                    <a href=".">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-laptop nav-icon"></i>
+                        <span class="nav-text">
+                            UI Components
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="ui-components-general.html">
+                                General
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-buttons.html">
+                                Buttons
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-tabs-accordions.html">
+                                Tabs &amp; Accordions
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-sliders.html">
+                                Sliders
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="ui-components-grid.html">
+                                Grid
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-list nav-icon"></i>
+                        <span class="nav-text">
+                            Forms
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="forms-form-components.html">
+                                Form Componenets<span class="label label-warning label-new">Update</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-masked-input-fields.html">
+                                Masked Input Fields
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-autotab-input-fields.html">
+                                Autotab Input Fields
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="forms-validation.html">
+                                Form Validation
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-folder-open nav-icon"></i>
+                        <span class="nav-text">
+                            Pages
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="intro.html">
+                                Intro Page<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="image-gallery-uploader.html">
+                                Image Gallery Uploader
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="calendar.html">
+                                Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="user-profile.html">
+                                User Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="advanced-search.html">
+                                Advanced Search<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="session-timeout.html">
+                                Session Timeout<span class="label label-danger label-new">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="login.html">
+                                Login Page
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="graphs-and-statistics.html">
+                        <i class="icon-bar-chart nav-icon"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics<span class="label label-warning label-new">Update</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography-and-icons.html">
+                        <i class="icon-font nav-icon"></i>
+                        <span class="nav-text">
+                            Typography and Icons
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tables.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Tables
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="maps.html">
+                        <i class="icon-map-marker nav-icon"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:;">
+                        <i class="icon-warning-sign nav-icon"></i>
+                        <span class="nav-text">
+                            Error Pages
+                        </span>
+                        <i class="icon-angle-right"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="subnav-text" href="400-bad-request-error.html">
+                                400 Bad Request
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="401-unauthorized-error.html">
+                                401 Unauthorized
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="403-forbidden-error.html">
+                                403 Forbidden
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="404-page-not-found-error.html">
+                                404 Page Not Found
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="500-internal-server-error.html">
+                                500 Internal Server Error
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subnav-text" href="503-service-unavailable-error.html">
+                                503 Service Unavailable
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="documentation.html">
+                        <i class="icon-info-sign nav-icon"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+
+        <section class="wrapper user-profile extended scrollable">
+            
+            <nav class="user-menu">
+                <a href="javascript:;" class="main-menu-access">
+                    <i class="icon-proton-logo"></i>
+                    <i class="icon-reorder"></i>
+                </a>
+                <section class="user-menu-wrapper">
+                    <a href="javascript:;" data-expand=".theme-view" class="view-menu-access">
+                        <i class="icon-eye-open"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".messages-view" class="messages-access">
+                        <i class="icon-envelope-alt"></i>
+                    </a>
+                    <a href="javascript:;" data-expand=".notifications-view" class="notifications-access unread">
+                        <i class="icon-comment-alt"></i>
+                        <div class="menu-counter">6</div>
+                    </a>
+                </section>
+
+                <div class="panel panel-default nav-view theme-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-eye-open"></i>
+                        <span>Color Scheme</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item" data-theme="default">
+                            <a href="javascript:;">
+                                <i><b class="dark"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Dark
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-light">
+                            <a href="javascript:;">
+                                <i><b></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Light
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-pastel">
+                            <a href="javascript:;">
+                                <i><b class="pastel"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Pastel Green
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-pastel-marine">
+                            <a href="javascript:;">
+                                <i><b class="pastel-marine"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Pastel Marine
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-terminal">
+                            <a href="javascript:;">
+                                <i><b class="terminal"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Terminal
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item" data-theme="theme-rio">
+                            <a href="javascript:;">
+                                <i><b class="rio"></b></i>
+                                <div class="text-holder">
+                                    <span class="title-text">
+                                        Rio
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default nav-view messages-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-envelope-alt"></i>
+                        <span>Messages</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis:
+                                </span>
+                                <span class="description-text">
+                                    Hi, can you meet me at the office tomorrow morning?
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Prasent Neque:
+                                </span>
+                                <span class="description-text">
+                                    Just a quick question: do you know the balance on the adsense account?
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                17 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa:
+                                </span>
+                                <span class="description-text">
+                                    Hey, we're going surfing tomorrow. Feel free to join in.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default nav-view notifications-view">
+                    <div class="arrow user-menu-arrow"></div>
+                    <div class="panel-heading">
+                        <i class="icon-comment-alt"></i>
+                        <span>Notifications</span>
+                        <a href="javascript:;" class="close-user-menu"><i class="icon-remove"></i></a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis
+                                </span>
+                                <span class="description-text">
+                                    likes your website.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                32 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Neque
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                57 mins ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Flor Demoa
+                                </span>
+                                <span class="description-text">
+                                    submitted a new ticket.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                1.5 hrs ago
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                            <div class="text-holder">
+                                <span class="title-text">
+                                    Nunc Cenenatis
+                                </span>
+                                <span class="description-text">
+                                    wrote a new post.
+                                </span>
+                            </div>
+                            <span class="time-ago">
+                                3 hrs ago
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <ol class="breadcrumb breadcrumb-nav">
+                <li><a href="."><i class="icon-home"></i></a></li>
+                <li class="active">
+                    <a class="bread-page-title" data-toggle="dropdown" href="#"></a>
+                    <ul class="dropdown-menu dropdown-menu-arrow" role="menu">
+                    </ul>
+                </li>
+            </ol>
+            
+                      
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    <div class="panel panel-default panel-block panel-title-block">
+                        <div class="panel-heading clearfix">
+                            <div class="avatar">
+                                <img src="images/user-icons/user4.jpg" alt="">
+                                <div class="overlay">
+                                    <div class="controls clearfix">
+                                        <a href="javascript:;"><i class="icon-search"></i></a>
+                                        <a href="javascript:;"><i class="icon-undo"></i></a>
+                                        <a class="edit-item" href="javascript:;"><i class="icon-pencil"></i></a>
+                                        <a class="trash-item" href="javascript:;"><i class="icon-trash"></i></a>
+                                    </div>
+                                    <div class="controls confirm-removal clearfix">
+                                        <a class="remove-item" href="javascript:;">YES</a>
+                                        <a class="remove-cancel" href="javascript:;">NO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">John Doe</span>
+                            <small>
+                                <b class="text-bold">Location:</b> 2nd Avenue, New York, USA
+                            </small>
+                            <small>
+                                <b class="text-bold">Occupation:</b> Web Developer
+                            </small>
+                        </div>
+                    </div>
+
+                                        <!-- TABS -->
+                    <ul class="nav nav-tabs panel panel-default panel-block">
+                        <li class="active"><a href="#user-overview" data-toggle="tab">OVERVIEW</a></li>
+                        <li><a href="#user-messages" data-toggle="tab">MESSAGES</a></li>
+                        <li><a href="#user-activity" data-toggle="tab">ACTIVITY</a></li>
+                        <li><a href="#user-settings" data-toggle="tab">EDIT PROFILE</a></li>
+                    </ul>
+                    <div class="tab-content panel panel-default panel-block">
+                        <div style="" class="tab-pane active" id="user-overview">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h4>
+                                        About me
+                                    </h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, sint, perspiciatis quos aliquam velit voluptate aliquid ratione repellat illum qui error ut totam maiores assumenda dolore distinctio dignissimos vel saepe impedit eius. Inventore, numquam veritatis quis ea quia perferendis consequatur eligendi ducimus.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>
+                                                User Stats
+                                            </h4>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <section class="panel stat stat-info stat-color">
+                                                <div class="panel-heading">
+                                                    <div>
+                                                        <i class="icon-beaker"></i>
+                                                        <h2>
+                                                            CURRENT<br/>
+                                                            PROJECTS
+                                                        </h2>
+                                                        <div class="counter counter-small">04</div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <section class="panel stat stat-success stat-color">
+                                                <div class="panel-heading">
+                                                    <div>
+                                                        <i class="icon-tags"></i>
+                                                        <h2>
+                                                            TASKS<br/>
+                                                            ASSIGNED
+                                                        </h2>
+                                                        <div class="counter counter-small">12</div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <section class="panel stat stat-danger stat-color">
+                                                <div class="panel-heading">
+                                                    <div>
+                                                        <i class="icon-bug"></i>
+                                                        <h2>
+                                                            BUG FIXES<br/>
+                                                            PENDING
+                                                        </h2>
+                                                        <div class="counter counter-small">03</div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <section class="panel stat stat-success">
+                                                <div class="panel-heading">
+                                                    <div>
+                                                        <i class="icon-briefcase"></i>
+                                                        <h2>
+                                                            PROJECTS<br/>
+                                                            COMPLETED
+                                                        </h2>
+                                                        <div class="counter counter-small">25</div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <section class="panel stat stat-info">
+                                                <div class="panel-heading">
+                                                    <div>
+                                                        <i class="icon-comment"></i>
+                                                        <h2>
+                                                            DISCUSSIONS<br/>
+                                                            STARTED
+                                                        </h2>
+                                                        <div class="counter counter-small">42</div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <section class="panel stat stat-info">
+                                                <div class="panel-heading">
+                                                    <div>
+                                                        <i class="icon-credit-card"></i>
+                                                        <h2>
+                                                            PURCHASES<br/>
+                                                            MADE
+                                                        </h2>
+                                                        <div class="counter counter-small">11</div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="list-group-item">
+                                    <div class="form-group">
+                                        <h4>Projects</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-condensed">
+                                                <thead class="">
+                                                    <tr>
+                                                        <th>PROJECT NAME</th>
+                                                        <th>TEAM LEAD</th>
+                                                        <th>COMMENT</th>
+                                                        <th>STATUS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-success text-bold">
+                                                        <td>Proton UI</td>
+                                                        <td>Mark P</td>
+                                                        <td>Natus, quam sapiente molestias dolores vero repellendus repudiandae eius.</td>
+                                                        <td>Updating</td>
+                                                    </tr>
+                                                    <tr class="text-warning text-bold">
+                                                        <td>Lorem Panel</td>
+                                                        <td>Angelica S</td>
+                                                        <td>Delectus, dolor, sapiente atque doloribus laborum quod ex hic?</td>
+                                                        <td>Pending</td>
+                                                    </tr>
+                                                    <tr class="text-warning text-bold">
+                                                        <td>Ipsum Site</td>
+                                                        <td>Magdelena R</td>
+                                                        <td>Sunt, explicabo, minus culpa inventore quis itaque deserunt consequuntur.</td>
+                                                        <td>Pending</td>
+                                                    </tr>
+                                                    <tr class="text-danger text-bold">
+                                                        <td>Laravel UI</td>
+                                                        <td>Larry S</td>
+                                                        <td>Perferendis, incidunt, iure. Molestias, fugit exercitationem tempora perferendis. Placeat, laudantiu.</td>
+                                                        <td>Canceled</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            
+                        </div>
+                        <div class="tab-pane scrollable list-group" id="user-activity">
+                            <div class="panel panel-default scrollable messages-view">
+                                <div class="arrow user-menu-arrow"></div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis
+                                            </span>
+                                            <span class="description-text">
+                                                likes your website.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            32 mins ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            3 hrs ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Neque
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            57 mins ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa
+                                            </span>
+                                            <span class="description-text">
+                                                submitted a new ticket.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            1.5 hrs ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            3 hrs ago
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis
+                                            </span>
+                                            <span class="description-text">
+                                                likes your website.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Neque
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa
+                                            </span>
+                                            <span class="description-text">
+                                                submitted a new ticket.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis
+                                            </span>
+                                            <span class="description-text">
+                                                likes your website.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user4.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Neque
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa
+                                            </span>
+                                            <span class="description-text">
+                                                submitted a new ticket.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis
+                                            </span>
+                                            <span class="description-text">
+                                                wrote a new post.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            Yesterday
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane scrollable list-group" id="user-messages">
+                            <div class="panel panel-default scrollable messages-view">
+                                <div class="arrow user-menu-arrow"></div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis:
+                                            </span>
+                                            <span class="description-text">
+                                                Hi, can you meet me at the office tomorrow morning?
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            3 mins ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Prasent Neque:
+                                            </span>
+                                            <span class="description-text">
+                                                Just a quick question: do you know the balance on the adsense account?
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            17 mins ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa:
+                                            </span>
+                                            <span class="description-text">
+                                                Hey, we're going surfing tomorrow. Feel free to join in.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            3 hrs ago
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis:
+                                            </span>
+                                            <span class="description-text">
+                                                Hi, can you meet me at the office tomorrow morning?
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            3 mins ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Prasent Neque:
+                                            </span>
+                                            <span class="description-text">
+                                                Just a quick question: do you know the balance on the adsense account?
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            17 mins ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa:
+                                            </span>
+                                            <span class="description-text">
+                                                Hey, we're going surfing tomorrow. Feel free to join in.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            3 hrs ago
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis:
+                                            </span>
+                                            <span class="description-text">
+                                                Quasi, facilis dolor ab eveniet tempora magnam labore reprehenderit delectus nisi obcaecati!
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            5 hrs ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Prasent Neque:
+                                            </span>
+                                            <span class="description-text">
+                                                Hic laboriosam eos veritatis distinctio voluptate dignissimos quaerat ad corrupti minus repudiandae.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            9 hrs ago
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa:
+                                            </span>
+                                            <span class="description-text">
+                                                Assumenda, tenetur vero id iste laudantium reiciendis nobis accusantium veritatis! Ab, perspiciatis.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            14 hrs ago
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user1.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Nunc Cenenatis:
+                                            </span>
+                                            <span class="description-text">
+                                                Dolores, ipsa, enim dolorem voluptatem vero eius animi neque aliquam aliquid sequi.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user5.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Prasent Neque:
+                                            </span>
+                                            <span class="description-text">
+                                                Fugiat labore fuga asperiores quasi facilis aperiam ducimus voluptatem itaque maiores porro.
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            yesterday
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i><img src="images/user-icons/user2.jpg" alt="User Icon"></i>
+                                        <div class="text-holder">
+                                            <span class="title-text">
+                                                Flor Demoa:
+                                            </span>
+                                            <span class="description-text">
+                                                Sed, libero soluta quo a dignissimos molestiae fugiat assumenda commodi delectus eaque?
+                                            </span>
+                                        </div>
+                                        <span class="time-ago">
+                                            yesterday
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane scrollable list-group" id="user-settings">
+                            <form action="#">
+                                <div class="list-group-item form-horizontal">
+                                    <h4>
+                                        Basic Information
+                                    </h4>
+                                    <div class="form-group">
+                                        <label for="first-name" class="col-md-2 control-label">First Name</label>
+                                        <div class="col-md-10">
+                                            <input id="first-name" class="form-control" value="John">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name" class="col-md-2 control-label">Last Name</label>
+                                        <div class="col-md-10">
+                                            <input id="last-name" class="form-control" value="Doe">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location" class="col-md-2 control-label">Location</label>
+                                        <div class="col-md-10">
+                                            <input id="location" class="form-control" value="2nd Avenue, New York, USA">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="occupation" class="col-md-2 control-label">Occupation</label>
+                                        <div class="col-md-10">
+                                            <input id="occupation" class="form-control" value="Web Developer">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Change Avatar</label>
+                                        <div class="col-md-10">
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                              <div class="input-group">
+                                                <div class="form-control uneditable-input span3" data-trigger="fileinput"><i class="icon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                                                <span class="input-group-addon btn btn-primary btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                                <a href="#" class="input-group-addon btn btn-primary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>
+                                        Contact Information
+                                    </h4>
+                                    <div class="form-group">
+                                        <label for="email" class="col-md-2 control-label">Email</label>
+                                        <div class="col-md-10">
+                                            <input id="email" class="form-control" value="john.doe@orangehilldev.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website" class="col-md-2 control-label">Website</label>
+                                        <div class="col-md-10">
+                                            <input id="website" class="form-control" value="http://www.orangehilldev.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fb" class="col-md-2 control-label">Facebook</label>
+                                        <div class="col-md-10">
+                                            <input id="fb" class="form-control" value="https://www.facebook.com/orangehilldev">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="twitter" class="col-md-2 control-label">Twitter</label>
+                                        <div class="col-md-10">
+                                            <input id="twitter" class="form-control" value="https://twitter.com/orangehilldev">
+                                        </div>
+                                    </div>
+                                    <h4>
+                                        About Me
+                                    </h4>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="about-me">About Me</label>
+                                        <div class="col-md-10">
+                                            <textarea id="about-me" rows="6" class="form-control auto-resize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, sint, perspiciatis quos aliquam velit voluptate aliquid ratione repellat illum qui error ut totam maiores assumenda dolore distinctio dignissimos vel saepe impedit eius. Inventore, numquam veritatis quis ea quia perferendis consequatur eligendi ducimus.&#10;Lorem ipsum dolor sit amet, consectetur adipisicing elit.</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12 pull-right text-right">
+                                            <button type="button" class="btn btn-danger">RESET ALL</button>
+                                            <button type="button" class="btn btn-success">APPLY CHANGES</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div> 
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="panel panel-default panel-block">
+                        <div class="panel-heading clearfix">
+                            <span class="title">Contact</span>
+                            <small>
+                                <b class="text-bold">Email:</b> <a href="mailto:john.doe@orangehilldev.com">john.doe@orangehilldev.com</a>
+                            </small>
+                            <small>
+                                <b class="text-bold">Facebook:</b> <a href="https://www.facebook.com/orangehilldev">orangehilldev</a>
+                            </small>
+                            <small>
+                                <b class="text-bold">Twitter:</b> <a href="https://twitter.com/orangehilldev">orangehilldev</a>
+                            </small>
+                            <small>
+                                <b class="text-bold">Website:</b> <a href="http://www.orangehilldev.com">www.orangehilldev.com</a>
+                            </small>
+                            <div class="map" id="hybridMap" style="height:250px; width:100%"></div>
+                        </div>
+                    </div>
+                                        <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title">Personal Skills Rated 1 To 5</h4>
+                                <div class="form-group">
+                                    <div id="hero-bar" class="graph" style="height: 200px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Word Counter -->
+        <!-- http://bavotasan.com/2011/simple-textarea-word-counter-jquery-plugin/ -->
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+            </div>
+        </section>
+
+
+        
+
+        
+        <script src="scripts/bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        
+        <script src="scripts/main.js"></script>
+		<script src="scripts/proton/common.js"></script>
+		<script src="scripts/proton/main-nav.js"></script>
+		<script src="scripts/proton/user-nav.js"></script>
+		
+
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/userProfile.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Raphael, used for graphs -->
+        <!-- http://raphaeljs.com/ -->
+            <script src="scripts/vendor/raphael-min.js"></script>
+        
+        <!-- Morris graphs -->
+        <!-- https://github.com/oesmith/morris.js -->
+            <script src="scripts/vendor/morris.min.js"></script>
+
+        <!-- Google Maps -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+        <!-- Word Counter -->
+        <!-- http://bavotasan.com/2011/simple-textarea-word-counter-jquery-plugin/ -->
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+
+        <!-- File Input -->
+        <!-- http://jasny.github.io/bootstrap/javascript/#fileinput -->
+            <script src="scripts/vendor/fileinput.js"></script>
+            
+      </body>
+</html>
