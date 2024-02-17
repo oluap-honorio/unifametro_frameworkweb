@@ -126,7 +126,7 @@ DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 ```
 6. Compilar a imagem Docker 
 ```
-$ docker-composer build
+$ docker-compose build
 7. Com uma imagen compilada, vamos rodar um container
 ```
 $ docker-compose up -d
