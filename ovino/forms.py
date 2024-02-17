@@ -8,10 +8,11 @@ class OvinoForm(forms.ModelForm):
 		model = Ovino
 
 		fields = [
-			"identificador",
+            "identificador",
             "peso",
             "nascimento",
             "raca",
             "cor",
             "genero",
-		]
+            "tag",
+        ]
