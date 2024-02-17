@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/agrovinos/static/images
+/agrovinos/static/scripts
+/agrovinos/static/styles
