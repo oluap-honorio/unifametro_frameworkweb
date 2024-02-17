@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'sekizai',
     'widget_tweaks', 
     'tag.apps.TagConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
