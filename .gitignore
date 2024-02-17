@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+unifametro_frameworkweb/agrovinos/static/images
+unifametro_frameworkweb/agrovinos/static/scripts
+unifametro_frameworkweb/agrovinos/static/styles
