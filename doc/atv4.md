@@ -20,7 +20,7 @@ $ cd unifametro_frameworkweb
 ```
 4. Gerar uma Branch com o seu nome.
 ```
-$ git checkout -b NOME_SOBRENOME v1.1
+$ git checkout -b NOME_SOBRENOME
 $ git branch
 ```
 
@@ -126,7 +126,7 @@ DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 ```
 6. Compilar a imagem Docker 
 ```
-$ docker-composer build
+$ docker-compose build
 7. Com uma imagen compilada, vamos rodar um container
 ```
 $ docker-compose up -d
