@@ -5,7 +5,7 @@ services:
         container_name: portal
         hostname: portal
         build:
-            context: ../unifametro_frameworkweb
+         #   context: ../unifametro_frameworkweb
             dockerfile: Dockerfile
         command: python manage.py runserver 0.0.0.0:8000
         volumes:

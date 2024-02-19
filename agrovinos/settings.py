@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'widget_tweaks' ,
     'ovino',
     'tag.apps.TagConfig',
+    'rest_framework',
    
 ]
 
