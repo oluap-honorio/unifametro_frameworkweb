@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for agrovinos project.
 
@@ -26,6 +28,12 @@ SECRET_KEY = 'django-insecure-1pm*crjz8*(dzocwtdd+e76ushzy(uku2pm12x#+&m*%^)d6ar
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+### Docker Config
+DEBUG = int(os.environ.get("DEBUG", default=DEBUG))
+SECRET_KEY = os.environ.get("SECRET_KEY", default=SECRET_KEY)
+if os.environ.get("DJANGO_ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -123,6 +131,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'agrovinos/static'),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

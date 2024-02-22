@@ -1,26 +1,39 @@
 {% load sekizai_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Deletar ovino</title>
-  </head>
-  <body>
-    <div >
-      <h4 >Atenção!</h4>
-      <p> Você tem certeza que deseja deletar esse registro? </p>
-      <form method="POST" action="{% url 'ovino:delete' id=data.id %}">
-        {% csrf_token %}
-        <br>
-        <p>
-          <input type="submit"  value="Sim" >
-          <a  href="{% url 'ovino:index' %}"> Não </a>
-        </p>
-      </form>
-    </div>
-  </body>
-  
-  <footer>
-    <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
-  </footer>
+
+<head>
+  <meta charset="utf-8">
+  <title>Deletar ovino</title>
+  <link rel="shortcut icon" href="{% static '/favicon.ico' %}" />
+  <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+  <!-- Proton CSS: -->
+  <link rel="stylesheet" href="{% static 'styles/proton.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/vendor/animate.css' %}">
+  <!-- adds CSS media query support to IE8   -->
+  <!-- Fonts CSS: -->
+  <link rel="stylesheet" href="{% static 'styles/font-awesome.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'styles/font-titillium.css' %}" type="text/css" />
+</head>
+
+<body>
+  <div>
+    <h4>Atenção!</h4>
+    <p> Você tem certeza que deseja deletar esse registro? </p>
+    <form method="POST" action="{% url 'ovino:delete' id=data.id %}">
+      {% csrf_token %}
+      <br>
+      <p>
+        <input type="submit" value="Sim">
+        <a href="{% url 'ovino:index' %}"> Não </a>
+      </p>
+    </form>
+  </div>
+</body>
+
+<footer>
+  <li><a href="{% url 'logout' %}"><i class="icon-key"></i> Sair </a></li>
+</footer>
+
 </html>
