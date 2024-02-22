@@ -1,0 +1,69 @@
+// Proton layout
+@wrapper-mobile-padding: 9px;
+@wrapper-large-padding: 30px;
+
+html, body{
+    min-width: 300px;
+}
+
+.wrapper{
+    position: relative;
+    padding: 0 @wrapper-mobile-padding;
+    opacity: 0;
+    .no-cssanimations &{
+        opacity: 1;
+    }
+}
+
+// Scrollable (y-axis) elements
+.scrollable{
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+// Only used for no-touch devices
+.no-touch {
+    .scrollable.hover {
+        overflow-y: hidden;
+        &:hover
+        {
+            overflow-y: auto;
+            overflow: visible;
+        }
+    }
+}
+
+@media (min-width: @screen-xs) {
+    html, body{
+        width:100%;
+        height:100%;
+        overflow: hidden;
+    }
+    body{
+        position: fixed;
+    }
+
+    .wrapper{
+        position: absolute;
+        display: block;
+        vertical-align: top;
+        top: 0;
+        left: 360px + @wrapper-large-padding;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        padding-right: @wrapper-large-padding;
+        padding-bottom: @wrapper-large-padding;
+        // z-index: 1;
+        .transition(left 0.1s ease-in);
+
+        &.extended{
+            left: 80px + @wrapper-large-padding;
+        }
+
+        p{
+            padding: 0 15px;
+        }
+    }
+}

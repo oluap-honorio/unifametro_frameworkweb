@@ -1,0 +1,35 @@
+{
+  "name": "grunt-lib-phantomjs",
+  "description": "Grunt and PhantomJS, sitting in a tree",
+  "version": "0.7.1",
+  "author": {
+    "name": "Grunt Team",
+    "url": "http://gruntjs.com/"
+  },
+  "repository": "gruntjs/grunt-lib-phantomjs",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt jshint test"
+  },
+  "dependencies": {
+    "eventemitter2": "^0.4.9",
+    "phantomjs": "^1.9.15",
+    "semver": "^4.3.0",
+    "temporary": "^0.0.8"
+  },
+  "devDependencies": {
+    "difflet": "^0.2.3",
+    "express": "^4.11.2",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.0"
+  },
+  "main": "lib/phantomjs",
+  "files": [
+    "lib",
+    "phantomjs"
+  ]
+}

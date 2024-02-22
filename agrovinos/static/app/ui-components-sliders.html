@@ -1,0 +1,48 @@
+@@include('common/head-part-1.html')
+        <title>Proton UI - Sliders</title>
+        <meta name="description" content="Page Description">
+@@include('common/head-part-2.html')
+
+        <!-- Page-specific Plugin CSS: -->
+
+@@include('common/head-part-3.html')
+
+    <body>
+        @@include('common/themeScript.html')
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        @@include('common/main-nav.html')
+        @@include('common/sidebar.html')
+
+        <section class="wrapper retracted scrollable">
+            @@include('common/cookieScript.html')
+            @@include('common/user-nav.html')
+            @@include('common/breadcrumbs-ui-components.html')
+            @@include('common/titlebar.html')
+
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    @@include('components/preface.html')
+                    @@include('components/sliders.html')
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    @@include('components/sliders-vertical.html')
+                </div>
+            </div>
+        </section>
+
+        @@include('common/base-scripts.html')
+
+        <!-- Page-specific scripts: -->
+        <script src="scripts/proton/sidebar.js"></script>
+        <script src="scripts/proton/ui-components-sliders.js"></script>
+        <!-- jsTree -->
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+        <!-- Sliders -->
+        <!-- http://www.eyecon.ro/bootstrap-slider/ -->
+            <script src="scripts/vendor/bootstrap-slider.js"></script>
+
+    </body>
+</html>

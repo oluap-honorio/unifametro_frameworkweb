@@ -1,0 +1,92 @@
+                    <div class="panel panel-default panel-block">
+                        <div class="list-group">
+                            <div class="list-group-item button-demo">
+                                <h4 class="section-title">Notifications</h4>
+                                <div class="form-group">
+                                    <label>By Type</label>
+                                    <div>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Basic Notification',
+                                        text: 'I am your basic notification.',
+                                        history: false,
+                                        }); return false;">
+                                        Basic Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Transparent Notification',
+                                        text: 'I am a transparent notification. You can hardly see me, good for less important stuff.',
+                                        history: false,
+                                        opacity: .5
+                                        }); return false;">
+                                        Transparent Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Sticky Notification',
+                                        text: 'I am a sticky notification. I won\'t go away, you\'ll have to close me yourself!',
+                                        history: false,
+                                        hide: false
+                                        }); return false;">
+                                        Sticky Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Long-Life Notification',
+                                        text: 'I am a long-life notification, I\'ll stay around longer than others.',
+                                        history: false,
+                                        delay: '10000'
+                                        }); return false;">
+                                        Long-life Notification
+                                        </button>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                        title: 'Non-blocking Notification',
+                                        text: 'I am a non-blocking notification. You can click behind me, I won\'t bother you.',
+                                        history: false,
+                                        nonblock: true,
+                                        nonblock_opacity: .2
+                                        }); return false;">
+                                        Non-blocking Notification
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>By Status</label>
+                                    <div>
+                                        <button class="btn btn-default" onclick="$.pnotify({
+                                            title: 'Sticky Notice',
+                                            text: 'Check me out! I\'m a sticky notice. You\'ll have to close me yourself.',
+                                            history: false,
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Notice
+                                        </button>
+                                        <button class="btn btn-info" onclick="$.pnotify({
+                                            title: 'Sticky Info',
+                                            text: 'Sticky info, you know, like a newspaper covered in honey.',
+                                            history: false,
+                                            type: 'info',
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Info
+                                        </button>
+                                        <button class="btn btn-success" onclick="$.pnotify({
+                                            title: 'Sticky Success',
+                                            text: 'Sticky success... I\'m not even gonna make a joke.',
+                                            history: false,
+                                            type: 'success',
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Success
+                                        </button>
+                                        <button class="btn btn-danger" onclick="$.pnotify({
+                                            title: 'Uh Oh!',
+                                            text: 'Something really terrible happened. You really need to read this, so I won\'t close automatically.',
+                                            history: false,
+                                            type: 'error',
+                                            hide: false
+                                        }); return false;">
+                                        Sticky Danger
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
