@@ -21,6 +21,7 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install --root-user-action=ignore psycopg2-binary
 RUN pip install -r requirements.txt
-
+RUN python manage.py makemigrations
+RUN python manage.py migrate --noinput
 # copy project
 COPY . .

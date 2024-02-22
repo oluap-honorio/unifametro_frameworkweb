@@ -39,6 +39,7 @@ if os.environ.get("DJANGO_ALLOWED_HOSTS"):
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_corporate.apps.AdminCorporateConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -81,9 +82,9 @@ TEMPLATES = [
     },
 ]
 LOGIN_REDIRECT_URL = '/ovino/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/ovino/'
 WSGI_APPLICATION = "agrovinos.wsgi.application"
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
