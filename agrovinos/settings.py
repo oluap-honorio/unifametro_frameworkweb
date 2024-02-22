@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sekizai',
     'widget_tweaks',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
