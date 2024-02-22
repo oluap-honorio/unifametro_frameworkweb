@@ -81,8 +81,8 @@ TEMPLATES = [
         },
     },
 ]
-LOGIN_REDIRECT_URL = '/ovino/'
-LOGOUT_REDIRECT_URL = '/ovino/'
+LOGIN_REDIRECT_URL = '/ovino'
+LOGOUT_REDIRECT_URL = '/ovino'
 WSGI_APPLICATION = "agrovinos.wsgi.application"
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
