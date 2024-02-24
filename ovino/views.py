@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.shortcuts import (get_object_or_404,
                               render,
                               HttpResponseRedirect)
@@ -6,7 +5,7 @@ from .models import Ovino
 from .forms import OvinoForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
 @login_required
 def index(request):
     context = {}
