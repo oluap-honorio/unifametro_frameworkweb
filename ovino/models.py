@@ -14,5 +14,13 @@ class Ovino(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     tag = models.OneToOneField(Tag, on_delete=models.SET_NULL, null=True)
 
+    #class Meta:
+    #    db_table = 'Ovino'
+    #    verbose_name = 'Ovino'
+    #    verbose_name_plural = 'Ovinos'
+
     def __str__(self):
-        return self.deveui
+        return self.identificador
+
+    #def __unicode__(self):
+    #    return self.identificador
